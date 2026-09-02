@@ -712,52 +712,52 @@
     {
       "sku": "Espresso beans",
       "status": "Low",
-      "text": "Your espresso beans are already below the reorder point (1.2 units on hand vs. a 3.5-unit trigger), so it's time to place an order today rather than waiting.\n\nAim for about 41-42 units total, split mostly with Highland Roasters Co-op (around 37 units) since they're your strongest, most reliable supplier right now, and top off the rest (about 4 units) with Golden Valley Wholesale to keep that backup relationship active. Also keep a small safety cushion of roughly half a unit in mind so you don't cut it too close if deliveries run late."
+      "text": "Your espresso beans are already below the reorder point (1.2 kg on hand vs. a 3.5 kg trigger), so it's time to place an order today rather than waiting. I'd recommend ordering about 37 kg from Highland Roasters Co-op, your top-performing supplier, and a smaller top-up of around 4 kg from Golden Valley Wholesale to round out the order \u2014 that gets you to the ideal 41.5 kg order size while keeping a small safety cushion in reserve."
     },
     {
       "sku": "Whole Milk",
       "status": "Low",
-      "text": "Your whole milk stock is critically low\u2014at 5 units, you're actually below your safety stock cushion of about 7 units, so this order is overdue and should go out today. Place an order for roughly 550 units total, sourcing the bulk (about 540 units) from Regional Dairy Co-op since they're currently your stronger, more reliable option, and a small backup order of 10 units from EcoPack Supply to keep that relationship active. Going forward, plan to reorder once stock dips to around 44 units to avoid running this close to empty again."
+      "text": "You're already below your safety stock cushion for Whole Milk, so it's time to place an order right away rather than waiting. Based on the numbers, order about 550 units total\u2014split as roughly 540 units from Regional Dairy Co-op (your best-value supplier right now) and a smaller top-up of 10 units from EcoPack Supply. Acting today should keep you from running out before the next delivery arrives."
     },
     {
       "sku": "Cheddar",
       "status": "Low",
-      "text": "You're out of cheddar and need to reorder today \u2014 current stock (0.18) has already dipped below your safety cushion. Place an order for about 12.5 units with Garden State Dairy, who's scoring much stronger right now (0.86 vs. 0.38 for Metro Foodservice) on price, reliability, or lead time. Acting today keeps you ahead of any stockout risk."
+      "text": "You're due to reorder Cheddar right now \u2014 current stock (0.18) has already dipped below your reorder point, leaving very little cushion before you risk running out. Place an order for about 12.5 units, and send the whole order to Garden State Dairy, since they're scoring much stronger than Metro Foodservice on reliability/value (0.86 vs. 0.38). I'd treat this one as urgent since there's no buffer left to wait."
     },
     {
       "sku": "Whipped cream",
       "status": "Low",
-      "text": "Since your whipped cream stock is basically out (0.83 units left, below the 1.3 reorder point), it's time to place an order today \u2014 waiting isn't an option here.\n\nFor your next order, aim for about 45 units total: split it as roughly 36 units from Garden State Dairy (your strongest, most reliable supplier) and about 9 units from Direct Trade Partners to keep a backup source active. Going forward, try to reorder before you dip below that 1.3-unit threshold, since your safety cushion is quite thin (only 0.3 units) \u2014 even a small delay could leave you empty-handed."
+      "text": "Your whipped cream is basically out (under 1 unit on hand), so it's time to reorder today \u2014 don't wait, since you're already at the reorder trigger point with almost no safety cushion left. For this order, plan to get about 45 units total, split mostly with Garden State Dairy (around 36 units, since they're your stronger supplier) and a smaller top-up of about 9 units from Direct Trade Partners to keep that relationship active and diversify your supply."
     },
     {
       "sku": "Barista chocolate syrup",
       "status": "Low",
-      "text": "You're out of stock on the chocolate syrup right now, so this order needs to go in today. Based on the numbers, order about 43 units total\u2014split roughly 32 from Garden State Dairy (your stronger, more reliable supplier) and 10 from Direct Trade Partners to fill out the order. Going forward, plan to reorder once stock dips to around 2.6 units, keeping a small safety cushion of just under 1 unit on hand."
+      "text": "**Time to reorder your Barista chocolate syrup \u2014 today.**\n\nYou're down to less than 1 unit in stock, which is below your safety cushion, so this is urgent. Based on the numbers, order about 43 units total: split it as roughly 32 units from Garden State Dairy (your stronger, more reliable supplier) and about 10 units from Direct Trade Partners to keep a backup source in play. Getting this order placed now will help you avoid running out before the next shipment arrives."
     },
     {
       "sku": "Barista caramel sauce",
       "status": "Low",
-      "text": "**Time to reorder your caramel sauce \u2014 today.**\n\nYou're down to just 0.09 units, which is already below your safety cushion, so this order shouldn't wait. Based on the numbers, order 28 units total: about 21 from Golden Valley Wholesale and the remaining 7 from EcoPack Supply \u2014 Golden Valley is your top pick right now, with EcoPack as a solid backup to round out the order."
+      "text": "Your barista caramel sauce is essentially out of stock (0.09 units on hand), so it's time to reorder today, not wait for the usual trigger point. For your next order of 28 units, split it between Golden Valley Wholesale (about 21 units) and EcoPack Supply (about 7 units) \u2014 Golden Valley is your top-performing supplier right now, but adding EcoPack helps keep a backup source in play. I'd get this order in as soon as possible to avoid running dry."
     },
     {
       "sku": "Sugar",
       "status": "Low",
-      "text": "Time to reorder Sugar today \u2014 you're down to about 1.8 units, right at your safety-stock cushion of 0.4. For your next order, put the bulk (102 units) with Garden State Dairy since they're your top-performing supplier right now, and split off a small amount (2.4 units) to Union Square Provisions to keep that backup relationship active."
+      "text": "Your Sugar stock is down to about 1.8 units, which is right at (actually just below) the reorder point\u2014so it's time to place an order today. Based on the numbers, order roughly 104 units total: the bulk (about 102) from Garden State Dairy since they're your stronger overall performer, with a small top-up (about 2.4 units) from Union Square Provisions to round things out. Keep about 0.4 units as a safety cushion for any unexpected delays or demand spikes between now and your next delivery."
     },
     {
       "sku": "Chocolate",
       "status": "Watch",
-      "text": "Heads up \u2014 your Chocolate stock is down to about 1 unit, and with reorder point right around there too, it's time to place an order tomorrow. I'd suggest ordering roughly 25 units total, split between suppliers: about 18 from Union Square Provisions (they're your stronger performer) and around 8 from Garden State Dairy to keep a backup source active. Since your safety stock cushion is very thin, try not to delay this order to avoid running out."
+      "text": "Here's the situation: chocolate is basically down to its last bit, and you're already at your reorder point, so it's time to place an order right away \u2014 waiting even a day risks running out. Based on the numbers, order around 25-26 units total, splitting it roughly 18 units from Union Square Provisions (your stronger supplier) and 7-8 units from Garden State Dairy to keep both relationships active. Just a heads-up: your safety cushion is very thin, so don't delay this order."
     },
     {
       "sku": "Lemons",
       "status": "Low",
-      "text": "Time to reorder lemons right away \u2014 you're currently sitting at 10 units, which is already below your reorder point of about 21, so there's no runway left to wait.\n\nFor this order, plan to buy around 1,000 units total, split mostly with EcoPack Supply (about 983 units, since they scored highest on reliability/value at 0.98) and a smaller amount, 17 units, from Torani Distribution to keep that relationship active. This should comfortably cover demand while keeping roughly 4 units in reserve as a safety cushion."
+      "text": "You're already below your reorder point for lemons (10 on hand vs. your 21-unit trigger), so it's time to place an order today. Order 1,000 units total, with the bulk (983) coming from EcoPack Supply since they're your stronger, more reliable option right now, and just a small top-up of 17 from Torani Distribution. This should keep you well-stocked with a comfortable cushion (about 4 units of safety buffer) until your next reorder point."
     },
     {
       "sku": "Salami",
       "status": "Low",
-      "text": "**Time to reorder Salami \u2014 today.** Your current stock (0.735) has dropped below the reorder point, so don't wait. Place an order for about 24.4 units total: the bulk (22 units) should go to Coastal Foods Group, since they're currently your stronger, more reliable supplier, with a smaller top-up order of 2.4 units from Garden State Dairy to keep that relationship active and diversify your supply."
+      "text": "Time to reorder Salami now \u2014 you're down to less than 1 unit on hand, which is already at your reorder point. Place an order for about 24.4 units total, splitting it mostly with Coastal Foods Group (22 units, your stronger-performing supplier) and a smaller amount (2.4 units) with Garden State Dairy to keep that relationship active. Coastal Foods Group is scoring notably better on reliability right now (0.86 vs. 0.39), so leaning on them for the bulk of this order is the safer bet."
     }
   ],
   "forecasts": {
