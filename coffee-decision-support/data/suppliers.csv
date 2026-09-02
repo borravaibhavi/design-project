@@ -1,14 +1,33 @@
 sku,supplier,price,lead_time,reliability,moq,availability
-Espresso Beans (Arabica),Highland Roasters Co-op,6.75,6,0.95,25,In stock
-Espresso Beans (Arabica),Continental Green Coffee,6.4,9,0.9,50,In stock
-Espresso Beans (Arabica),Direct Trade Partners,7.2,4,0.98,10,Limited
-Whole Milk,Garden State Dairy,3.1,1,0.99,5,In stock
-Whole Milk,Regional Dairy Co-op,2.95,2,0.94,10,In stock
-Oat Milk,PlantBase Foods,4.5,3,0.93,5,In stock
-Oat Milk,Regional Dairy Co-op,4.8,2,0.96,5,Limited
-Paper Cups (12oz),EcoPack Supply,32.0,8,0.92,3,In stock
-Paper Cups (12oz),Metro Foodservice,35.5,4,0.97,2,In stock
-Vanilla Syrup,Torani Distribution,9.25,5,0.96,6,In stock
-Vanilla Syrup,Metro Foodservice,9.9,4,0.97,4,In stock
-Sugar,Regional Dairy Co-op,0.85,3,0.98,20,In stock
-Sugar,Metro Foodservice,0.9,4,0.97,10,In stock
+Espresso beans,Highland Roasters Co-op,13.342,4,0.96,3.7,In stock
+Espresso beans,Golden Valley Wholesale,13.026,9,0.97,4.3,Limited
+Whole Milk,EcoPack Supply,1.356,8,0.97,10.0,In stock
+Whole Milk,Regional Dairy Co-op,1.13,1,0.91,16.9,In stock
+Cheddar,Metro Foodservice,14.538,7,0.99,18.1,Limited
+Cheddar,Garden State Dairy,13.895,8,0.94,2.8,In stock
+Mozzarella,Continental Green Coffee,10.811,4,0.93,8.7,Limited
+Mozzarella,Torani Distribution,10.068,8,0.91,10.6,In stock
+Whipped cream,Garden State Dairy,4.491,7,0.97,14.6,In stock
+Whipped cream,Direct Trade Partners,4.971,3,0.97,9.0,Limited
+Barista chocolate syrup,Garden State Dairy,7.792,8,0.9,16.2,In stock
+Barista chocolate syrup,Direct Trade Partners,8.995,5,0.97,10.3,Limited
+Barista white chocolate syrup,EcoPack Supply,7.734,2,0.96,10.5,Limited
+Barista white chocolate syrup,PlantBase Foods,9.225,6,0.96,12.0,In stock
+Barista caramel sauce,Golden Valley Wholesale,7.542,4,0.92,9.4,In stock
+Barista caramel sauce,EcoPack Supply,9.427,1,0.91,7.1,In stock
+Sugar,Garden State Dairy,1.546,6,0.97,14.0,In stock
+Sugar,Union Square Provisions,1.65,4,0.92,2.4,In stock
+Panini Bread,Highland Roasters Co-op,0.339,7,0.95,9.0,Limited
+Panini Bread,Golden Valley Wholesale,0.36,2,0.94,9.0,In stock
+Cocoa powder,Direct Trade Partners,21.509,6,0.91,4.1,In stock
+Cocoa powder,Garden State Dairy,24.757,9,0.96,6.8,Limited
+Chocolate,Union Square Provisions,11.272,8,0.92,3.7,In stock
+Chocolate,Garden State Dairy,11.799,2,0.92,7.5,In stock
+Lemons,Torani Distribution,0.333,2,0.97,17.0,Limited
+Lemons,EcoPack Supply,0.299,3,0.95,20.0,In stock
+Ham,Coastal Foods Group,27.287,8,0.94,7.9,In stock
+Ham,Metro Foodservice,25.273,7,0.95,5.1,In stock
+Salami,Garden State Dairy,15.082,6,0.95,2.4,In stock
+Salami,Coastal Foods Group,15.648,9,0.97,3.5,In stock
+Black Tea,Torani Distribution,18.131,2,0.94,6.8,In stock
+Black Tea,PlantBase Foods,15.512,5,0.94,2.4,In stock

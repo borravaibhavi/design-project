@@ -1,818 +1,2140 @@
 {
   "metrics": {
-    "active_skus": 6,
-    "low_stock_alerts": 2,
-    "pending_recommendations": 2,
-    "historical_stockout_days": 224,
-    "data_range": "2021-01-01 to 2026-08-31"
+    "active_skus": 16,
+    "low_stock_alerts": 9,
+    "pending_recommendations": 10,
+    "historical_stockout_days": 0,
+    "data_range": "2024-02-12 to 2024-02-17"
   },
   "sku_cards": [
     {
-      "sku": "Espresso Beans (Arabica)",
-      "unit": "lb",
-      "on_hand": 205.0,
-      "reorder_point": 113.7,
-      "eoq": 148.8,
-      "safety_stock": 8.5,
-      "status": "OK",
-      "avg_daily_demand": 16.6,
+      "sku": "Espresso beans",
+      "unit": "kg",
+      "on_hand": 1.2,
+      "reorder_point": 3.5,
+      "eoq": 41.5,
+      "safety_stock": 0.4,
+      "status": "Low",
+      "avg_daily_demand": 0.5,
       "suppliers": [
         {
-          "sku": "Espresso Beans (Arabica)",
+          "sku": "Espresso beans",
           "supplier": "Highland Roasters Co-op",
-          "price": 6.75,
-          "lead_time": 6,
-          "reliability": 0.95,
-          "moq": 25,
-          "availability": "In stock"
-        },
-        {
-          "sku": "Espresso Beans (Arabica)",
-          "supplier": "Continental Green Coffee",
-          "price": 6.4,
-          "lead_time": 9,
-          "reliability": 0.9,
-          "moq": 50,
-          "availability": "In stock"
-        },
-        {
-          "sku": "Espresso Beans (Arabica)",
-          "supplier": "Direct Trade Partners",
-          "price": 7.2,
+          "price": 13.342,
           "lead_time": 4,
-          "reliability": 0.98,
-          "moq": 10,
+          "reliability": 0.96,
+          "moq": 3.7,
+          "availability": "In stock"
+        },
+        {
+          "sku": "Espresso beans",
+          "supplier": "Golden Valley Wholesale",
+          "price": 13.026,
+          "lead_time": 9,
+          "reliability": 0.97,
+          "moq": 4.3,
           "availability": "Limited"
         }
       ],
       "lp_scores": {
-        "Highland Roasters Co-op": 0.88,
-        "Continental Green Coffee": 0.67,
-        "Direct Trade Partners": 0.44
+        "Highland Roasters Co-op": 0.94,
+        "Golden Valley Wholesale": 0.36
       },
       "allocation": [
         {
           "supplier": "Highland Roasters Co-op",
-          "qty": 88.8
+          "qty": 37.2
         },
         {
-          "supplier": "Continental Green Coffee",
-          "qty": 50.0
-        },
-        {
-          "supplier": "Direct Trade Partners",
-          "qty": 10.0
+          "supplier": "Golden Valley Wholesale",
+          "qty": 4.3
         }
       ]
     },
     {
       "sku": "Whole Milk",
-      "unit": "gal",
-      "on_hand": 53.0,
-      "reorder_point": 37.1,
-      "eoq": 103.8,
-      "safety_stock": 4.8,
-      "status": "OK",
-      "avg_daily_demand": 21.6,
+      "unit": "L",
+      "on_hand": 5.1,
+      "reorder_point": 44.4,
+      "eoq": 550.2,
+      "safety_stock": 6.9,
+      "status": "Low",
+      "avg_daily_demand": 8.3,
       "suppliers": [
         {
           "sku": "Whole Milk",
-          "supplier": "Garden State Dairy",
-          "price": 3.1,
-          "lead_time": 1,
-          "reliability": 0.99,
-          "moq": 5,
+          "supplier": "EcoPack Supply",
+          "price": 1.356,
+          "lead_time": 8,
+          "reliability": 0.97,
+          "moq": 10.0,
           "availability": "In stock"
         },
         {
           "sku": "Whole Milk",
           "supplier": "Regional Dairy Co-op",
-          "price": 2.95,
-          "lead_time": 2,
-          "reliability": 0.94,
-          "moq": 10,
+          "price": 1.13,
+          "lead_time": 1,
+          "reliability": 0.91,
+          "moq": 16.9,
           "availability": "In stock"
         }
       ],
       "lp_scores": {
-        "Garden State Dairy": 1.4,
-        "Regional Dairy Co-op": 0.58
+        "EcoPack Supply": 0.37,
+        "Regional Dairy Co-op": 1.37
       },
       "allocation": [
         {
-          "supplier": "Garden State Dairy",
-          "qty": 93.8
+          "supplier": "EcoPack Supply",
+          "qty": 10.0
         },
         {
           "supplier": "Regional Dairy Co-op",
-          "qty": 10.0
+          "qty": 540.2
         }
       ]
     },
     {
-      "sku": "Oat Milk",
-      "unit": "gal",
-      "on_hand": 6.0,
-      "reorder_point": 22.9,
-      "eoq": 58.2,
-      "safety_stock": 2.6,
+      "sku": "Cheddar",
+      "unit": "kg",
+      "on_hand": 0.2,
+      "reorder_point": 0.5,
+      "eoq": 12.5,
+      "safety_stock": 0.1,
       "status": "Low",
-      "avg_daily_demand": 8.1,
+      "avg_daily_demand": 0.1,
       "suppliers": [
         {
-          "sku": "Oat Milk",
-          "supplier": "PlantBase Foods",
-          "price": 4.5,
-          "lead_time": 3,
+          "sku": "Cheddar",
+          "supplier": "Metro Foodservice",
+          "price": 14.538,
+          "lead_time": 7,
+          "reliability": 0.99,
+          "moq": 18.1,
+          "availability": "Limited"
+        },
+        {
+          "sku": "Cheddar",
+          "supplier": "Garden State Dairy",
+          "price": 13.895,
+          "lead_time": 8,
+          "reliability": 0.94,
+          "moq": 2.8,
+          "availability": "In stock"
+        }
+      ],
+      "lp_scores": {
+        "Metro Foodservice": 0.38,
+        "Garden State Dairy": 0.86
+      },
+      "allocation": [
+        {
+          "supplier": "Garden State Dairy",
+          "qty": 12.5
+        }
+      ]
+    },
+    {
+      "sku": "Mozzarella",
+      "unit": "kg",
+      "on_hand": 1.6,
+      "reorder_point": 0.4,
+      "eoq": 16.7,
+      "safety_stock": 0.1,
+      "status": "OK",
+      "avg_daily_demand": 0.1,
+      "suppliers": [
+        {
+          "sku": "Mozzarella",
+          "supplier": "Continental Green Coffee",
+          "price": 10.811,
+          "lead_time": 4,
           "reliability": 0.93,
-          "moq": 5,
+          "moq": 8.7,
+          "availability": "Limited"
+        },
+        {
+          "sku": "Mozzarella",
+          "supplier": "Torani Distribution",
+          "price": 10.068,
+          "lead_time": 8,
+          "reliability": 0.91,
+          "moq": 10.6,
+          "availability": "In stock"
+        }
+      ],
+      "lp_scores": {
+        "Continental Green Coffee": 0.43,
+        "Torani Distribution": 0.85
+      },
+      "allocation": [
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 8.7
+        },
+        {
+          "supplier": "Torani Distribution",
+          "qty": 10.6
+        }
+      ]
+    },
+    {
+      "sku": "Whipped cream",
+      "unit": "L",
+      "on_hand": 0.8,
+      "reorder_point": 1.3,
+      "eoq": 45.4,
+      "safety_stock": 0.3,
+      "status": "Low",
+      "avg_daily_demand": 0.2,
+      "suppliers": [
+        {
+          "sku": "Whipped cream",
+          "supplier": "Garden State Dairy",
+          "price": 4.491,
+          "lead_time": 7,
+          "reliability": 0.97,
+          "moq": 14.6,
           "availability": "In stock"
         },
         {
-          "sku": "Oat Milk",
-          "supplier": "Regional Dairy Co-op",
-          "price": 4.8,
-          "lead_time": 2,
-          "reliability": 0.96,
-          "moq": 5,
+          "sku": "Whipped cream",
+          "supplier": "Direct Trade Partners",
+          "price": 4.971,
+          "lead_time": 3,
+          "reliability": 0.97,
+          "moq": 9.0,
           "availability": "Limited"
         }
       ],
       "lp_scores": {
-        "PlantBase Foods": 0.98,
-        "Regional Dairy Co-op": 0.59
+        "Garden State Dairy": 0.88,
+        "Direct Trade Partners": 0.49
       },
       "allocation": [
+        {
+          "supplier": "Garden State Dairy",
+          "qty": 36.4
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 9.0
+        }
+      ]
+    },
+    {
+      "sku": "Barista chocolate syrup",
+      "unit": "L",
+      "on_hand": 0.9,
+      "reorder_point": 2.6,
+      "eoq": 42.7,
+      "safety_stock": 0.3,
+      "status": "Low",
+      "avg_daily_demand": 0.4,
+      "suppliers": [
+        {
+          "sku": "Barista chocolate syrup",
+          "supplier": "Garden State Dairy",
+          "price": 7.792,
+          "lead_time": 8,
+          "reliability": 0.9,
+          "moq": 16.2,
+          "availability": "In stock"
+        },
+        {
+          "sku": "Barista chocolate syrup",
+          "supplier": "Direct Trade Partners",
+          "price": 8.995,
+          "lead_time": 5,
+          "reliability": 0.97,
+          "moq": 10.3,
+          "availability": "Limited"
+        }
+      ],
+      "lp_scores": {
+        "Garden State Dairy": 0.84,
+        "Direct Trade Partners": 0.41
+      },
+      "allocation": [
+        {
+          "supplier": "Garden State Dairy",
+          "qty": 32.4
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.3
+        }
+      ]
+    },
+    {
+      "sku": "Barista white chocolate syrup",
+      "unit": "L",
+      "on_hand": 2.9,
+      "reorder_point": 0.8,
+      "eoq": 30.2,
+      "safety_stock": 0.1,
+      "status": "OK",
+      "avg_daily_demand": 0.2,
+      "suppliers": [
+        {
+          "sku": "Barista white chocolate syrup",
+          "supplier": "EcoPack Supply",
+          "price": 7.734,
+          "lead_time": 2,
+          "reliability": 0.96,
+          "moq": 10.5,
+          "availability": "Limited"
+        },
+        {
+          "sku": "Barista white chocolate syrup",
+          "supplier": "PlantBase Foods",
+          "price": 9.225,
+          "lead_time": 6,
+          "reliability": 0.96,
+          "moq": 12.0,
+          "availability": "In stock"
+        }
+      ],
+      "lp_scores": {
+        "EcoPack Supply": 1.09,
+        "PlantBase Foods": 0.39
+      },
+      "allocation": [
+        {
+          "supplier": "EcoPack Supply",
+          "qty": 18.2
+        },
         {
           "supplier": "PlantBase Foods",
-          "qty": 53.2
-        },
-        {
-          "supplier": "Regional Dairy Co-op",
-          "qty": 5.0
+          "qty": 12.0
         }
       ]
     },
     {
-      "sku": "Paper Cups (12oz)",
-      "unit": "case",
-      "on_hand": 129.0,
-      "reorder_point": 33.5,
-      "eoq": 72.0,
-      "safety_stock": 2.4,
-      "status": "OK",
-      "avg_daily_demand": 5.2,
-      "suppliers": [
-        {
-          "sku": "Paper Cups (12oz)",
-          "supplier": "EcoPack Supply",
-          "price": 32.0,
-          "lead_time": 8,
-          "reliability": 0.92,
-          "moq": 3,
-          "availability": "In stock"
-        },
-        {
-          "sku": "Paper Cups (12oz)",
-          "supplier": "Metro Foodservice",
-          "price": 35.5,
-          "lead_time": 4,
-          "reliability": 0.97,
-          "moq": 2,
-          "availability": "In stock"
-        }
-      ],
-      "lp_scores": {
-        "EcoPack Supply": 0.85,
-        "Metro Foodservice": 0.44
-      },
-      "allocation": [
-        {
-          "supplier": "EcoPack Supply",
-          "qty": 70.0
-        },
-        {
-          "supplier": "Metro Foodservice",
-          "qty": 2.0
-        }
-      ]
-    },
-    {
-      "sku": "Vanilla Syrup",
-      "unit": "btl",
-      "on_hand": 8.0,
-      "reorder_point": 15.1,
-      "eoq": 47.7,
-      "safety_stock": 1.5,
+      "sku": "Barista caramel sauce",
+      "unit": "L",
+      "on_hand": 0.1,
+      "reorder_point": 0.5,
+      "eoq": 28.0,
+      "safety_stock": 0.1,
       "status": "Low",
-      "avg_daily_demand": 3.0,
+      "avg_daily_demand": 0.2,
       "suppliers": [
         {
-          "sku": "Vanilla Syrup",
-          "supplier": "Torani Distribution",
-          "price": 9.25,
-          "lead_time": 5,
-          "reliability": 0.96,
-          "moq": 6,
+          "sku": "Barista caramel sauce",
+          "supplier": "Golden Valley Wholesale",
+          "price": 7.542,
+          "lead_time": 4,
+          "reliability": 0.92,
+          "moq": 9.4,
           "availability": "In stock"
         },
         {
-          "sku": "Vanilla Syrup",
-          "supplier": "Metro Foodservice",
-          "price": 9.9,
-          "lead_time": 4,
-          "reliability": 0.97,
-          "moq": 4,
+          "sku": "Barista caramel sauce",
+          "supplier": "EcoPack Supply",
+          "price": 9.427,
+          "lead_time": 1,
+          "reliability": 0.91,
+          "moq": 7.1,
           "availability": "In stock"
         }
       ],
       "lp_scores": {
-        "Torani Distribution": 0.91,
-        "Metro Foodservice": 0.44
+        "Golden Valley Wholesale": 0.93,
+        "EcoPack Supply": 0.87
       },
       "allocation": [
         {
-          "supplier": "Torani Distribution",
-          "qty": 43.7
+          "supplier": "Golden Valley Wholesale",
+          "qty": 20.9
         },
         {
-          "supplier": "Metro Foodservice",
-          "qty": 4.0
+          "supplier": "EcoPack Supply",
+          "qty": 7.1
         }
       ]
     },
     {
       "sku": "Sugar",
-      "unit": "lb",
-      "on_hand": 135.0,
-      "reorder_point": 25.7,
-      "eoq": 81.9,
-      "safety_stock": 2.2,
-      "status": "OK",
-      "avg_daily_demand": 6.7,
+      "unit": "kg",
+      "on_hand": 1.8,
+      "reorder_point": 2.3,
+      "eoq": 104.4,
+      "safety_stock": 0.4,
+      "status": "Low",
+      "avg_daily_demand": 0.4,
       "suppliers": [
         {
           "sku": "Sugar",
-          "supplier": "Regional Dairy Co-op",
-          "price": 0.85,
-          "lead_time": 3,
-          "reliability": 0.98,
-          "moq": 20,
+          "supplier": "Garden State Dairy",
+          "price": 1.546,
+          "lead_time": 6,
+          "reliability": 0.97,
+          "moq": 14.0,
           "availability": "In stock"
         },
         {
           "sku": "Sugar",
-          "supplier": "Metro Foodservice",
-          "price": 0.9,
+          "supplier": "Union Square Provisions",
+          "price": 1.65,
           "lead_time": 4,
-          "reliability": 0.97,
-          "moq": 10,
+          "reliability": 0.92,
+          "moq": 2.4,
           "availability": "In stock"
         }
       ],
       "lp_scores": {
-        "Regional Dairy Co-op": 0.99,
-        "Metro Foodservice": 0.44
+        "Garden State Dairy": 0.89,
+        "Union Square Provisions": 0.43
       },
       "allocation": [
         {
-          "supplier": "Regional Dairy Co-op",
-          "qty": 71.9
+          "supplier": "Garden State Dairy",
+          "qty": 102.0
+        },
+        {
+          "supplier": "Union Square Provisions",
+          "qty": 2.4
+        }
+      ]
+    },
+    {
+      "sku": "Panini Bread",
+      "unit": "unit",
+      "on_hand": 45.0,
+      "reorder_point": 31.4,
+      "eoq": 881.9,
+      "safety_stock": 5.1,
+      "status": "OK",
+      "avg_daily_demand": 5.8,
+      "suppliers": [
+        {
+          "sku": "Panini Bread",
+          "supplier": "Highland Roasters Co-op",
+          "price": 0.339,
+          "lead_time": 7,
+          "reliability": 0.95,
+          "moq": 9.0,
+          "availability": "Limited"
+        },
+        {
+          "sku": "Panini Bread",
+          "supplier": "Golden Valley Wholesale",
+          "price": 0.36,
+          "lead_time": 2,
+          "reliability": 0.94,
+          "moq": 9.0,
+          "availability": "In stock"
+        }
+      ],
+      "lp_scores": {
+        "Highland Roasters Co-op": 0.37,
+        "Golden Valley Wholesale": 1.08
+      },
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 9.0
+        },
+        {
+          "supplier": "Golden Valley Wholesale",
+          "qty": 872.9
+        }
+      ]
+    },
+    {
+      "sku": "Cocoa powder",
+      "unit": "kg",
+      "on_hand": 3.9,
+      "reorder_point": 1.7,
+      "eoq": 19.1,
+      "safety_stock": 0.3,
+      "status": "OK",
+      "avg_daily_demand": 0.2,
+      "suppliers": [
+        {
+          "sku": "Cocoa powder",
+          "supplier": "Direct Trade Partners",
+          "price": 21.509,
+          "lead_time": 6,
+          "reliability": 0.91,
+          "moq": 4.1,
+          "availability": "In stock"
+        },
+        {
+          "sku": "Cocoa powder",
+          "supplier": "Garden State Dairy",
+          "price": 24.757,
+          "lead_time": 9,
+          "reliability": 0.96,
+          "moq": 6.8,
+          "availability": "Limited"
+        }
+      ],
+      "lp_scores": {
+        "Direct Trade Partners": 0.87,
+        "Garden State Dairy": 0.35
+      },
+      "allocation": [
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 12.3
+        },
+        {
+          "supplier": "Garden State Dairy",
+          "qty": 6.8
+        }
+      ]
+    },
+    {
+      "sku": "Chocolate",
+      "unit": "kg",
+      "on_hand": 1.1,
+      "reorder_point": 1.0,
+      "eoq": 25.3,
+      "safety_stock": 0.2,
+      "status": "Watch",
+      "avg_daily_demand": 0.2,
+      "suppliers": [
+        {
+          "sku": "Chocolate",
+          "supplier": "Union Square Provisions",
+          "price": 11.272,
+          "lead_time": 8,
+          "reliability": 0.92,
+          "moq": 3.7,
+          "availability": "In stock"
+        },
+        {
+          "sku": "Chocolate",
+          "supplier": "Garden State Dairy",
+          "price": 11.799,
+          "lead_time": 2,
+          "reliability": 0.92,
+          "moq": 7.5,
+          "availability": "In stock"
+        }
+      ],
+      "lp_scores": {
+        "Union Square Provisions": 0.85,
+        "Garden State Dairy": 0.58
+      },
+      "allocation": [
+        {
+          "supplier": "Union Square Provisions",
+          "qty": 17.8
+        },
+        {
+          "supplier": "Garden State Dairy",
+          "qty": 7.5
+        }
+      ]
+    },
+    {
+      "sku": "Lemons",
+      "unit": "unit",
+      "on_hand": 10.0,
+      "reorder_point": 20.8,
+      "eoq": 1000.0,
+      "safety_stock": 4.2,
+      "status": "Low",
+      "avg_daily_demand": 6.7,
+      "suppliers": [
+        {
+          "sku": "Lemons",
+          "supplier": "Torani Distribution",
+          "price": 0.333,
+          "lead_time": 2,
+          "reliability": 0.97,
+          "moq": 17.0,
+          "availability": "Limited"
+        },
+        {
+          "sku": "Lemons",
+          "supplier": "EcoPack Supply",
+          "price": 0.299,
+          "lead_time": 3,
+          "reliability": 0.95,
+          "moq": 20.0,
+          "availability": "In stock"
+        }
+      ],
+      "lp_scores": {
+        "Torani Distribution": 0.59,
+        "EcoPack Supply": 0.98
+      },
+      "allocation": [
+        {
+          "supplier": "Torani Distribution",
+          "qty": 17.0
+        },
+        {
+          "supplier": "EcoPack Supply",
+          "qty": 983.0
+        }
+      ]
+    },
+    {
+      "sku": "Ham",
+      "unit": "kg",
+      "on_hand": 2.2,
+      "reorder_point": 1.3,
+      "eoq": 14.6,
+      "safety_stock": 0.3,
+      "status": "OK",
+      "avg_daily_demand": 0.1,
+      "suppliers": [
+        {
+          "sku": "Ham",
+          "supplier": "Coastal Foods Group",
+          "price": 27.287,
+          "lead_time": 8,
+          "reliability": 0.94,
+          "moq": 7.9,
+          "availability": "In stock"
+        },
+        {
+          "sku": "Ham",
+          "supplier": "Metro Foodservice",
+          "price": 25.273,
+          "lead_time": 7,
+          "reliability": 0.95,
+          "moq": 5.1,
+          "availability": "In stock"
+        }
+      ],
+      "lp_scores": {
+        "Coastal Foods Group": 0.36,
+        "Metro Foodservice": 0.87
+      },
+      "allocation": [
+        {
+          "supplier": "Coastal Foods Group",
+          "qty": 7.9
         },
         {
           "supplier": "Metro Foodservice",
-          "qty": 10.0
+          "qty": 6.7
+        }
+      ]
+    },
+    {
+      "sku": "Salami",
+      "unit": "kg",
+      "on_hand": 0.7,
+      "reorder_point": 1.7,
+      "eoq": 24.4,
+      "safety_stock": 0.2,
+      "status": "Low",
+      "avg_daily_demand": 0.2,
+      "suppliers": [
+        {
+          "sku": "Salami",
+          "supplier": "Garden State Dairy",
+          "price": 15.082,
+          "lead_time": 6,
+          "reliability": 0.95,
+          "moq": 2.4,
+          "availability": "In stock"
+        },
+        {
+          "sku": "Salami",
+          "supplier": "Coastal Foods Group",
+          "price": 15.648,
+          "lead_time": 9,
+          "reliability": 0.97,
+          "moq": 3.5,
+          "availability": "In stock"
+        }
+      ],
+      "lp_scores": {
+        "Garden State Dairy": 0.39,
+        "Coastal Foods Group": 0.86
+      },
+      "allocation": [
+        {
+          "supplier": "Garden State Dairy",
+          "qty": 2.4
+        },
+        {
+          "supplier": "Coastal Foods Group",
+          "qty": 22.0
+        }
+      ]
+    },
+    {
+      "sku": "Black Tea",
+      "unit": "kg",
+      "on_hand": 1.9,
+      "reorder_point": 0.1,
+      "eoq": 8.3,
+      "safety_stock": 0.0,
+      "status": "OK",
+      "avg_daily_demand": 0.0,
+      "suppliers": [
+        {
+          "sku": "Black Tea",
+          "supplier": "Torani Distribution",
+          "price": 18.131,
+          "lead_time": 2,
+          "reliability": 0.94,
+          "moq": 6.8,
+          "availability": "In stock"
+        },
+        {
+          "sku": "Black Tea",
+          "supplier": "PlantBase Foods",
+          "price": 15.512,
+          "lead_time": 5,
+          "reliability": 0.94,
+          "moq": 2.4,
+          "availability": "In stock"
+        }
+      ],
+      "lp_scores": {
+        "Torani Distribution": 0.58,
+        "PlantBase Foods": 0.9
+      },
+      "allocation": [
+        {
+          "supplier": "Torani Distribution",
+          "qty": 6.8
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 2.4
         }
       ]
     }
   ],
   "recommendation_queue": [
     {
-      "sku": "Oat Milk",
+      "sku": "Espresso beans",
       "status": "Low",
-      "text": "Oat Milk is at or below its reorder point now. Recommend ordering 58.2 units from PlantBase Foods (53.2 units), which balances price, lead time, and reliability best among current options. Current stock: 6.0 units; reorder point: 22.9 units."
+      "text": "Espresso beans is at or below its reorder point now. Recommend ordering 41.5 units from Highland Roasters Co-op (37.2 units), which balances price, lead time, and reliability best among current options. Current stock: 1.166 units; reorder point: 3.5 units."
     },
     {
-      "sku": "Vanilla Syrup",
+      "sku": "Whole Milk",
       "status": "Low",
-      "text": "Vanilla Syrup is at or below its reorder point now. Recommend ordering 47.7 units from Torani Distribution (43.7 units), which balances price, lead time, and reliability best among current options. Current stock: 8.0 units; reorder point: 15.1 units."
+      "text": "Whole Milk is at or below its reorder point now. Recommend ordering 550.2 units from Regional Dairy Co-op (540.2 units), which balances price, lead time, and reliability best among current options. Current stock: 5.06 units; reorder point: 44.4 units."
+    },
+    {
+      "sku": "Cheddar",
+      "status": "Low",
+      "text": "Cheddar is at or below its reorder point now. Recommend ordering 12.5 units from Garden State Dairy (12.5 units), which balances price, lead time, and reliability best among current options. Current stock: 0.18 units; reorder point: 0.5 units."
+    },
+    {
+      "sku": "Whipped cream",
+      "status": "Low",
+      "text": "Whipped cream is at or below its reorder point now. Recommend ordering 45.4 units from Garden State Dairy (36.4 units), which balances price, lead time, and reliability best among current options. Current stock: 0.83 units; reorder point: 1.3 units."
+    },
+    {
+      "sku": "Barista chocolate syrup",
+      "status": "Low",
+      "text": "Barista chocolate syrup is at or below its reorder point now. Recommend ordering 42.7 units from Garden State Dairy (32.4 units), which balances price, lead time, and reliability best among current options. Current stock: 0.88 units; reorder point: 2.6 units."
+    },
+    {
+      "sku": "Barista caramel sauce",
+      "status": "Low",
+      "text": "Barista caramel sauce is at or below its reorder point now. Recommend ordering 28.0 units from Golden Valley Wholesale (20.9 units), which balances price, lead time, and reliability best among current options. Current stock: 0.09 units; reorder point: 0.5 units."
+    },
+    {
+      "sku": "Sugar",
+      "status": "Low",
+      "text": "Sugar is at or below its reorder point now. Recommend ordering 104.4 units from Garden State Dairy (102.0 units), which balances price, lead time, and reliability best among current options. Current stock: 1.765 units; reorder point: 2.3 units."
+    },
+    {
+      "sku": "Chocolate",
+      "status": "Watch",
+      "text": "Chocolate will hit its reorder point in about 1 day(s). Recommend ordering 25.3 units from Union Square Provisions (17.8 units), which balances price, lead time, and reliability best among current options. Current stock: 1.08 units; reorder point: 1.0 units."
+    },
+    {
+      "sku": "Lemons",
+      "status": "Low",
+      "text": "Lemons is at or below its reorder point now. Recommend ordering 1000.0 units from EcoPack Supply (983.0 units), which balances price, lead time, and reliability best among current options. Current stock: 10.0 units; reorder point: 20.8 units."
+    },
+    {
+      "sku": "Salami",
+      "status": "Low",
+      "text": "Salami is at or below its reorder point now. Recommend ordering 24.4 units from Coastal Foods Group (22.0 units), which balances price, lead time, and reliability best among current options. Current stock: 0.735 units; reorder point: 1.7 units."
     }
   ],
   "forecasts": {
-    "Espresso Beans (Arabica)": [
+    "Espresso beans": [
       {
         "day": 1,
-        "point": 16.8,
-        "low": 13.4,
-        "high": 20.1
+        "point": 0.5,
+        "low": 0.3,
+        "high": 0.6
       },
       {
         "day": 2,
-        "point": 16.2,
-        "low": 12.9,
-        "high": 19.6
+        "point": 0.5,
+        "low": 0.3,
+        "high": 0.6
       },
       {
         "day": 3,
-        "point": 15.5,
-        "low": 12.1,
-        "high": 18.9
+        "point": 0.5,
+        "low": 0.3,
+        "high": 0.6
       },
       {
         "day": 4,
-        "point": 19.5,
-        "low": 16.1,
-        "high": 22.9
+        "point": 0.5,
+        "low": 0.3,
+        "high": 0.6
       },
       {
         "day": 5,
-        "point": 16.2,
-        "low": 12.9,
-        "high": 19.6
+        "point": 0.5,
+        "low": 0.3,
+        "high": 0.6
       },
       {
         "day": 6,
-        "point": 15.0,
-        "low": 11.6,
-        "high": 18.4
+        "point": 0.5,
+        "low": 0.3,
+        "high": 0.6
       },
       {
         "day": 7,
-        "point": 17.0,
-        "low": 13.6,
-        "high": 20.4
+        "point": 0.5,
+        "low": 0.3,
+        "high": 0.6
       },
       {
         "day": 8,
-        "point": 16.8,
-        "low": 13.4,
-        "high": 20.1
+        "point": 0.5,
+        "low": 0.3,
+        "high": 0.6
       },
       {
         "day": 9,
-        "point": 16.2,
-        "low": 12.9,
-        "high": 19.6
+        "point": 0.5,
+        "low": 0.3,
+        "high": 0.6
       },
       {
         "day": 10,
-        "point": 15.5,
-        "low": 12.1,
-        "high": 18.9
+        "point": 0.5,
+        "low": 0.3,
+        "high": 0.6
       },
       {
         "day": 11,
-        "point": 19.5,
-        "low": 16.1,
-        "high": 22.9
+        "point": 0.5,
+        "low": 0.3,
+        "high": 0.6
       },
       {
         "day": 12,
-        "point": 16.2,
-        "low": 12.9,
-        "high": 19.6
+        "point": 0.5,
+        "low": 0.3,
+        "high": 0.6
       },
       {
         "day": 13,
-        "point": 15.0,
-        "low": 11.6,
-        "high": 18.4
+        "point": 0.5,
+        "low": 0.3,
+        "high": 0.6
       },
       {
         "day": 14,
-        "point": 17.0,
-        "low": 13.6,
-        "high": 20.4
+        "point": 0.5,
+        "low": 0.3,
+        "high": 0.6
       }
     ],
     "Whole Milk": [
       {
         "day": 1,
-        "point": 20.2,
-        "low": 16.4,
-        "high": 24.1
+        "point": 8.3,
+        "low": 5.1,
+        "high": 11.6
       },
       {
         "day": 2,
-        "point": 20.2,
-        "low": 16.4,
-        "high": 24.1
+        "point": 8.3,
+        "low": 5.1,
+        "high": 11.6
       },
       {
         "day": 3,
-        "point": 20.8,
-        "low": 16.9,
-        "high": 24.6
+        "point": 8.3,
+        "low": 5.1,
+        "high": 11.6
       },
       {
         "day": 4,
-        "point": 21.5,
-        "low": 17.6,
-        "high": 25.4
+        "point": 8.3,
+        "low": 5.1,
+        "high": 11.6
       },
       {
         "day": 5,
-        "point": 23.8,
-        "low": 19.9,
-        "high": 27.6
+        "point": 8.3,
+        "low": 5.1,
+        "high": 11.6
       },
       {
         "day": 6,
-        "point": 21.6,
-        "low": 17.7,
-        "high": 25.5
+        "point": 8.3,
+        "low": 5.1,
+        "high": 11.6
       },
       {
         "day": 7,
-        "point": 22.8,
-        "low": 18.9,
-        "high": 26.6
+        "point": 8.3,
+        "low": 5.1,
+        "high": 11.6
       },
       {
         "day": 8,
-        "point": 20.2,
-        "low": 16.4,
-        "high": 24.1
+        "point": 8.3,
+        "low": 5.1,
+        "high": 11.6
       },
       {
         "day": 9,
-        "point": 20.2,
-        "low": 16.4,
-        "high": 24.1
+        "point": 8.3,
+        "low": 5.1,
+        "high": 11.6
       },
       {
         "day": 10,
-        "point": 20.8,
-        "low": 16.9,
-        "high": 24.6
+        "point": 8.3,
+        "low": 5.1,
+        "high": 11.6
       },
       {
         "day": 11,
-        "point": 21.5,
-        "low": 17.6,
-        "high": 25.4
+        "point": 8.3,
+        "low": 5.1,
+        "high": 11.6
       },
       {
         "day": 12,
-        "point": 23.8,
-        "low": 19.9,
-        "high": 27.6
+        "point": 8.3,
+        "low": 5.1,
+        "high": 11.6
       },
       {
         "day": 13,
-        "point": 21.6,
-        "low": 17.7,
-        "high": 25.5
+        "point": 8.3,
+        "low": 5.1,
+        "high": 11.6
       },
       {
         "day": 14,
-        "point": 22.8,
-        "low": 18.9,
-        "high": 26.6
+        "point": 8.3,
+        "low": 5.1,
+        "high": 11.6
       }
     ],
-    "Oat Milk": [
+    "Cheddar": [
       {
         "day": 1,
-        "point": 8.0,
-        "low": 6.4,
-        "high": 9.6
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 2,
-        "point": 8.8,
-        "low": 7.1,
-        "high": 10.4
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 3,
-        "point": 7.6,
-        "low": 6.0,
-        "high": 9.2
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 4,
-        "point": 8.0,
-        "low": 6.4,
-        "high": 9.6
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 5,
-        "point": 8.2,
-        "low": 6.6,
-        "high": 9.9
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 6,
-        "point": 8.2,
-        "low": 6.6,
-        "high": 9.9
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 7,
-        "point": 8.0,
-        "low": 6.4,
-        "high": 9.6
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 8,
-        "point": 8.0,
-        "low": 6.4,
-        "high": 9.6
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 9,
-        "point": 8.8,
-        "low": 7.1,
-        "high": 10.4
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 10,
-        "point": 7.6,
-        "low": 6.0,
-        "high": 9.2
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 11,
-        "point": 8.0,
-        "low": 6.4,
-        "high": 9.6
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 12,
-        "point": 8.2,
-        "low": 6.6,
-        "high": 9.9
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 13,
-        "point": 8.2,
-        "low": 6.6,
-        "high": 9.9
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 14,
-        "point": 8.0,
-        "low": 6.4,
-        "high": 9.6
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       }
     ],
-    "Paper Cups (12oz)": [
+    "Mozzarella": [
       {
         "day": 1,
-        "point": 4.8,
-        "low": 3.8,
-        "high": 5.7
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 2,
-        "point": 4.8,
-        "low": 3.8,
-        "high": 5.7
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 3,
-        "point": 5.2,
-        "low": 4.3,
-        "high": 6.2
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 4,
-        "point": 5.2,
-        "low": 4.3,
-        "high": 6.2
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 5,
-        "point": 5.5,
-        "low": 4.5,
-        "high": 6.5
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 6,
-        "point": 5.5,
-        "low": 4.5,
-        "high": 6.5
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 7,
-        "point": 5.2,
-        "low": 4.3,
-        "high": 6.2
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 8,
-        "point": 4.8,
-        "low": 3.8,
-        "high": 5.7
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 9,
-        "point": 4.8,
-        "low": 3.8,
-        "high": 5.7
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 10,
-        "point": 5.2,
-        "low": 4.3,
-        "high": 6.2
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 11,
-        "point": 5.2,
-        "low": 4.3,
-        "high": 6.2
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 12,
-        "point": 5.5,
-        "low": 4.5,
-        "high": 6.5
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 13,
-        "point": 5.5,
-        "low": 4.5,
-        "high": 6.5
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       },
       {
         "day": 14,
-        "point": 5.2,
-        "low": 4.3,
-        "high": 6.2
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.1
       }
     ],
-    "Vanilla Syrup": [
+    "Whipped cream": [
       {
         "day": 1,
-        "point": 3.2,
-        "low": 2.6,
-        "high": 3.9
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
       },
       {
         "day": 2,
-        "point": 3.0,
-        "low": 2.3,
-        "high": 3.7
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
       },
       {
         "day": 3,
-        "point": 2.8,
-        "low": 2.1,
-        "high": 3.4
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
       },
       {
         "day": 4,
-        "point": 3.0,
-        "low": 2.3,
-        "high": 3.7
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
       },
       {
         "day": 5,
-        "point": 3.2,
-        "low": 2.6,
-        "high": 3.9
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
       },
       {
         "day": 6,
-        "point": 3.0,
-        "low": 2.3,
-        "high": 3.7
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
       },
       {
         "day": 7,
-        "point": 3.0,
-        "low": 2.3,
-        "high": 3.7
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
       },
       {
         "day": 8,
-        "point": 3.2,
-        "low": 2.6,
-        "high": 3.9
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
       },
       {
         "day": 9,
-        "point": 3.0,
-        "low": 2.3,
-        "high": 3.7
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
       },
       {
         "day": 10,
-        "point": 2.8,
-        "low": 2.1,
-        "high": 3.4
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
       },
       {
         "day": 11,
-        "point": 3.0,
-        "low": 2.3,
-        "high": 3.7
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
       },
       {
         "day": 12,
-        "point": 3.2,
-        "low": 2.6,
-        "high": 3.9
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
       },
       {
         "day": 13,
-        "point": 3.0,
-        "low": 2.3,
-        "high": 3.7
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
       },
       {
         "day": 14,
-        "point": 3.0,
-        "low": 2.3,
-        "high": 3.7
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      }
+    ],
+    "Barista chocolate syrup": [
+      {
+        "day": 1,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.5
+      },
+      {
+        "day": 2,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.5
+      },
+      {
+        "day": 3,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.5
+      },
+      {
+        "day": 4,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.5
+      },
+      {
+        "day": 5,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.5
+      },
+      {
+        "day": 6,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.5
+      },
+      {
+        "day": 7,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.5
+      },
+      {
+        "day": 8,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.5
+      },
+      {
+        "day": 9,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.5
+      },
+      {
+        "day": 10,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.5
+      },
+      {
+        "day": 11,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.5
+      },
+      {
+        "day": 12,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.5
+      },
+      {
+        "day": 13,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.5
+      },
+      {
+        "day": 14,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.5
+      }
+    ],
+    "Barista white chocolate syrup": [
+      {
+        "day": 1,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 2,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 3,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 4,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 5,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 6,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 7,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 8,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 9,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 10,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 11,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 12,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 13,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 14,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      }
+    ],
+    "Barista caramel sauce": [
+      {
+        "day": 1,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 2,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 3,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 4,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 5,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 6,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 7,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 8,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 9,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 10,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 11,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 12,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 13,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 14,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
       }
     ],
     "Sugar": [
       {
         "day": 1,
-        "point": 7.2,
-        "low": 6.1,
-        "high": 8.4
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.6
       },
       {
         "day": 2,
-        "point": 6.5,
-        "low": 5.3,
-        "high": 7.7
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.6
       },
       {
         "day": 3,
-        "point": 6.0,
-        "low": 4.8,
-        "high": 7.2
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.6
       },
       {
         "day": 4,
-        "point": 6.8,
-        "low": 5.6,
-        "high": 7.9
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.6
       },
       {
         "day": 5,
-        "point": 6.2,
-        "low": 5.1,
-        "high": 7.4
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.6
       },
       {
         "day": 6,
-        "point": 7.2,
-        "low": 6.1,
-        "high": 8.4
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.6
       },
       {
         "day": 7,
-        "point": 7.0,
-        "low": 5.8,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.6
+      },
+      {
+        "day": 8,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.6
+      },
+      {
+        "day": 9,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.6
+      },
+      {
+        "day": 10,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.6
+      },
+      {
+        "day": 11,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.6
+      },
+      {
+        "day": 12,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.6
+      },
+      {
+        "day": 13,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.6
+      },
+      {
+        "day": 14,
+        "point": 0.4,
+        "low": 0.2,
+        "high": 0.6
+      }
+    ],
+    "Panini Bread": [
+      {
+        "day": 1,
+        "point": 5.8,
+        "low": 3.4,
+        "high": 8.2
+      },
+      {
+        "day": 2,
+        "point": 5.8,
+        "low": 3.4,
+        "high": 8.2
+      },
+      {
+        "day": 3,
+        "point": 5.8,
+        "low": 3.4,
+        "high": 8.2
+      },
+      {
+        "day": 4,
+        "point": 5.8,
+        "low": 3.4,
+        "high": 8.2
+      },
+      {
+        "day": 5,
+        "point": 5.8,
+        "low": 3.4,
+        "high": 8.2
+      },
+      {
+        "day": 6,
+        "point": 5.8,
+        "low": 3.4,
+        "high": 8.2
+      },
+      {
+        "day": 7,
+        "point": 5.8,
+        "low": 3.4,
         "high": 8.2
       },
       {
         "day": 8,
-        "point": 7.2,
-        "low": 6.1,
-        "high": 8.4
+        "point": 5.8,
+        "low": 3.4,
+        "high": 8.2
       },
       {
         "day": 9,
-        "point": 6.5,
-        "low": 5.3,
-        "high": 7.7
+        "point": 5.8,
+        "low": 3.4,
+        "high": 8.2
       },
       {
         "day": 10,
-        "point": 6.0,
-        "low": 4.8,
-        "high": 7.2
+        "point": 5.8,
+        "low": 3.4,
+        "high": 8.2
       },
       {
         "day": 11,
-        "point": 6.8,
-        "low": 5.6,
-        "high": 7.9
+        "point": 5.8,
+        "low": 3.4,
+        "high": 8.2
       },
       {
         "day": 12,
-        "point": 6.2,
-        "low": 5.1,
-        "high": 7.4
+        "point": 5.8,
+        "low": 3.4,
+        "high": 8.2
       },
       {
         "day": 13,
-        "point": 7.2,
-        "low": 6.1,
-        "high": 8.4
+        "point": 5.8,
+        "low": 3.4,
+        "high": 8.2
       },
       {
         "day": 14,
-        "point": 7.0,
-        "low": 5.8,
+        "point": 5.8,
+        "low": 3.4,
         "high": 8.2
+      }
+    ],
+    "Cocoa powder": [
+      {
+        "day": 1,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 2,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 3,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 4,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 5,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 6,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 7,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 8,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 9,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 10,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 11,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 12,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 13,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 14,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      }
+    ],
+    "Chocolate": [
+      {
+        "day": 1,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 2,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 3,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 4,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 5,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 6,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 7,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 8,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 9,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 10,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 11,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 12,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 13,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      },
+      {
+        "day": 14,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.2
+      }
+    ],
+    "Lemons": [
+      {
+        "day": 1,
+        "point": 6.7,
+        "low": 4.0,
+        "high": 9.3
+      },
+      {
+        "day": 2,
+        "point": 6.7,
+        "low": 4.0,
+        "high": 9.3
+      },
+      {
+        "day": 3,
+        "point": 6.7,
+        "low": 4.0,
+        "high": 9.3
+      },
+      {
+        "day": 4,
+        "point": 6.7,
+        "low": 4.0,
+        "high": 9.3
+      },
+      {
+        "day": 5,
+        "point": 6.7,
+        "low": 4.0,
+        "high": 9.3
+      },
+      {
+        "day": 6,
+        "point": 6.7,
+        "low": 4.0,
+        "high": 9.3
+      },
+      {
+        "day": 7,
+        "point": 6.7,
+        "low": 4.0,
+        "high": 9.3
+      },
+      {
+        "day": 8,
+        "point": 6.7,
+        "low": 4.0,
+        "high": 9.3
+      },
+      {
+        "day": 9,
+        "point": 6.7,
+        "low": 4.0,
+        "high": 9.3
+      },
+      {
+        "day": 10,
+        "point": 6.7,
+        "low": 4.0,
+        "high": 9.3
+      },
+      {
+        "day": 11,
+        "point": 6.7,
+        "low": 4.0,
+        "high": 9.3
+      },
+      {
+        "day": 12,
+        "point": 6.7,
+        "low": 4.0,
+        "high": 9.3
+      },
+      {
+        "day": 13,
+        "point": 6.7,
+        "low": 4.0,
+        "high": 9.3
+      },
+      {
+        "day": 14,
+        "point": 6.7,
+        "low": 4.0,
+        "high": 9.3
+      }
+    ],
+    "Ham": [
+      {
+        "day": 1,
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.2
+      },
+      {
+        "day": 2,
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.2
+      },
+      {
+        "day": 3,
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.2
+      },
+      {
+        "day": 4,
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.2
+      },
+      {
+        "day": 5,
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.2
+      },
+      {
+        "day": 6,
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.2
+      },
+      {
+        "day": 7,
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.2
+      },
+      {
+        "day": 8,
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.2
+      },
+      {
+        "day": 9,
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.2
+      },
+      {
+        "day": 10,
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.2
+      },
+      {
+        "day": 11,
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.2
+      },
+      {
+        "day": 12,
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.2
+      },
+      {
+        "day": 13,
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.2
+      },
+      {
+        "day": 14,
+        "point": 0.1,
+        "low": 0.0,
+        "high": 0.2
+      }
+    ],
+    "Salami": [
+      {
+        "day": 1,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 2,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 3,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 4,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 5,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 6,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 7,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 8,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 9,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 10,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 11,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 12,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 13,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      },
+      {
+        "day": 14,
+        "point": 0.2,
+        "low": 0.1,
+        "high": 0.3
+      }
+    ],
+    "Black Tea": [
+      {
+        "day": 1,
+        "point": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      {
+        "day": 2,
+        "point": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      {
+        "day": 3,
+        "point": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      {
+        "day": 4,
+        "point": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      {
+        "day": 5,
+        "point": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      {
+        "day": 6,
+        "point": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      {
+        "day": 7,
+        "point": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      {
+        "day": 8,
+        "point": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      {
+        "day": 9,
+        "point": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      {
+        "day": 10,
+        "point": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      {
+        "day": 11,
+        "point": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      {
+        "day": 12,
+        "point": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      {
+        "day": 13,
+        "point": 0.0,
+        "low": 0.0,
+        "high": 0.0
+      },
+      {
+        "day": 14,
+        "point": 0.0,
+        "low": 0.0,
+        "high": 0.0
       }
     ]
   }
