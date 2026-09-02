@@ -1,0 +1,406 @@
+<style>
+  :root{
+    --paper:#EFE7D6;
+    --paper-dim:#E4DAC4;
+    --roast:#2E2118;
+    --roast-soft:#4A392C;
+    --olive:#5F6B3E;
+    --olive-soft:#8A9560;
+    --copper:#A85C2A;
+    --ink:#2B211B;
+    --ink-faint:#7A6E5E;
+    --line:#D9CCAE;
+    --card:#F7F2E7;
+    --white:#FFFDF8;
+  }
+  *{box-sizing:border-box;}
+  .brew-app{
+    font-family: Georgia, 'Iowan Old Style', 'Palatino Linotype', serif;
+    background:var(--paper);
+    color:var(--ink);
+    display:flex;
+    min-height:640px;
+    border:1px solid var(--line);
+    border-radius:6px;
+    overflow:hidden;
+  }
+  .brew-nav{
+    width:190px;
+    background:var(--roast);
+    color:var(--paper);
+    padding:22px 0;
+    flex-shrink:0;
+  }
+  .brew-nav .brand{
+    font-size:15px;
+    letter-spacing:0.02em;
+    padding:0 20px 18px 20px;
+    border-bottom:1px solid rgba(239,231,214,0.18);
+    margin-bottom:14px;
+  }
+  .brew-nav .brand small{
+    display:block;
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-size:10.5px;
+    color:var(--olive-soft);
+    margin-top:3px;
+    letter-spacing:0.03em;
+  }
+  .brew-nav button{
+    display:block;
+    width:100%;
+    text-align:left;
+    background:none;
+    border:none;
+    color:var(--paper-dim);
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+    font-size:13.5px;
+    padding:10px 20px;
+    cursor:pointer;
+    border-left:3px solid transparent;
+  }
+  .brew-nav button.active{
+    background:rgba(239,231,214,0.08);
+    border-left:3px solid var(--olive-soft);
+    color:var(--white);
+  }
+  .brew-nav button:hover{ color:var(--white); }
+
+  .brew-main{
+    flex:1;
+    padding:26px 30px 34px 30px;
+    overflow-y:auto;
+    font-family: -apple-system, 'Segoe UI', sans-serif;
+  }
+  .brew-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    margin-bottom:4px;
+    flex-wrap:wrap;
+    gap:8px;
+  }
+  .brew-header h1{
+    font-family: Georgia, serif;
+    font-size:23px;
+    margin:0;
+    color:var(--roast);
+    font-weight:600;
+  }
+  .brew-header .range{
+    font-size:12px;
+    color:var(--ink-faint);
+    background:var(--card);
+    border:1px solid var(--line);
+    padding:4px 10px;
+    border-radius:20px;
+  }
+  .brew-sub{
+    font-size:12.5px;
+    color:var(--ink-faint);
+    margin-bottom:20px;
+  }
+
+  .metric-row{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+    margin-bottom:26px;
+  }
+  .metric{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:5px;
+    padding:14px 16px;
+  }
+  .metric .num{
+    font-family:Georgia, serif;
+    font-size:26px;
+    color:var(--roast);
+    line-height:1;
+  }
+  .metric .num.alert{ color:var(--copper); }
+  .metric .lbl{
+    font-size:11.5px;
+    color:var(--ink-faint);
+    margin-top:5px;
+  }
+
+  .panel{
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:5px;
+    padding:18px 20px;
+    margin-bottom:22px;
+  }
+  .panel h2{
+    font-family:Georgia, serif;
+    font-size:16px;
+    margin:0 0 12px 0;
+    color:var(--roast-soft);
+  }
+
+  table{ width:100%; border-collapse:collapse; font-size:13px; }
+  th{
+    text-align:left;
+    font-size:11px;
+    color:var(--ink-faint);
+    font-weight:600;
+    padding:6px 8px;
+    border-bottom:1px solid var(--line);
+  }
+  td{
+    padding:8px 8px;
+    border-bottom:1px solid var(--line);
+    vertical-align:middle;
+  }
+  tr:last-child td{ border-bottom:none; }
+  tr.clickable{ cursor:pointer; }
+  tr.clickable:hover{ background:rgba(95,107,62,0.06); }
+
+  .bar-wrap{ width:110px; height:7px; background:var(--paper-dim); border-radius:4px; overflow:hidden; }
+  .bar-fill{ height:100%; border-radius:4px; }
+  .status-pill{
+    display:inline-block;
+    font-size:10.5px;
+    padding:2px 8px;
+    border-radius:20px;
+    font-weight:600;
+    letter-spacing:0.01em;
+  }
+  .status-OK{ background:rgba(95,107,62,0.15); color:var(--olive); }
+  .status-Watch{ background:rgba(168,92,42,0.14); color:var(--copper); }
+  .status-Low{ background:rgba(168,92,42,0.9); color:var(--white); }
+
+  .rec-card{
+    border:1px solid var(--line);
+    border-left:4px solid var(--copper);
+    background:var(--white);
+    border-radius:4px;
+    padding:12px 14px;
+    margin-bottom:10px;
+  }
+  .rec-card .rec-head{
+    display:flex;
+    justify-content:space-between;
+    font-size:13px;
+    font-weight:600;
+    color:var(--roast);
+    margin-bottom:5px;
+  }
+  .rec-card p{ font-size:12.8px; color:var(--ink); line-height:1.5; margin:0 0 10px 0; }
+  .rec-actions button{
+    font-family:-apple-system,'Segoe UI',sans-serif;
+    font-size:12px;
+    padding:5px 12px;
+    border-radius:4px;
+    cursor:pointer;
+    margin-right:8px;
+    border:1px solid var(--line);
+    background:var(--card);
+    color:var(--ink);
+  }
+  .rec-actions button.approve{ background:var(--olive); color:var(--white); border:none; }
+  .rec-empty{ font-size:12.5px; color:var(--ink-faint); font-style:italic; }
+
+  .sku-select{
+    font-family:-apple-system,'Segoe UI',sans-serif;
+    font-size:13px;
+    padding:6px 10px;
+    border-radius:4px;
+    border:1px solid var(--line);
+    background:var(--white);
+    color:var(--ink);
+    margin-bottom:14px;
+  }
+
+  .forecast-chart{ width:100%; height:130px; }
+
+  .footnote{
+    font-size:11px;
+    color:var(--ink-faint);
+    border-top:1px solid var(--line);
+    padding-top:10px;
+    margin-top:4px;
+  }
+
+  @media (max-width:640px){
+    .brew-nav{ display:none; }
+    .metric-row{ grid-template-columns:repeat(2,1fr); }
+  }
+</style>
+
+<div class="brew-app">
+  <div class="brew-nav">
+    <div class="brand">Cedar &amp; Rye Coffee<small>Decision support system</small></div>
+    <button class="active" data-view="dashboard">Dashboard</button>
+    <button data-view="inventory">Inventory</button>
+    <button data-view="suppliers">Suppliers</button>
+    <button data-view="forecasts">Forecasts</button>
+    <button data-view="decisions">Decision log</button>
+  </div>
+
+  <div class="brew-main">
+    <div class="brew-header">
+      <h1>Operations dashboard</h1>
+      <span class="range" id="range-badge"></span>
+    </div>
+    <div class="brew-sub">Prototype running on simulated data — placeholder until a real supplier/POS feed is connected.</div>
+
+    <div class="metric-row" id="metric-row"></div>
+
+    <div class="panel">
+      <h2>Current stock levels</h2>
+      <table>
+        <thead><tr><th>Ingredient</th><th>On hand</th><th>Reorder pt.</th><th>Status</th><th>Level</th></tr></thead>
+        <tbody id="stock-table"></tbody>
+      </table>
+    </div>
+
+    <div class="panel">
+      <h2>Recommendation queue</h2>
+      <div id="rec-queue"></div>
+    </div>
+
+    <div class="panel">
+      <h2>Supplier comparison</h2>
+      <select class="sku-select" id="sku-select"></select>
+      <table>
+        <thead><tr><th>Supplier</th><th>Price/unit</th><th>Lead time</th><th>Availability</th><th>LP score</th></tr></thead>
+        <tbody id="supplier-table"></tbody>
+      </table>
+    </div>
+
+    <div class="panel">
+      <h2>14-day forecast</h2>
+      <select class="sku-select" id="forecast-select"></select>
+      <svg class="forecast-chart" id="forecast-chart" viewBox="0 0 600 130"></svg>
+    </div>
+
+    <div class="footnote">Espresso Beans · Whole Milk · Oat Milk · Paper Cups · Vanilla Syrup · Sugar — synthetic daily data, 2021-01-01 to 2026-08-31. Forecasting: seasonal-naive + rolling std. Reorder logic: EOQ with a ~95% service-level safety stock. Supplier choice: LP minimizing an effective cost that penalizes low reliability and limited availability.</div>
+  </div>
+</div>
+
+<script>
+(function(){
+  const DATA = {"metrics": {"active_skus": 6, "low_stock_alerts": 2, "pending_recommendations": 2, "historical_stockout_days": 224, "data_range": "2021-01-01 to 2026-08-31"}, "sku_cards": [{"sku": "Espresso Beans (Arabica)", "unit": "lb", "on_hand": 205.0, "reorder_point": 113.7, "eoq": 148.8, "safety_stock": 8.5, "status": "OK", "avg_daily_demand": 16.6, "suppliers": [{"sku": "Espresso Beans (Arabica)", "supplier": "Highland Roasters Co-op", "price": 6.75, "lead_time": 6, "reliability": 0.95, "moq": 25, "availability": "In stock"}, {"sku": "Espresso Beans (Arabica)", "supplier": "Continental Green Coffee", "price": 6.4, "lead_time": 9, "reliability": 0.9, "moq": 50, "availability": "In stock"}, {"sku": "Espresso Beans (Arabica)", "supplier": "Direct Trade Partners", "price": 7.2, "lead_time": 4, "reliability": 0.98, "moq": 10, "availability": "Limited"}], "lp_scores": {"Highland Roasters Co-op": 0.88, "Continental Green Coffee": 0.67, "Direct Trade Partners": 0.44}, "allocation": [{"supplier": "Highland Roasters Co-op", "qty": 88.8}, {"supplier": "Continental Green Coffee", "qty": 50.0}, {"supplier": "Direct Trade Partners", "qty": 10.0}]}, {"sku": "Whole Milk", "unit": "gal", "on_hand": 53.0, "reorder_point": 37.1, "eoq": 103.8, "safety_stock": 4.8, "status": "OK", "avg_daily_demand": 21.6, "suppliers": [{"sku": "Whole Milk", "supplier": "Garden State Dairy", "price": 3.1, "lead_time": 1, "reliability": 0.99, "moq": 5, "availability": "In stock"}, {"sku": "Whole Milk", "supplier": "Regional Dairy Co-op", "price": 2.95, "lead_time": 2, "reliability": 0.94, "moq": 10, "availability": "In stock"}], "lp_scores": {"Garden State Dairy": 1.4, "Regional Dairy Co-op": 0.58}, "allocation": [{"supplier": "Garden State Dairy", "qty": 93.8}, {"supplier": "Regional Dairy Co-op", "qty": 10.0}]}, {"sku": "Oat Milk", "unit": "gal", "on_hand": 6.0, "reorder_point": 22.9, "eoq": 58.2, "safety_stock": 2.6, "status": "Low", "avg_daily_demand": 8.1, "suppliers": [{"sku": "Oat Milk", "supplier": "PlantBase Foods", "price": 4.5, "lead_time": 3, "reliability": 0.93, "moq": 5, "availability": "In stock"}, {"sku": "Oat Milk", "supplier": "Regional Dairy Co-op", "price": 4.8, "lead_time": 2, "reliability": 0.96, "moq": 5, "availability": "Limited"}], "lp_scores": {"PlantBase Foods": 0.98, "Regional Dairy Co-op": 0.59}, "allocation": [{"supplier": "PlantBase Foods", "qty": 53.2}, {"supplier": "Regional Dairy Co-op", "qty": 5.0}]}, {"sku": "Paper Cups (12oz)", "unit": "case", "on_hand": 129.0, "reorder_point": 33.5, "eoq": 72.0, "safety_stock": 2.4, "status": "OK", "avg_daily_demand": 5.2, "suppliers": [{"sku": "Paper Cups (12oz)", "supplier": "EcoPack Supply", "price": 32.0, "lead_time": 8, "reliability": 0.92, "moq": 3, "availability": "In stock"}, {"sku": "Paper Cups (12oz)", "supplier": "Metro Foodservice", "price": 35.5, "lead_time": 4, "reliability": 0.97, "moq": 2, "availability": "In stock"}], "lp_scores": {"EcoPack Supply": 0.85, "Metro Foodservice": 0.44}, "allocation": [{"supplier": "EcoPack Supply", "qty": 70.0}, {"supplier": "Metro Foodservice", "qty": 2.0}]}, {"sku": "Vanilla Syrup", "unit": "btl", "on_hand": 8.0, "reorder_point": 15.1, "eoq": 47.7, "safety_stock": 1.5, "status": "Low", "avg_daily_demand": 3.0, "suppliers": [{"sku": "Vanilla Syrup", "supplier": "Torani Distribution", "price": 9.25, "lead_time": 5, "reliability": 0.96, "moq": 6, "availability": "In stock"}, {"sku": "Vanilla Syrup", "supplier": "Metro Foodservice", "price": 9.9, "lead_time": 4, "reliability": 0.97, "moq": 4, "availability": "In stock"}], "lp_scores": {"Torani Distribution": 0.91, "Metro Foodservice": 0.44}, "allocation": [{"supplier": "Torani Distribution", "qty": 43.7}, {"supplier": "Metro Foodservice", "qty": 4.0}]}, {"sku": "Sugar", "unit": "lb", "on_hand": 135.0, "reorder_point": 25.7, "eoq": 81.9, "safety_stock": 2.2, "status": "OK", "avg_daily_demand": 6.7, "suppliers": [{"sku": "Sugar", "supplier": "Regional Dairy Co-op", "price": 0.85, "lead_time": 3, "reliability": 0.98, "moq": 20, "availability": "In stock"}, {"sku": "Sugar", "supplier": "Metro Foodservice", "price": 0.9, "lead_time": 4, "reliability": 0.97, "moq": 10, "availability": "In stock"}], "lp_scores": {"Regional Dairy Co-op": 0.99, "Metro Foodservice": 0.44}, "allocation": [{"supplier": "Regional Dairy Co-op", "qty": 71.9}, {"supplier": "Metro Foodservice", "qty": 10.0}]}], "recommendation_queue": [{"sku": "Oat Milk", "status": "Low", "text": "Oat Milk is at or below its reorder point now. Recommend ordering 58.2 units from PlantBase Foods (53.2 units), which balances price, lead time, and reliability best among current options. Current stock: 6.0 units; reorder point: 22.9 units."}, {"sku": "Vanilla Syrup", "status": "Low", "text": "Vanilla Syrup is at or below its reorder point now. Recommend ordering 47.7 units from Torani Distribution (43.7 units), which balances price, lead time, and reliability best among current options. Current stock: 8.0 units; reorder point: 15.1 units."}], "forecasts": {"Espresso Beans (Arabica)": [{"day": 1, "point": 16.8, "low": 13.4, "high": 20.1}, {"day": 2, "point": 16.2, "low": 12.9, "high": 19.6}, {"day": 3, "point": 15.5, "low": 12.1, "high": 18.9}, {"day": 4, "point": 19.5, "low": 16.1, "high": 22.9}, {"day": 5, "point": 16.2, "low": 12.9, "high": 19.6}, {"day": 6, "point": 15.0, "low": 11.6, "high": 18.4}, {"day": 7, "point": 17.0, "low": 13.6, "high": 20.4}, {"day": 8, "point": 16.8, "low": 13.4, "high": 20.1}, {"day": 9, "point": 16.2, "low": 12.9, "high": 19.6}, {"day": 10, "point": 15.5, "low": 12.1, "high": 18.9}, {"day": 11, "point": 19.5, "low": 16.1, "high": 22.9}, {"day": 12, "point": 16.2, "low": 12.9, "high": 19.6}, {"day": 13, "point": 15.0, "low": 11.6, "high": 18.4}, {"day": 14, "point": 17.0, "low": 13.6, "high": 20.4}], "Whole Milk": [{"day": 1, "point": 20.2, "low": 16.4, "high": 24.1}, {"day": 2, "point": 20.2, "low": 16.4, "high": 24.1}, {"day": 3, "point": 20.8, "low": 16.9, "high": 24.6}, {"day": 4, "point": 21.5, "low": 17.6, "high": 25.4}, {"day": 5, "point": 23.8, "low": 19.9, "high": 27.6}, {"day": 6, "point": 21.6, "low": 17.7, "high": 25.5}, {"day": 7, "point": 22.8, "low": 18.9, "high": 26.6}, {"day": 8, "point": 20.2, "low": 16.4, "high": 24.1}, {"day": 9, "point": 20.2, "low": 16.4, "high": 24.1}, {"day": 10, "point": 20.8, "low": 16.9, "high": 24.6}, {"day": 11, "point": 21.5, "low": 17.6, "high": 25.4}, {"day": 12, "point": 23.8, "low": 19.9, "high": 27.6}, {"day": 13, "point": 21.6, "low": 17.7, "high": 25.5}, {"day": 14, "point": 22.8, "low": 18.9, "high": 26.6}], "Oat Milk": [{"day": 1, "point": 8.0, "low": 6.4, "high": 9.6}, {"day": 2, "point": 8.8, "low": 7.1, "high": 10.4}, {"day": 3, "point": 7.6, "low": 6.0, "high": 9.2}, {"day": 4, "point": 8.0, "low": 6.4, "high": 9.6}, {"day": 5, "point": 8.2, "low": 6.6, "high": 9.9}, {"day": 6, "point": 8.2, "low": 6.6, "high": 9.9}, {"day": 7, "point": 8.0, "low": 6.4, "high": 9.6}, {"day": 8, "point": 8.0, "low": 6.4, "high": 9.6}, {"day": 9, "point": 8.8, "low": 7.1, "high": 10.4}, {"day": 10, "point": 7.6, "low": 6.0, "high": 9.2}, {"day": 11, "point": 8.0, "low": 6.4, "high": 9.6}, {"day": 12, "point": 8.2, "low": 6.6, "high": 9.9}, {"day": 13, "point": 8.2, "low": 6.6, "high": 9.9}, {"day": 14, "point": 8.0, "low": 6.4, "high": 9.6}], "Paper Cups (12oz)": [{"day": 1, "point": 4.8, "low": 3.8, "high": 5.7}, {"day": 2, "point": 4.8, "low": 3.8, "high": 5.7}, {"day": 3, "point": 5.2, "low": 4.3, "high": 6.2}, {"day": 4, "point": 5.2, "low": 4.3, "high": 6.2}, {"day": 5, "point": 5.5, "low": 4.5, "high": 6.5}, {"day": 6, "point": 5.5, "low": 4.5, "high": 6.5}, {"day": 7, "point": 5.2, "low": 4.3, "high": 6.2}, {"day": 8, "point": 4.8, "low": 3.8, "high": 5.7}, {"day": 9, "point": 4.8, "low": 3.8, "high": 5.7}, {"day": 10, "point": 5.2, "low": 4.3, "high": 6.2}, {"day": 11, "point": 5.2, "low": 4.3, "high": 6.2}, {"day": 12, "point": 5.5, "low": 4.5, "high": 6.5}, {"day": 13, "point": 5.5, "low": 4.5, "high": 6.5}, {"day": 14, "point": 5.2, "low": 4.3, "high": 6.2}], "Vanilla Syrup": [{"day": 1, "point": 3.2, "low": 2.6, "high": 3.9}, {"day": 2, "point": 3.0, "low": 2.3, "high": 3.7}, {"day": 3, "point": 2.8, "low": 2.1, "high": 3.4}, {"day": 4, "point": 3.0, "low": 2.3, "high": 3.7}, {"day": 5, "point": 3.2, "low": 2.6, "high": 3.9}, {"day": 6, "point": 3.0, "low": 2.3, "high": 3.7}, {"day": 7, "point": 3.0, "low": 2.3, "high": 3.7}, {"day": 8, "point": 3.2, "low": 2.6, "high": 3.9}, {"day": 9, "point": 3.0, "low": 2.3, "high": 3.7}, {"day": 10, "point": 2.8, "low": 2.1, "high": 3.4}, {"day": 11, "point": 3.0, "low": 2.3, "high": 3.7}, {"day": 12, "point": 3.2, "low": 2.6, "high": 3.9}, {"day": 13, "point": 3.0, "low": 2.3, "high": 3.7}, {"day": 14, "point": 3.0, "low": 2.3, "high": 3.7}], "Sugar": [{"day": 1, "point": 7.2, "low": 6.1, "high": 8.4}, {"day": 2, "point": 6.5, "low": 5.3, "high": 7.7}, {"day": 3, "point": 6.0, "low": 4.8, "high": 7.2}, {"day": 4, "point": 6.8, "low": 5.6, "high": 7.9}, {"day": 5, "point": 6.2, "low": 5.1, "high": 7.4}, {"day": 6, "point": 7.2, "low": 6.1, "high": 8.4}, {"day": 7, "point": 7.0, "low": 5.8, "high": 8.2}, {"day": 8, "point": 7.2, "low": 6.1, "high": 8.4}, {"day": 9, "point": 6.5, "low": 5.3, "high": 7.7}, {"day": 10, "point": 6.0, "low": 4.8, "high": 7.2}, {"day": 11, "point": 6.8, "low": 5.6, "high": 7.9}, {"day": 12, "point": 6.2, "low": 5.1, "high": 7.4}, {"day": 13, "point": 7.2, "low": 6.1, "high": 8.4}, {"day": 14, "point": 7.0, "low": 5.8, "high": 8.2}]}};
+
+  const statusColor = (s) => s === "Low" ? "var(--copper)" : s === "Watch" ? "var(--olive-soft)" : "var(--olive)";
+
+  function renderMetrics(){
+    const m = DATA.metrics;
+    document.getElementById('range-badge').textContent = m.data_range;
+    const items = [
+      {num:m.active_skus, lbl:"Active SKUs", alert:false},
+      {num:m.low_stock_alerts, lbl:"Low stock alerts", alert:m.low_stock_alerts>0},
+      {num:m.pending_recommendations, lbl:"Pending recommendations", alert:m.pending_recommendations>0},
+      {num:m.historical_stockout_days, lbl:"Historical stockout days", alert:false},
+    ];
+    document.getElementById('metric-row').innerHTML = items.map(i =>
+      `<div class="metric"><div class="num ${i.alert?'alert':''}">${i.num}</div><div class="lbl">${i.lbl}</div></div>`
+    ).join('');
+  }
+
+  function renderStockTable(){
+    const rows = DATA.sku_cards.map(c => {
+      const pct = Math.min(100, Math.round((c.on_hand / (c.reorder_point*2.2)) * 100));
+      const color = c.status === "Low" ? "var(--copper)" : c.status === "Watch" ? "var(--olive-soft)" : "var(--olive)";
+      return `<tr>
+        <td>${c.sku}</td>
+        <td>${c.on_hand} ${c.unit}</td>
+        <td>${c.reorder_point} ${c.unit}</td>
+        <td><span class="status-pill status-${c.status}">${c.status}</span></td>
+        <td><div class="bar-wrap"><div class="bar-fill" style="width:${pct}%;background:${color};"></div></div></td>
+      </tr>`;
+    }).join('');
+    document.getElementById('stock-table').innerHTML = rows;
+  }
+
+  function renderQueue(){
+    const q = DATA.recommendation_queue;
+    const el = document.getElementById('rec-queue');
+    if(!q.length){ el.innerHTML = '<div class="rec-empty">No open recommendations right now — everything is above its reorder point.</div>'; return; }
+    el.innerHTML = q.map(r => `
+      <div class="rec-card" data-sku="${r.sku}">
+        <div class="rec-head"><span>${r.sku}</span><span class="status-pill status-${r.status}">${r.status}</span></div>
+        <p>${r.text}</p>
+        <div class="rec-actions">
+          <button class="approve">Approve</button>
+          <button class="adjust">Adjust</button>
+        </div>
+      </div>`).join('');
+    el.querySelectorAll('.approve').forEach(btn => btn.addEventListener('click', (e) => {
+      const card = e.target.closest('.rec-card');
+      card.style.opacity = '0.45';
+      card.querySelector('.rec-head').innerHTML += ' <span style="font-size:11px;color:var(--olive);">— approved</span>';
+      btn.parentElement.innerHTML = '<span style="font-size:11.5px;color:var(--ink-faint);">Sent to supplier queue.</span>';
+    }));
+    el.querySelectorAll('.adjust').forEach(btn => btn.addEventListener('click', (e) => {
+      alert('In the full build this opens an edit form for quantity/supplier before approval.');
+    }));
+  }
+
+  function populateSelects(){
+    const skuNames = DATA.sku_cards.map(c => c.sku);
+    ['sku-select','forecast-select'].forEach(id => {
+      const sel = document.getElementById(id);
+      sel.innerHTML = skuNames.map(s => `<option value="${s}">${s}</option>`).join('');
+    });
+  }
+
+  function renderSuppliers(sku){
+    const card = DATA.sku_cards.find(c => c.sku === sku);
+    const scores = card.lp_scores || {};
+    const rows = card.suppliers.map(s => {
+      const isTop = card.allocation.some(a => a.supplier === s.supplier);
+      return `<tr style="${isTop?'background:rgba(95,107,62,0.08);':''}">
+        <td>${s.supplier}${isTop?' <span style=\"font-size:10px;color:var(--olive);\">chosen</span>':''}</td>
+        <td>$${s.price.toFixed(2)}</td>
+        <td>${s.lead_time}d</td>
+        <td>${s.availability}</td>
+        <td>${scores[s.supplier] !== undefined ? scores[s.supplier] : '—'}</td>
+      </tr>`;
+    }).join('');
+    document.getElementById('supplier-table').innerHTML = rows;
+  }
+
+  function renderForecast(sku){
+    const f = DATA.forecasts[sku];
+    const svg = document.getElementById('forecast-chart');
+    const w = 600, h = 130, pad = 24;
+    const allVals = f.flatMap(d => [d.low, d.high]);
+    const maxV = Math.max(...allVals) * 1.1;
+    const x = i => pad + (i/(f.length-1)) * (w - pad*2);
+    const y = v => h - pad - (v/maxV) * (h - pad*1.6);
+
+    const bandPath = f.map((d,i) => `${x(i)},${y(d.high)}`).join(' L ') +
+      ' L ' + f.slice().reverse().map((d,i) => `${x(f.length-1-i)},${y(d.low)}`).join(' L ');
+    const linePath = 'M ' + f.map((d,i) => `${x(i)},${y(d.point)}`).join(' L ');
+
+    svg.innerHTML = `
+      <polygon points="${bandPath}" fill="var(--olive-soft)" opacity="0.18"></polygon>
+      <path d="${linePath}" fill="none" stroke="var(--roast-soft)" stroke-width="2"></path>
+      ${f.map((d,i) => `<circle cx="${x(i)}" cy="${y(d.point)}" r="2.5" fill="var(--copper)"></circle>`).join('')}
+      <text x="${pad}" y="${h-6}" font-size="10" fill="var(--ink-faint)">day 1</text>
+      <text x="${w-pad-40}" y="${h-6}" font-size="10" fill="var(--ink-faint)">day ${f.length}</text>
+    `;
+  }
+
+  renderMetrics();
+  renderStockTable();
+  renderQueue();
+  populateSelects();
+  renderSuppliers(DATA.sku_cards[0].sku);
+  renderForecast(DATA.sku_cards[0].sku);
+
+  document.getElementById('sku-select').addEventListener('change', e => renderSuppliers(e.target.value));
+  document.getElementById('forecast-select').addEventListener('change', e => renderForecast(e.target.value));
+
+  document.querySelectorAll('.brew-nav button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.brew-nav button').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    });
+  });
+})();
+</script>
