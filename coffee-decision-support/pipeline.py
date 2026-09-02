@@ -188,14 +188,17 @@ def translate_with_claude(sku, eoq_result, supplier_choice, days_until_reorder, 
         return translate_rule_based(sku, eoq_result, supplier_choice, days_until_reorder, current_stock)
     try:
         import anthropic
-        client = anthropic.Anthropic(api_key=api_key)
+        # identity-linked API keys require the target workspace on every request
+        workspace_id = os.environ.get("ANTHROPIC_WORKSPACE_ID")
+        default_headers = {"anthropic-workspace-id": workspace_id} if workspace_id else None
+        client = anthropic.Anthropic(api_key=api_key, default_headers=default_headers)
         payload = {
             "sku": sku, "eoq": eoq_result, "supplier_choice": supplier_choice,
             "days_until_reorder": days_until_reorder, "current_stock": current_stock,
         }
         msg = client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=200,
+            model="claude-sonnet-5",
+            max_tokens=1200,
             messages=[{
                 "role": "user",
                 "content": (
@@ -207,7 +210,10 @@ def translate_with_claude(sku, eoq_result, supplier_choice, days_until_reorder, 
                 ),
             }],
         )
-        return msg.content[0].text
+        # extended thinking (on by default for some workspaces) puts a
+        # ThinkingBlock before the TextBlock -- find the text block explicitly
+        text_block = next(b for b in msg.content if b.type == "text")
+        return text_block.text
     except Exception as e:
         return translate_rule_based(sku, eoq_result, supplier_choice, days_until_reorder, current_stock)
 
