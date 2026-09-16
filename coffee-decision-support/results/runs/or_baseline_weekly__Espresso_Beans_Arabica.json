@@ -1,0 +1,4055 @@
+{
+  "policy": "or_baseline_weekly",
+  "sku": "Espresso Beans (Arabica)",
+  "start_date": "2025-08-31",
+  "end_date": "2026-08-31",
+  "days_simulated": 366,
+  "total_holding_cost": 1602.82,
+  "total_ordering_cost": 1600.0,
+  "total_cost": 3202.82,
+  "order_count": 40,
+  "stockout_days": 33,
+  "stockout_units": 427.7,
+  "total_demand": 6683.0,
+  "service_level": 0.936,
+  "decisions": [
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-08-31",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 16.96,
+      "reorder_point": 116.1,
+      "safety_stock": 8.6,
+      "reasoning": "On-hand (138.0) is above the reorder point (116.1); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 30.66,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-09-07",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 151.7,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 91.7
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 17.25,
+      "reorder_point": 118.2,
+      "safety_stock": 8.9,
+      "reasoning": "On-hand (36.0) is at or below the reorder point (118.2). Ordering 151.7 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 6.76,
+        "stockout_units": 37.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-09-14",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 148.8,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 88.8
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 16.61,
+      "reorder_point": 120.4,
+      "safety_stock": 15.2,
+      "reasoning": "On-hand (70.7) is at or below the reorder point (120.4). Ordering 148.8 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 23.5,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-09-21",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 148.3,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 88.3
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 16.49,
+      "reorder_point": 120.2,
+      "safety_stock": 15.8,
+      "reasoning": "On-hand (100.5) is at or below the reorder point (120.2). Ordering 148.3 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 34.19,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-09-28",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 90.0
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 16.87,
+      "reorder_point": 121.9,
+      "safety_stock": 15.0,
+      "reasoning": "On-hand (120.8) is at or below the reorder point (121.9). Ordering 150.0 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 41.74,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-10-05",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 17.24,
+      "reorder_point": 123.9,
+      "safety_stock": 14.7,
+      "reasoning": "On-hand (140.8) is above the reorder point (123.9); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 43.3,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-10-12",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 154.6,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 94.6
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 17.93,
+      "reorder_point": 121.5,
+      "safety_stock": 8.0,
+      "reasoning": "On-hand (65.8) is at or below the reorder point (121.5). Ordering 154.6 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 10.92,
+        "stockout_units": 30.2,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-10-19",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 155.2,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 95.2
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 18.07,
+      "reorder_point": 123.0,
+      "safety_stock": 8.5,
+      "reasoning": "On-hand (77.6) is at or below the reorder point (123.0). Ordering 155.2 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 25.04,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-10-26",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 155.2,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 95.2
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 18.07,
+      "reorder_point": 122.4,
+      "safety_stock": 8.0,
+      "reasoning": "On-hand (104.8) is at or below the reorder point (122.4). Ordering 155.2 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 35.15,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-11-02",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 156.3,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 96.3
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 18.32,
+      "reorder_point": 124.8,
+      "safety_stock": 8.8,
+      "reasoning": "On-hand (123.0) is at or below the reorder point (124.8). Ordering 156.3 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 43.04,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-11-09",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 18.43,
+      "reorder_point": 124.7,
+      "safety_stock": 8.0,
+      "reasoning": "On-hand (151.3) is above the reorder point (124.7); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 46.09,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-11-16",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 158.4,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 98.4
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 18.82,
+      "reorder_point": 127.2,
+      "safety_stock": 8.0,
+      "reasoning": "On-hand (67.3) is at or below the reorder point (127.2). Ordering 158.4 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 10.82,
+        "stockout_units": 38.7,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-11-23",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 159.3,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 99.3
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 19.04,
+      "reorder_point": 129.9,
+      "safety_stock": 9.4,
+      "reasoning": "On-hand (80.4) is at or below the reorder point (129.9). Ordering 159.3 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 23.95,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-11-30",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 159.3,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 99.3
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 19.04,
+      "reorder_point": 129.9,
+      "safety_stock": 9.4,
+      "reasoning": "On-hand (102.7) is at or below the reorder point (129.9). Ordering 159.3 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 32.83,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-12-07",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 160.2,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 100.2
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 19.25,
+      "reorder_point": 132.2,
+      "safety_stock": 10.3,
+      "reasoning": "On-hand (128.0) is at or below the reorder point (132.2). Ordering 160.2 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 42.01,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-12-14",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 19.61,
+      "reorder_point": 133.6,
+      "safety_stock": 9.4,
+      "reasoning": "On-hand (144.2) is above the reorder point (133.6); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 25.63,
+        "stockout_units": 7.8,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-12-21",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 170.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 110.0
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 21.66,
+      "reorder_point": 173.8,
+      "safety_stock": 36.6,
+      "reasoning": "On-hand (0.0) is at or below the reorder point (173.8). Ordering 170.0 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 5.52,
+        "stockout_units": 114.0,
+        "stockout_days": 6
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-12-28",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 170.6,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 110.6
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 21.84,
+      "reorder_point": 174.7,
+      "safety_stock": 36.4,
+      "reasoning": "On-hand (92.0) is at or below the reorder point (174.7). Ordering 170.6 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 30.82,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-01-04",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 170.6,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 110.6
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 21.84,
+      "reorder_point": 174.7,
+      "safety_stock": 36.4,
+      "reasoning": "On-hand (145.6) is at or below the reorder point (174.7). Ordering 170.6 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 49.07,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-01-11",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 171.1,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 111.1
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 21.97,
+      "reorder_point": 175.5,
+      "safety_stock": 36.4,
+      "reasoning": "On-hand (169.2) is at or below the reorder point (175.5). Ordering 171.1 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 59.97,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-01-18",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 20.23,
+      "reorder_point": 138.0,
+      "safety_stock": 9.9,
+      "reasoning": "On-hand (197.3) is above the reorder point (138.0); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 66.19,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-01-25",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 163.4,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 103.4
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 20.02,
+      "reorder_point": 137.7,
+      "safety_stock": 10.9,
+      "reasoning": "On-hand (111.3) is at or below the reorder point (137.7). Ordering 163.4 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 20.63,
+        "stockout_units": 8.7,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-02-01",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 165.5,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 105.5
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 20.54,
+      "reorder_point": 140.6,
+      "safety_stock": 10.6,
+      "reasoning": "On-hand (84.4) is at or below the reorder point (140.6). Ordering 165.5 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 26.0,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-02-08",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 163.7,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 103.7
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 20.11,
+      "reorder_point": 138.7,
+      "safety_stock": 11.3,
+      "reasoning": "On-hand (114.9) is at or below the reorder point (138.7). Ordering 163.7 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 35.16,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-02-15",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 164.6,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 104.6
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 20.32,
+      "reorder_point": 138.7,
+      "safety_stock": 10.0,
+      "reasoning": "On-hand (129.6) is at or below the reorder point (138.7). Ordering 164.6 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 44.51,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-02-22",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 20.5,
+      "reorder_point": 138.7,
+      "safety_stock": 8.8,
+      "reasoning": "On-hand (153.2) is above the reorder point (138.7); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 47.18,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-03-01",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 163.4,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 103.4
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 20.04,
+      "reorder_point": 136.7,
+      "safety_stock": 9.8,
+      "reasoning": "On-hand (67.2) is at or below the reorder point (136.7). Ordering 163.4 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 9.54,
+        "stockout_units": 47.8,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-03-08",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 165.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 105.0
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 20.43,
+      "reorder_point": 137.9,
+      "safety_stock": 8.5,
+      "reasoning": "On-hand (82.4) is at or below the reorder point (137.9). Ordering 165.0 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 23.69,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-03-15",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 163.7,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 103.7
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 20.11,
+      "reorder_point": 135.8,
+      "safety_stock": 8.5,
+      "reasoning": "On-hand (107.4) is at or below the reorder point (135.8). Ordering 163.7 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 38.97,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-03-22",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 19.36,
+      "reorder_point": 134.9,
+      "safety_stock": 12.3,
+      "reasoning": "On-hand (151.1) is above the reorder point (134.9); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 47.8,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-03-29",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 158.7,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 98.7
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 18.89,
+      "reorder_point": 131.9,
+      "safety_stock": 12.2,
+      "reasoning": "On-hand (78.1) is at or below the reorder point (131.9). Ordering 158.7 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 12.25,
+        "stockout_units": 26.9,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-04-05",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 156.8,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 96.8
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 18.43,
+      "reorder_point": 127.9,
+      "safety_stock": 11.2,
+      "reasoning": "On-hand (80.7) is at or below the reorder point (127.9). Ordering 156.8 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 22.6,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-04-12",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 157.2,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 97.2
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 18.54,
+      "reorder_point": 129.2,
+      "safety_stock": 11.8,
+      "reasoning": "On-hand (94.5) is at or below the reorder point (129.2). Ordering 157.2 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 34.36,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-04-19",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 18.36,
+      "reorder_point": 127.4,
+      "safety_stock": 11.2,
+      "reasoning": "On-hand (136.7) is above the reorder point (127.4); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 41.27,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-04-26",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 156.4,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 96.4
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 18.36,
+      "reorder_point": 129.2,
+      "safety_stock": 12.9,
+      "reasoning": "On-hand (63.7) is at or below the reorder point (129.2). Ordering 156.4 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 9.69,
+        "stockout_units": 34.3,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-05-03",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 154.3,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 94.3
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 17.86,
+      "reorder_point": 127.7,
+      "safety_stock": 14.6,
+      "reasoning": "On-hand (85.4) is at or below the reorder point (127.7). Ordering 154.3 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 27.67,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-05-10",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 152.3,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 92.3
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 17.39,
+      "reorder_point": 123.5,
+      "safety_stock": 13.3,
+      "reasoning": "On-hand (109.7) is at or below the reorder point (123.5). Ordering 152.3 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 38.17,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-05-17",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 17.75,
+      "reorder_point": 124.3,
+      "safety_stock": 11.9,
+      "reasoning": "On-hand (137.0) is above the reorder point (124.3); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 43.98,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-05-24",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 152.9,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 92.9
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 17.54,
+      "reorder_point": 120.7,
+      "safety_stock": 9.6,
+      "reasoning": "On-hand (70.0) is at or below the reorder point (120.7). Ordering 152.9 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 11.51,
+        "stockout_units": 18.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-05-31",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 152.4,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 92.4
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 17.43,
+      "reorder_point": 119.7,
+      "safety_stock": 9.3,
+      "reasoning": "On-hand (74.9) is at or below the reorder point (119.7). Ordering 152.4 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 23.5,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-06-07",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 151.8,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 91.8
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 17.29,
+      "reorder_point": 118.2,
+      "safety_stock": 8.7,
+      "reasoning": "On-hand (101.3) is at or below the reorder point (118.2). Ordering 151.8 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 34.43,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-06-14",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 17.36,
+      "reorder_point": 119.1,
+      "safety_stock": 9.2,
+      "reasoning": "On-hand (126.1) is above the reorder point (119.1); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 38.02,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-06-21",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 152.8,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 92.8
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 17.5,
+      "reorder_point": 119.7,
+      "safety_stock": 8.9,
+      "reasoning": "On-hand (55.1) is at or below the reorder point (119.7). Ordering 152.8 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 8.53,
+        "stockout_units": 35.9,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-06-28",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 152.8,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 92.8
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 17.5,
+      "reorder_point": 117.5,
+      "safety_stock": 6.7,
+      "reasoning": "On-hand (77.8) is at or below the reorder point (117.5). Ordering 152.8 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 28.1,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-07-05",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 17.07,
+      "reorder_point": 115.4,
+      "safety_stock": 7.3,
+      "reasoning": "On-hand (116.6) is above the reorder point (115.4); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 39.73,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-07-12",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 147.5,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 87.5
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 16.32,
+      "reorder_point": 111.9,
+      "safety_stock": 8.5,
+      "reasoning": "On-hand (60.6) is at or below the reorder point (111.9). Ordering 147.5 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 11.43,
+        "stockout_units": 7.4,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-07-19",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 146.1,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 86.1
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 16.0,
+      "reorder_point": 109.2,
+      "safety_stock": 7.8,
+      "reasoning": "On-hand (69.5) is at or below the reorder point (109.2). Ordering 146.1 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 22.66,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-07-26",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 146.4,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 86.4
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 16.07,
+      "reorder_point": 110.2,
+      "safety_stock": 8.4,
+      "reasoning": "On-hand (97.6) is at or below the reorder point (110.2). Ordering 146.4 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 40.42,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-08-02",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 15.75,
+      "reorder_point": 114.0,
+      "safety_stock": 14.2,
+      "reasoning": "On-hand (140.0) is above the reorder point (114.0); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 43.92,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-08-09",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 147.8,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 87.8
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 16.39,
+      "reorder_point": 117.3,
+      "safety_stock": 13.5,
+      "reasoning": "On-hand (67.0) is at or below the reorder point (117.3). Ordering 147.8 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 11.03,
+        "stockout_units": 21.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-08-16",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 148.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 88.0
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 16.42,
+      "reorder_point": 117.6,
+      "safety_stock": 13.6,
+      "reasoning": "On-hand (72.8) is at or below the reorder point (117.6). Ordering 148.0 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 26.8,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-08-23",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 146.6,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 86.6
+        },
+        {
+          "supplier": "Continental Green Coffee",
+          "qty": 50.0
+        },
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 10.0
+        }
+      ],
+      "forecast_level": 16.13,
+      "reorder_point": 115.9,
+      "safety_stock": 13.8,
+      "reasoning": "On-hand (110.8) is at or below the reorder point (115.9). Ordering 146.6 units across 3 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 38.95,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-08-30",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 16.82,
+      "reorder_point": 115.1,
+      "safety_stock": 8.6,
+      "reasoning": "On-hand (132.4) is above the reorder point (115.1); no action needed.",
+      "outcome": {
+        "days": 2,
+        "holding_cost": 13.13,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    }
+  ],
+  "daily_log": [
+    {
+      "date": "2025-08-31",
+      "on_hand": 119.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-01",
+      "on_hand": 104.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-02",
+      "on_hand": 87.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-03",
+      "on_hand": 74.0,
+      "demand": 13.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-04",
+      "on_hand": 55.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-05",
+      "on_hand": 36.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-06",
+      "on_hand": 36.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-07",
+      "on_hand": 19.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-08",
+      "on_hand": 19.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-09",
+      "on_hand": 4.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-10",
+      "on_hand": 0.0,
+      "demand": 18.0,
+      "stockout_units": 14.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-11",
+      "on_hand": 0.0,
+      "demand": 16.0,
+      "stockout_units": 6.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2025-09-12",
+      "on_hand": 0.0,
+      "demand": 17.0,
+      "stockout_units": 17.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-13",
+      "on_hand": 70.7,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 91.7
+    },
+    {
+      "date": "2025-09-14",
+      "on_hand": 52.7,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-15",
+      "on_hand": 37.7,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-16",
+      "on_hand": 70.7,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2025-09-17",
+      "on_hand": 55.7,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-18",
+      "on_hand": 44.7,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2025-09-19",
+      "on_hand": 29.7,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-20",
+      "on_hand": 100.5,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 88.8
+    },
+    {
+      "date": "2025-09-21",
+      "on_hand": 84.5,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-22",
+      "on_hand": 63.5,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-23",
+      "on_hand": 96.5,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2025-09-24",
+      "on_hand": 79.5,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-25",
+      "on_hand": 72.5,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2025-09-26",
+      "on_hand": 52.5,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-27",
+      "on_hand": 120.8,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 88.3
+    },
+    {
+      "date": "2025-09-28",
+      "on_hand": 101.8,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-29",
+      "on_hand": 84.8,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-30",
+      "on_hand": 113.8,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2025-10-01",
+      "on_hand": 95.8,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-02",
+      "on_hand": 87.8,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2025-10-03",
+      "on_hand": 70.8,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-04",
+      "on_hand": 140.8,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 90.0
+    },
+    {
+      "date": "2025-10-05",
+      "on_hand": 122.8,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-06",
+      "on_hand": 102.8,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-07",
+      "on_hand": 131.8,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2025-10-08",
+      "on_hand": 116.8,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-09",
+      "on_hand": 98.8,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-10",
+      "on_hand": 82.8,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-11",
+      "on_hand": 65.8,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-12",
+      "on_hand": 50.8,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-13",
+      "on_hand": 34.8,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-14",
+      "on_hand": 18.8,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-15",
+      "on_hand": 0.0,
+      "demand": 20.0,
+      "stockout_units": 1.2,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-16",
+      "on_hand": 0.0,
+      "demand": 16.0,
+      "stockout_units": 6.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2025-10-17",
+      "on_hand": 0.0,
+      "demand": 23.0,
+      "stockout_units": 23.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-18",
+      "on_hand": 77.6,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 94.6
+    },
+    {
+      "date": "2025-10-19",
+      "on_hand": 59.6,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-20",
+      "on_hand": 43.6,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-21",
+      "on_hand": 75.6,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2025-10-22",
+      "on_hand": 57.6,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-23",
+      "on_hand": 47.6,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2025-10-24",
+      "on_hand": 28.6,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-25",
+      "on_hand": 104.8,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 95.2
+    },
+    {
+      "date": "2025-10-26",
+      "on_hand": 87.8,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-27",
+      "on_hand": 69.8,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-28",
+      "on_hand": 101.8,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2025-10-29",
+      "on_hand": 81.8,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-30",
+      "on_hand": 71.8,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2025-10-31",
+      "on_hand": 49.8,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-01",
+      "on_hand": 123.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 95.2
+    },
+    {
+      "date": "2025-11-02",
+      "on_hand": 103.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-03",
+      "on_hand": 84.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-04",
+      "on_hand": 116.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2025-11-05",
+      "on_hand": 99.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-06",
+      "on_hand": 91.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2025-11-07",
+      "on_hand": 73.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-08",
+      "on_hand": 151.3,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 96.3
+    },
+    {
+      "date": "2025-11-09",
+      "on_hand": 129.3,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-10",
+      "on_hand": 111.3,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-11",
+      "on_hand": 144.3,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2025-11-12",
+      "on_hand": 121.3,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-13",
+      "on_hand": 105.3,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-14",
+      "on_hand": 89.3,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-15",
+      "on_hand": 67.3,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-16",
+      "on_hand": 50.3,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-17",
+      "on_hand": 35.3,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-18",
+      "on_hand": 14.3,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-19",
+      "on_hand": 0.0,
+      "demand": 20.0,
+      "stockout_units": 5.7,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-20",
+      "on_hand": 0.0,
+      "demand": 19.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2025-11-21",
+      "on_hand": 0.0,
+      "demand": 24.0,
+      "stockout_units": 24.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-22",
+      "on_hand": 80.4,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 98.4
+    },
+    {
+      "date": "2025-11-23",
+      "on_hand": 60.4,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-24",
+      "on_hand": 39.4,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-25",
+      "on_hand": 72.4,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2025-11-26",
+      "on_hand": 53.4,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-27",
+      "on_hand": 44.4,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2025-11-28",
+      "on_hand": 26.4,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-29",
+      "on_hand": 102.7,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 99.3
+    },
+    {
+      "date": "2025-11-30",
+      "on_hand": 82.7,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-01",
+      "on_hand": 61.7,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-02",
+      "on_hand": 91.7,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2025-12-03",
+      "on_hand": 69.7,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-04",
+      "on_hand": 64.7,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2025-12-05",
+      "on_hand": 48.7,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-06",
+      "on_hand": 128.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 99.3
+    },
+    {
+      "date": "2025-12-07",
+      "on_hand": 110.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-08",
+      "on_hand": 89.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-09",
+      "on_hand": 116.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2025-12-10",
+      "on_hand": 95.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-11",
+      "on_hand": 83.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2025-12-12",
+      "on_hand": 63.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-13",
+      "on_hand": 144.2,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 100.2
+    },
+    {
+      "date": "2025-12-14",
+      "on_hand": 123.2,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-15",
+      "on_hand": 103.2,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-16",
+      "on_hand": 77.2,
+      "demand": 76.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2025-12-17",
+      "on_hand": 62.2,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-18",
+      "on_hand": 43.2,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-19",
+      "on_hand": 18.2,
+      "demand": 25.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-20",
+      "on_hand": 0.0,
+      "demand": 26.0,
+      "stockout_units": 7.8,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-21",
+      "on_hand": 0.0,
+      "demand": 20.0,
+      "stockout_units": 20.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-22",
+      "on_hand": 0.0,
+      "demand": 21.0,
+      "stockout_units": 21.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-23",
+      "on_hand": 0.0,
+      "demand": 20.0,
+      "stockout_units": 20.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-24",
+      "on_hand": 0.0,
+      "demand": 19.0,
+      "stockout_units": 19.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-25",
+      "on_hand": 0.0,
+      "demand": 23.0,
+      "stockout_units": 13.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2025-12-26",
+      "on_hand": 0.0,
+      "demand": 21.0,
+      "stockout_units": 21.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-27",
+      "on_hand": 92.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 110.0
+    },
+    {
+      "date": "2025-12-28",
+      "on_hand": 73.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-29",
+      "on_hand": 57.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-30",
+      "on_hand": 86.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2025-12-31",
+      "on_hand": 65.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-01",
+      "on_hand": 52.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-01-02",
+      "on_hand": 35.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-03",
+      "on_hand": 145.6,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 110.6
+    },
+    {
+      "date": "2026-01-04",
+      "on_hand": 127.6,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-05",
+      "on_hand": 104.6,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-06",
+      "on_hand": 131.6,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-01-07",
+      "on_hand": 109.6,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-08",
+      "on_hand": 97.6,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-01-09",
+      "on_hand": 77.6,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-10",
+      "on_hand": 169.2,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 110.6
+    },
+    {
+      "date": "2026-01-11",
+      "on_hand": 143.2,
+      "demand": 26.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-12",
+      "on_hand": 126.2,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-13",
+      "on_hand": 158.2,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-01-14",
+      "on_hand": 137.2,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-15",
+      "on_hand": 130.2,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-01-16",
+      "on_hand": 107.2,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-17",
+      "on_hand": 197.3,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 111.1
+    },
+    {
+      "date": "2026-01-18",
+      "on_hand": 177.3,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-19",
+      "on_hand": 159.3,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-20",
+      "on_hand": 194.3,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-01-21",
+      "on_hand": 172.3,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-22",
+      "on_hand": 155.3,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-23",
+      "on_hand": 133.3,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-24",
+      "on_hand": 111.3,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-25",
+      "on_hand": 92.3,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-26",
+      "on_hand": 71.3,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-27",
+      "on_hand": 50.3,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-28",
+      "on_hand": 29.3,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-29",
+      "on_hand": 16.3,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-01-30",
+      "on_hand": 0.0,
+      "demand": 25.0,
+      "stockout_units": 8.7,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-31",
+      "on_hand": 84.4,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 103.4
+    },
+    {
+      "date": "2026-02-01",
+      "on_hand": 64.4,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-02",
+      "on_hand": 43.4,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-03",
+      "on_hand": 72.4,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-02-04",
+      "on_hand": 58.4,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-05",
+      "on_hand": 48.4,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-02-06",
+      "on_hand": 31.4,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-07",
+      "on_hand": 114.9,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 105.5
+    },
+    {
+      "date": "2026-02-08",
+      "on_hand": 91.9,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-09",
+      "on_hand": 72.9,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-10",
+      "on_hand": 99.9,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-02-11",
+      "on_hand": 78.9,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-12",
+      "on_hand": 66.9,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-02-13",
+      "on_hand": 45.9,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-14",
+      "on_hand": 129.6,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 103.7
+    },
+    {
+      "date": "2026-02-15",
+      "on_hand": 109.6,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-16",
+      "on_hand": 92.6,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-17",
+      "on_hand": 121.6,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-02-18",
+      "on_hand": 101.6,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-19",
+      "on_hand": 92.6,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-02-20",
+      "on_hand": 70.6,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-21",
+      "on_hand": 153.2,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 104.6
+    },
+    {
+      "date": "2026-02-22",
+      "on_hand": 135.2,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-23",
+      "on_hand": 115.2,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-24",
+      "on_hand": 149.2,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-02-25",
+      "on_hand": 124.2,
+      "demand": 25.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-26",
+      "on_hand": 106.2,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-27",
+      "on_hand": 89.2,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-28",
+      "on_hand": 67.2,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-01",
+      "on_hand": 46.2,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-02",
+      "on_hand": 26.2,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-03",
+      "on_hand": 4.2,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-04",
+      "on_hand": 0.0,
+      "demand": 23.0,
+      "stockout_units": 18.8,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-05",
+      "on_hand": 0.0,
+      "demand": 20.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-03-06",
+      "on_hand": 0.0,
+      "demand": 19.0,
+      "stockout_units": 19.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-07",
+      "on_hand": 82.4,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 103.4
+    },
+    {
+      "date": "2026-03-08",
+      "on_hand": 61.4,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-09",
+      "on_hand": 43.4,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-10",
+      "on_hand": 70.4,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-03-11",
+      "on_hand": 50.4,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-12",
+      "on_hand": 41.4,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-03-13",
+      "on_hand": 20.4,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-14",
+      "on_hand": 107.4,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 105.0
+    },
+    {
+      "date": "2026-03-15",
+      "on_hand": 89.4,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-16",
+      "on_hand": 70.4,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-17",
+      "on_hand": 101.4,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-03-18",
+      "on_hand": 83.4,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-19",
+      "on_hand": 84.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-03-20",
+      "on_hand": 69.4,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-21",
+      "on_hand": 151.1,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 103.7
+    },
+    {
+      "date": "2026-03-22",
+      "on_hand": 131.1,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-23",
+      "on_hand": 111.1,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-24",
+      "on_hand": 141.1,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-03-25",
+      "on_hand": 127.1,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-26",
+      "on_hand": 112.1,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-27",
+      "on_hand": 96.1,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-28",
+      "on_hand": 78.1,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-29",
+      "on_hand": 60.1,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-30",
+      "on_hand": 40.1,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-31",
+      "on_hand": 21.1,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-01",
+      "on_hand": 2.1,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-02",
+      "on_hand": 0.0,
+      "demand": 20.0,
+      "stockout_units": 7.9,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-04-03",
+      "on_hand": 0.0,
+      "demand": 19.0,
+      "stockout_units": 19.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-04",
+      "on_hand": 80.7,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 98.7
+    },
+    {
+      "date": "2026-04-05",
+      "on_hand": 61.7,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-06",
+      "on_hand": 38.7,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-07",
+      "on_hand": 72.7,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-04-08",
+      "on_hand": 51.7,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-09",
+      "on_hand": 39.7,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-04-10",
+      "on_hand": 17.7,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-11",
+      "on_hand": 94.5,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 96.8
+    },
+    {
+      "date": "2026-04-12",
+      "on_hand": 80.5,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-13",
+      "on_hand": 60.5,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-14",
+      "on_hand": 91.5,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-04-15",
+      "on_hand": 73.5,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-16",
+      "on_hand": 72.5,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-04-17",
+      "on_hand": 57.5,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-18",
+      "on_hand": 136.7,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 97.2
+    },
+    {
+      "date": "2026-04-19",
+      "on_hand": 117.7,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-20",
+      "on_hand": 92.7,
+      "demand": 25.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-21",
+      "on_hand": 128.7,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-04-22",
+      "on_hand": 113.7,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-23",
+      "on_hand": 92.7,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-24",
+      "on_hand": 78.7,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-25",
+      "on_hand": 63.7,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-26",
+      "on_hand": 42.7,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-27",
+      "on_hand": 23.7,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-28",
+      "on_hand": 9.7,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-29",
+      "on_hand": 0.0,
+      "demand": 18.0,
+      "stockout_units": 8.3,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-30",
+      "on_hand": 0.0,
+      "demand": 20.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-05-01",
+      "on_hand": 0.0,
+      "demand": 16.0,
+      "stockout_units": 16.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-02",
+      "on_hand": 85.4,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 96.4
+    },
+    {
+      "date": "2026-05-03",
+      "on_hand": 68.4,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-04",
+      "on_hand": 50.4,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-05",
+      "on_hand": 83.4,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-05-06",
+      "on_hand": 64.4,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-07",
+      "on_hand": 51.4,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-05-08",
+      "on_hand": 33.4,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-09",
+      "on_hand": 109.7,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 94.3
+    },
+    {
+      "date": "2026-05-10",
+      "on_hand": 92.7,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-11",
+      "on_hand": 73.7,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-12",
+      "on_hand": 103.7,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-05-13",
+      "on_hand": 87.7,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-14",
+      "on_hand": 79.7,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-05-15",
+      "on_hand": 61.7,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-16",
+      "on_hand": 137.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 92.3
+    },
+    {
+      "date": "2026-05-17",
+      "on_hand": 117.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-18",
+      "on_hand": 102.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-19",
+      "on_hand": 137.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-05-20",
+      "on_hand": 119.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-21",
+      "on_hand": 103.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-22",
+      "on_hand": 85.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-23",
+      "on_hand": 70.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-24",
+      "on_hand": 57.0,
+      "demand": 13.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-25",
+      "on_hand": 35.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-26",
+      "on_hand": 20.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-27",
+      "on_hand": 5.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-28",
+      "on_hand": 0.0,
+      "demand": 19.0,
+      "stockout_units": 4.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-05-29",
+      "on_hand": 0.0,
+      "demand": 14.0,
+      "stockout_units": 14.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-30",
+      "on_hand": 74.9,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 92.9
+    },
+    {
+      "date": "2026-05-31",
+      "on_hand": 55.9,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-01",
+      "on_hand": 37.9,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-02",
+      "on_hand": 68.9,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-06-03",
+      "on_hand": 53.9,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-04",
+      "on_hand": 46.9,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-06-05",
+      "on_hand": 26.9,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-06",
+      "on_hand": 101.3,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 92.4
+    },
+    {
+      "date": "2026-06-07",
+      "on_hand": 85.3,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-08",
+      "on_hand": 64.3,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-09",
+      "on_hand": 97.3,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-06-10",
+      "on_hand": 78.3,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-11",
+      "on_hand": 69.3,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-06-12",
+      "on_hand": 53.3,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-13",
+      "on_hand": 126.1,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 91.8
+    },
+    {
+      "date": "2026-06-14",
+      "on_hand": 105.1,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-15",
+      "on_hand": 87.1,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-16",
+      "on_hand": 121.1,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-06-17",
+      "on_hand": 105.1,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-18",
+      "on_hand": 88.1,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-19",
+      "on_hand": 72.1,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-20",
+      "on_hand": 55.1,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-21",
+      "on_hand": 39.1,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-22",
+      "on_hand": 21.1,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-23",
+      "on_hand": 4.1,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-24",
+      "on_hand": 0.0,
+      "demand": 17.0,
+      "stockout_units": 12.9,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-25",
+      "on_hand": 0.0,
+      "demand": 17.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-06-26",
+      "on_hand": 0.0,
+      "demand": 16.0,
+      "stockout_units": 16.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-27",
+      "on_hand": 77.8,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 92.8
+    },
+    {
+      "date": "2026-06-28",
+      "on_hand": 61.8,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-29",
+      "on_hand": 44.8,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-30",
+      "on_hand": 78.8,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-07-01",
+      "on_hand": 64.8,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-02",
+      "on_hand": 57.8,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-07-03",
+      "on_hand": 43.8,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-04",
+      "on_hand": 116.6,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 92.8
+    },
+    {
+      "date": "2026-07-05",
+      "on_hand": 101.6,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-06",
+      "on_hand": 89.6,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-07",
+      "on_hand": 124.6,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-07-08",
+      "on_hand": 108.6,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-09",
+      "on_hand": 95.6,
+      "demand": 13.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-10",
+      "on_hand": 81.6,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-11",
+      "on_hand": 60.6,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-12",
+      "on_hand": 44.6,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-13",
+      "on_hand": 27.6,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-14",
+      "on_hand": 27.6,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-15",
+      "on_hand": 12.6,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-16",
+      "on_hand": 8.6,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-07-17",
+      "on_hand": 0.0,
+      "demand": 16.0,
+      "stockout_units": 7.4,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-18",
+      "on_hand": 69.5,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 87.5
+    },
+    {
+      "date": "2026-07-19",
+      "on_hand": 52.5,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-20",
+      "on_hand": 34.5,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-21",
+      "on_hand": 70.5,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-07-22",
+      "on_hand": 51.5,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-23",
+      "on_hand": 44.5,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-07-24",
+      "on_hand": 26.5,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-25",
+      "on_hand": 97.6,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 86.1
+    },
+    {
+      "date": "2026-07-26",
+      "on_hand": 80.6,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-27",
+      "on_hand": 80.6,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-28",
+      "on_hand": 112.6,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-07-29",
+      "on_hand": 96.6,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-30",
+      "on_hand": 90.6,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-07-31",
+      "on_hand": 72.6,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-01",
+      "on_hand": 140.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 86.4
+    },
+    {
+      "date": "2026-08-02",
+      "on_hand": 120.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-03",
+      "on_hand": 104.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-04",
+      "on_hand": 137.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-08-05",
+      "on_hand": 117.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-06",
+      "on_hand": 103.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-07",
+      "on_hand": 84.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-08",
+      "on_hand": 67.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-09",
+      "on_hand": 53.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-10",
+      "on_hand": 35.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-11",
+      "on_hand": 19.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-12",
+      "on_hand": 4.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-13",
+      "on_hand": 0.0,
+      "demand": 17.0,
+      "stockout_units": 3.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-08-14",
+      "on_hand": 0.0,
+      "demand": 18.0,
+      "stockout_units": 18.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-15",
+      "on_hand": 72.8,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 87.8
+    },
+    {
+      "date": "2026-08-16",
+      "on_hand": 58.8,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-17",
+      "on_hand": 41.8,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-18",
+      "on_hand": 76.8,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-08-19",
+      "on_hand": 61.8,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-20",
+      "on_hand": 57.8,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-08-21",
+      "on_hand": 38.8,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-22",
+      "on_hand": 110.8,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 88.0
+    },
+    {
+      "date": "2026-08-23",
+      "on_hand": 94.8,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-24",
+      "on_hand": 75.8,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-25",
+      "on_hand": 106.8,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.0
+    },
+    {
+      "date": "2026-08-26",
+      "on_hand": 91.8,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-27",
+      "on_hand": 84.8,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0
+    },
+    {
+      "date": "2026-08-28",
+      "on_hand": 62.8,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-29",
+      "on_hand": 132.4,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 86.6
+    },
+    {
+      "date": "2026-08-30",
+      "on_hand": 116.4,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-31",
+      "on_hand": 102.4,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    }
+  ]
+}

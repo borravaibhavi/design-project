@@ -1,0 +1,3719 @@
+{
+  "policy": "llm_agent",
+  "sku": "Oat Milk",
+  "start_date": "2025-08-31",
+  "end_date": "2026-08-31",
+  "days_simulated": 366,
+  "total_holding_cost": 1147.56,
+  "total_ordering_cost": 850.0,
+  "total_cost": 1997.56,
+  "order_count": 34,
+  "stockout_days": 97,
+  "stockout_units": 849.0,
+  "total_demand": 3387.0,
+  "service_level": 0.7493,
+  "decisions": [
+    {
+      "sku": "Oat Milk",
+      "date": "2025-08-31",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Average daily demand is ~8.3 gal, trending slightly up but stable. With 78 gal on hand, that's roughly 9-10 days of coverage, well beyond the 2-3 day lead time plus 3-day safety stock (~5-6 days needed to reorder safely). No need to tie up cash or incur holding costs now; hold and reassess in a few days as stock approaches the reorder point (~50 gal).",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 41.64,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-09-07",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 40.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 40
+        }
+      ],
+      "reasoning": "Average daily demand is ~8.5 gal/day (excluding the anomalous zero-sale day), so 24 gal on hand covers under 3 days - below the 3-day safety stock alone, with lead time on top. We need to cover lead time + safety stock (~5-6 days) plus a buffer until next review, so ordering ~40 gal (about 4-5 days' worth beyond current stock) restores a healthy buffer. Regional Dairy Co-op has a shorter lead time (2 days vs 3) and higher reliability (0.96 vs 0.93), which reduces stockout risk despite slightly higher price, and its 'Limited' availability makes it wise to order now before stock issues worsen; the price difference is minor for a 40 gal order.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 14.52,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-09-14",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 40.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 40
+        }
+      ],
+      "reasoning": "Average daily demand is ~8.6 gal/day and quite stable; with only 3 gal on hand we have less than half a day of coverage, well below the ~5-day safety stock + lead time buffer needed. Ordering now is urgent - I'm choosing Regional Dairy Co-op despite its slightly higher price because its 2-day lead time and higher reliability (0.96) minimize stockout risk during this critical low-stock period, and its 'Limited' availability means waiting could make it harder to secure. 40 gal covers about 4-5 days beyond current stock, restoring a safe buffer.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 9.36,
+        "stockout_units": 16.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-09-21",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 60.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 60
+        }
+      ],
+      "reasoning": "We're currently at zero stock and already stocking out - this is urgent. Average demand is ~8.6 gal/day; with 2-day lead time we need at least ~17 gal just to bridge the gap, plus 3-day safety stock (~26 gal) and buffer until next review (~7 days), so ordering 60 gal covers about a week of demand plus safety margin. Choosing Regional Dairy Co-op despite the higher price because its shorter 2-day lead time (vs 3) and higher reliability (0.96) minimize further stockout time given we have zero cushion right now; past orders show this lead time still isn't always enough, so I'm sizing up the order to rebuild a real buffer instead of just refilling to the same thin level.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 21.48,
+        "stockout_units": 17.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-09-28",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 40.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 40
+        }
+      ],
+      "reasoning": "Demand is steady at ~8.5 gal/day; with 19 gal on hand that's only ~2.2 days of coverage, less than the 2-day lead time plus 3-day safety stock (~5 days, ~43 gal) needed. Ordering 40 gal now from Regional Dairy Co-op (2-day lead time, 0.96 reliability) brings us to ~59 gal, covering about a week and rebuilding safety stock before we hit the critical near-zero levels that caused recent stockouts; slightly higher price is worth avoiding another stockout given the pattern of past under-ordering.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 9.72,
+        "stockout_units": 6.0,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-10-05",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 75.0,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 40
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 35
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out with steady demand of ~8.7 gal/day - this is urgent and past history shows repeated stockouts from under-ordering. Splitting the order: 35 gal from Regional Dairy Co-op for its faster 2-day lead time to minimize the immediate gap, plus 40 gal from PlantBase Foods (in stock, no availability risk) to build a real buffer covering lead time + 3-day safety stock + about a week of runway (~75 gal \u2248 8-9 days), since prior 40-60 gal orders kept resulting in stockouts.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 25.8,
+        "stockout_units": 16.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-10-12",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Average demand is steady at ~8.5 gal/day. With 33 gal on hand, that's ~3.9 days of coverage, which comfortably exceeds the 2-day lead time (Regional Dairy Co-op) plus the 3-day safety stock requirement (~5 days total need ~42-43 gal reorder point at most conservative, but actual daily draw is consistent, not spiking). Current stock covers lead time and most of safety stock; holding now avoids extra holding cost from the recent pattern of over-ordering (75 gal caused stockouts anyway due to timing, not quantity), so we'll reorder in 1-2 days once stock nears ~20-25 gal to align order arrival with depletion.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 4.44,
+        "stockout_units": 32.0,
+        "stockout_days": 4
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-10-19",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 75.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 40
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 35
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out, with steady demand of ~8.8 gal/day (recent week averaging ~9.3). History shows this SKU repeatedly runs out even after 40-60 gal orders due to hold decisions being made too close to depletion, so I'm sizing for roughly 8 days of coverage (~75 gal) to rebuild a real buffer past the 2-3 day lead time plus 3-day safety stock. Splitting the order lets 40 gal arrive fastest via Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the immediate gap, while 35 gal from PlantBase Foods (in stock, no availability risk) backstops supply in case Regional Dairy's 'Limited' availability causes delay.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 23.88,
+        "stockout_units": 18.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-10-26",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is steady at ~9 gal/day. With 29 gal on hand, that's over 3 days of coverage beyond even the longer 3-day lead time (PlantBase), and safety stock of 3 days (~27 gal) is essentially covered by current inventory alone. Holding now avoids tying up cash/holding cost; we'll reorder in a day or two once stock nears ~20 gal so a fast 2-day Regional Dairy order can arrive before we dip below safety stock.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 4.08,
+        "stockout_units": 39.0,
+        "stockout_days": 4
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-11-02",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 90.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 45
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 45
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out, with steady demand now trending up to ~9.5-10 gal/day. Past history shows this SKU repeatedly stocks out even after 40-75 gal orders and hold decisions made too early, so I'm sizing for ~9 days of coverage (90 gal) to cover the 2-3 day lead time, 3-day safety stock, and a real buffer against demand variability. Splitting between both suppliers: 45 gal from Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the immediate gap fastest, and 45 gal from PlantBase Foods (in stock, no availability risk) as a reliable backstop given Regional Dairy's 'Limited' availability has contributed to repeated shortfalls.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 37.2,
+        "stockout_units": 18.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-11-09",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is steady at ~9.5 gal/day, and with 52 gal on hand we have roughly 5.5 days of coverage - enough to span the 2-3 day lead time plus the 3-day safety stock (~5-6 days, ~52-57 gal needed at reorder point). We just placed a 90 gal order a week ago and stock is still healthy, so holding now avoids extra holding cost; we'll reorder once stock drops toward ~30 gal to align arrival with depletion given the 2-3 day lead times.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 13.08,
+        "stockout_units": 21.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-11-16",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 60
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 40
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out, with demand steady/trending up around 10 gal/day. Every hold decision in this SKU's history has led to stockouts because reordering was triggered too late relative to lead times, so I'm sizing for ~10 days of coverage (100 gal) to cover lead time, 3-day safety stock, and a real buffer against demand variability. Splitting the order: 60 gal from PlantBase Foods (in stock, no availability risk) as the reliable backbone, plus 40 gal from Regional Dairy Co-op (faster 2-day lead, 0.96 reliability) to close the immediate gap fastest despite its 'Limited' availability.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 36.36,
+        "stockout_units": 22.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-11-23",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is steady at ~9.7 gal/day. With 54 gal on hand, that's about 5.5 days of coverage, which covers the 2-3 day lead time plus the 3-day safety stock (~5-6 days, ~50-58 gal). We just received a large 100 gal order a week ago, so stock is healthy - holding now avoids unnecessary holding costs. We'll reorder once stock nears ~30 gal to align a new order's arrival with depletion before hitting safety stock levels.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 14.88,
+        "stockout_units": 15.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-11-30",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 45
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 55
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out, with steady demand around 9.8-10 gal/day. History shows this SKU repeatedly stocks out even after large orders because holds are triggered too close to depletion and lead times (2-3 days) plus variability eat the buffer fast - so I'm sizing for ~10 days of coverage (100 gal) to rebuild real safety stock rather than just bridging the gap. Splitting the order: 45 gal from Regional Dairy Co-op (faster 2-day lead, 0.96 reliability) to close the immediate gap fastest, and 55 gal from PlantBase Foods (in stock, no availability risk) as the reliable backbone given Regional Dairy's 'Limited' availability has repeatedly contributed to shortfalls.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 35.52,
+        "stockout_units": 22.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-12-07",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is very stable at ~10 gal/day. With 49 gal on hand, that's about 4.9 days of coverage, which comfortably exceeds the longest lead time (3 days, PlantBase) plus the 3-day safety stock target (~30 gal needed for lead time+safety). We just received a 100 gal order last week, so stock is healthy - holding now avoids tying up cash and extra holding cost. We'll reorder in a couple days once stock nears ~30 gal so a 2-3 day lead time order arrives before hitting safety stock.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 10.8,
+        "stockout_units": 65.0,
+        "stockout_days": 4
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-12-14",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 45
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 55
+        }
+      ],
+      "reasoning": "We are at zero stock and actively stocking out, with demand steady around 10 gal/day (and a recent spike to 52 units suggesting even higher/volatile demand). This SKU has a strong history of repeated stockouts even after 90-100 gal orders because holds are triggered too close to depletion, so I'm ordering 100 gal to cover lead time, 3-day safety stock, and a real buffer against demand variability/spikes. Splitting the order: 45 gal from Regional Dairy Co-op (faster 2-day lead time, 0.96 reliability) to close the immediate gap fastest, plus 55 gal from PlantBase Foods (in stock, no availability risk) as the reliable backbone since Regional Dairy's 'Limited' availability has repeatedly contributed to shortfalls in the past.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 32.64,
+        "stockout_units": 24.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-12-21",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is steady at ~11 gal/day (excluding the one-off 52-unit spike). With 44 gal on hand, that's ~4 days of coverage, exceeding the longest lead time (3 days) plus most of the 3-day safety stock buffer, so we're not yet at the reorder point. Past pattern shows ordering 100 gal while stock is still healthy just adds holding cost without preventing stockouts (which stem from timing/lead-time variability, not quantity), so we'll hold now and reorder in 1-2 days once stock nears ~30 gal to better align arrival with depletion.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 8.04,
+        "stockout_units": 30.0,
+        "stockout_days": 4
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-12-28",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 45
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 55
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out, with steady demand ~11 gal/day. History strongly shows holds triggered while stock still looked \"healthy\" (40-50 gal) consistently led to stockouts a week later, so waiting is not safe - we need to order now rather than hold. Splitting the order: 45 gal from Regional Dairy Co-op (faster 2-day lead, 0.96 reliability) to close the immediate gap fastest, plus 55 gal from PlantBase Foods (in stock, no availability risk) as the reliable backbone, sizing to ~9 days coverage to rebuild a real buffer against demand variability and the 'Limited' availability risk at Regional Dairy.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 33.48,
+        "stockout_units": 21.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-01-04",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand has settled back to ~10-11 gal/day after the mid-December spike, and we just received a 100 gal order on 12/28. With 46 gal on hand, that's over 4 days of coverage, exceeding the 2-3 day lead time. Holding now avoids piling on holding cost; we'll reorder in a couple days once stock nears ~30 gal so a fresh order lands before hitting the safety stock threshold.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 9.48,
+        "stockout_units": 24.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-01-11",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 45
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 55
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out, with steady demand around 10.5 gal/day. The repeated pattern in this SKU's history is clear: holding once stock looks \"healthy\" (40-50 gal) consistently leads to stockouts a week later because lead times plus demand variability eat the buffer faster than expected, so waiting is not a safe strategy here. Splitting the order - 45 gal from Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the immediate gap fastest, and 55 gal from PlantBase Foods (in stock, no availability risk) as a reliable backbone - gives ~9-10 days of coverage to rebuild a real buffer against demand swings and Regional Dairy's 'Limited' availability risk.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 35.76,
+        "stockout_units": 21.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-01-18",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is very stable at ~10.3 gal/day. With 49 gal on hand, that's ~4.7 days of coverage, comfortably exceeding the 2-3 day lead time plus 3-day safety stock (~5-6 days, ~52-62 gal needed at the reorder trigger, but we're close and can afford a short hold). We just received a 100 gal order on 1/11, so ordering again now would stack inventory and holding cost unnecessarily; we'll monitor and place the next order in a day or two once stock nears ~30 gal so the new order arrives before hitting safety stock.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 9.24,
+        "stockout_units": 29.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-01-25",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 45
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 55
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out, with steady demand around 10.5-11 gal/day. History clearly shows that holding once stock looks \"healthy\" (~44-52 gal) repeatedly leads to a fresh stockout the following week, since lead time variability plus demand eats the buffer faster than expected - so we must order now, not wait. Splitting 45 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the immediate gap fastest, and 55 gal to PlantBase Foods (in stock, no availability risk) as the reliable backbone, giving ~9-10 days of coverage to rebuild a real safety buffer.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 33.24,
+        "stockout_units": 21.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-02-01",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is steady at ~10.5 gal/day. We just received a 100 gal order on 1/25, and with 45 gal on hand we have ~4.3 days of coverage, which exceeds the longer 3-day lead time (PlantBase) even before counting safety stock buildup starting. Ordering now would stack on top of last week's large order and add unnecessary holding cost; we'll monitor and place the next order in 1-2 days once stock nears ~30 gal (roughly lead time + safety stock threshold) to time arrival before hitting critical levels.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 9.84,
+        "stockout_units": 26.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-02-08",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 45
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 55
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out right now, with steady demand around 10.4 gal/day. The consistent pattern in this SKU's history is that holding once stock looks \"healthy\" (44-52 gal) always leads to a fresh stockout the following week because the hold-until-~30-gal trigger point is never actually acted on before depletion hits zero - so we need to order immediately rather than wait. Splitting 45 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the immediate gap fastest, and 55 gal to PlantBase Foods (in stock, no availability risk) as the reliable backbone, giving ~9-10 days of coverage to rebuild a real safety buffer against demand variability and Regional Dairy's limited availability risk.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 35.16,
+        "stockout_units": 21.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-02-15",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is steady at ~10.4 gal/day and we have 49 gal on hand (~4.7 days coverage), which exceeds the longest lead time (3 days) plus most of the 3-day safety stock. We just received a 100 gal order on 2/8, so stock is currently healthy; ordering now would stack inventory and add unnecessary holding cost. We'll hold and plan to reorder in ~2 days once stock nears 25-30 gal so the next order (Regional Dairy Co-op's 2-day lead time) arrives before hitting the safety stock threshold, avoiding both a stockout and excess holding cost.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 10.2,
+        "stockout_units": 25.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-02-22",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 45
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 55
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out, with steady demand around 10.5 gal/day. The recurring pattern here is that holding once stock 'looks healthy' (45-55 gal) always leads to hitting zero again about a week later since safety stock plus lead time (2-3 days) chews through the buffer faster than expected - so we need to order now. Splitting 45 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the gap fastest, plus 55 gal to PlantBase Foods (in stock, no availability risk) as the reliable backbone, giving ~9-10 days of coverage to rebuild a real buffer.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 36.12,
+        "stockout_units": 21.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-03-01",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is steady at ~10.2 gal/day and we have 51 gal on hand (~5 days of coverage), which exceeds the longest lead time (3 days) plus most of the 3-day safety stock target. We just received a 100 gal order on 2/22, so ordering again now would stack inventory unnecessarily and add holding cost; we'll hold and plan to place the next order in 2-3 days once stock nears ~30 gal so a 2-day Regional Dairy order lands before hitting the safety stock threshold.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 15.0,
+        "stockout_units": 12.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-03-08",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 45
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 55
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out, with steady demand ~9.8 gal/day. This exact pattern (hold at 45-55 gal on hand leading to stockout a week later) has repeated every single cycle in the history, meaning the hold-at-~30gal trigger is never reached before depletion hits zero - we must order now rather than wait. Splitting 45 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the gap fastest, plus 55 gal to PlantBase Foods (in stock, no availability risk) as the reliable backbone, giving ~10 days of coverage to rebuild a real buffer against demand variability and lead-time risk.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 33.72,
+        "stockout_units": 19.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-03-15",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is steady at ~10 gal/day and we have 46 gal on hand (~4.6 days coverage), which exceeds the longest lead time (3 days) though it's below full lead-time+safety-stock coverage (~6 days, ~60 gal). We just received the 100 gal order placed on 3/8, so ordering again now would stack inventory and unnecessarily add holding cost. Given the cyclical pattern where stock depletes fast, we'll monitor closely and plan to place the next order in 1-2 days once stock nears ~30 gal so a 2-day Regional Dairy order arrives before hitting the safety stock threshold.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 10.08,
+        "stockout_units": 22.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-03-22",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 45
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 55
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out, with steady demand around 9.8-10 gal/day. Every single prior cycle in this SKU's history shows that holding once stock looks \"healthy\" (45-51 gal, ~4.5-5 days coverage) still results in hitting zero again about a week later, because the hold-until-~30gal trigger is never actually acted on before depletion - the real fix is ordering a full replenishment now. Splitting 45 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the immediate gap fastest, plus 55 gal to PlantBase Foods (in stock, no availability risk) as the reliable backbone, giving ~10 days of coverage to rebuild a real buffer against demand variability and lead-time risk.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 35.64,
+        "stockout_units": 21.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-03-29",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is steady at ~9.8 gal/day and we just received a 100 gal order on 3/22 (7 days ago), with 51 gal now on hand giving ~5.2 days of coverage - still above the 3-day max lead time. However, the recurring pattern here is that holding at this level (45-51 gal) has led to a stockout every single week because the 'wait until ~30 gal' trigger is never revisited before the 7-day review cycle hits zero. Since the next review isn't until day 7 and depletion at ~10/day will hit zero around day 5, we'll hold today only if we plan to reorder mid-cycle; given the pattern, we hold now but flag that if reviewed again before day 5 stock nears 30 gal, an order should be placed immediately rather than waiting for zero stock.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 12.6,
+        "stockout_units": 19.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-04-05",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 45
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 55
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out, with steady demand ~10 gal/day. This exact cycle has repeated every week: a 100-gal order gets drawn down to zero in ~7 days, and the review cadence means we only catch it once it's already stocked out, so we need to reorder now rather than wait for a lower trigger point. Splitting 45 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the immediate gap fastest, and 55 gal to PlantBase Foods (in stock, no availability risk) as the reliable backbone, giving ~10 days of coverage to rebuild a real buffer against demand variability and lead-time risk.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 35.76,
+        "stockout_units": 21.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-04-12",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is very stable at ~10 gal/day and we have 53 gal on hand (~5.3 days of coverage), which exceeds the longest lead time (3 days) plus most of the 3-day safety stock target. We just received a 100 gal order on 4/5 (7 days ago), so ordering again now would stack inventory and add unnecessary holding cost given the current review-cycle stockouts stem from the 7-day gap between checks, not from insufficient order size. We'll monitor and plan to order in 2-3 days once stock nears ~30 gal, so a 2-day Regional Dairy Co-op order can land before hitting the safety stock threshold.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 15.96,
+        "stockout_units": 10.0,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-04-19",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 130.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 55
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 75
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out, with steady demand ~9.5-10 gal/day. The consistent pattern across every prior 7-day review cycle is that a 100 gal order gets fully depleted before the next check, causing 2+ days of stockout each time -- so this cycle we're increasing the order to 130 gal (~13 days coverage) to build a real buffer that survives the full review interval plus safety stock. Splitting 55 gal to Regional Dairy Co-op (faster 2-day lead, 0.96 reliability) to close the gap quickest, and 75 gal to PlantBase Foods (in stock, no availability risk) as the reliable backbone.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 51.24,
+        "stockout_units": 19.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-04-26",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is steady at ~9.5 gal/day and we have 82 gal on hand (~8.6 days of coverage), well above the longest lead time (3 days) plus 3-day safety stock (~6 days needed). We just placed a 130 gal order on 4/19, which should have landed by now given max 3-day lead time, so this 82 gal reflects that replenishment already being drawn down - ordering more now would stack inventory and add unnecessary holding cost. We'll monitor and plan to reorder once stock nears ~55-60 gal so a 2-3 day lead time order arrives comfortably before hitting the safety stock threshold.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 37.92,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-05-03",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is steady at ~9.3 gal/day and we have 19 gal on hand (~2 days coverage), which is below the 2-3 day lead time. However, the last cycle's approach of holding until near-zero caused repeated stockouts, while the 4/26 hold at 82 gal worked with zero stockouts by not overordering into an already-full pipeline. At 19 gal we're close to needing to reorder soon (within a day) but not yet critical enough to place an order today; we'll monitor daily and order as soon as stock dips toward the ~2-day-of-demand mark to let Regional Dairy's fast 2-day lead time close the gap without stacking excess inventory.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 1.08,
+        "stockout_units": 41.0,
+        "stockout_days": 5
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-05-10",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 130.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 55
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 75
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out, with steady demand ~9 gal/day. History shows every hold decision (even at 19-82 gal on hand) eventually led to a stockout by the next 7-day review, so at zero on-hand we must order immediately and size for a full review cycle plus buffer (~130 gal \u2248 14 days). Splitting 55 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the immediate gap fastest, and 75 gal to PlantBase Foods (in stock, no availability risk) as the reliable backbone to rebuild a real safety buffer.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 53.16,
+        "stockout_units": 15.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-05-17",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is very stable at ~8.7 gal/day. We just received the 130 gal order placed on 5/10, and current on-hand of 86 gal gives ~9.9 days of coverage, well above the 2-3 day lead time plus 3-day safety stock (~5-6 days, ~44-52 gal needed). Ordering now would stack inventory on top of an already large recent order and needlessly add holding cost; we'll monitor daily and place the next order once stock drops to roughly 40-45 gal so a fresh order (2-day Regional Dairy lead time) lands before hitting the safety stock threshold.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 44.64,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-05-24",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 50.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 20
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 30
+        }
+      ],
+      "reasoning": "Demand is steady at ~8.5 gal/day, and with 28 gal on hand we have ~3.3 days of coverage - close to the 2-3 day lead time plus 3-day safety stock target (~5-6 days, ~45 gal needed). Rather than waiting for a hold-until-critical approach that has repeatedly caused stockouts in this SKU's history, ordering a moderate 50 gal now tops up to a safe buffer without over-stacking like the 130-gal orders that drove up holding costs. Splitting 20 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) for a fast partial arrival, and 30 gal to PlantBase Foods (in stock, reliable) to round out the order.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 21.84,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-05-31",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 50.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 20
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 30
+        }
+      ],
+      "reasoning": "Demand is stable around 8.3 gal/day, and with 20 gal on hand we have only ~2.4 days of coverage - below the lead time (2-3 days) plus safety stock (3 days) requirement of roughly 5-6 days (~45-50 gal). The last cycle's moderate 50 gal order at a similar stock level (28 gal) worked well with zero stockouts and modest holding cost, so we repeat that success rather than over-ordering (130 gal caused high holding costs) or waiting until stockout (which has repeatedly caused losses). Splitting 20 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) for fastest partial replenishment, and 30 gal to PlantBase Foods (in stock, reliable) as the backbone.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 13.2,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-06-07",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 50.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 20
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 30
+        }
+      ],
+      "reasoning": "Demand is steady at ~8.5 gal/day and we have only 8 gal on hand (~0.9 days coverage), well below the 2-3 day lead time plus 3-day safety stock target (~5-6 days, ~45 gal needed) - we're at high risk of an imminent stockout. The last two cycles at similar or higher stock levels (20-28 gal) with a 50 gal order avoided stockouts entirely while keeping holding costs modest, so we repeat that proven approach rather than over-ordering or waiting further. Splitting 20 gal to Regional Dairy Co-op (faster 2-day lead, 0.96 reliability) to close the gap quickly, and 30 gal to PlantBase Foods (in stock, reliable) as the backbone.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 10.68,
+        "stockout_units": 11.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-06-14",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 50.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 20
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 30
+        }
+      ],
+      "reasoning": "Demand is steady at ~8.7 gal/day and we have only 6 gal on hand (~0.7 days coverage), well below the 2-3 day lead time plus 3-day safety stock target (~5-6 days, ~45-52 gal needed). The 50 gal order size has proven reliable the last few cycles (zero or minimal stockouts, moderate holding cost) versus both the smaller reactive holds and the oversized 100-130 gal orders that drove up holding costs, so we repeat that approach now before we fully stock out. Splitting 20 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the gap fastest, and 30 gal to PlantBase Foods (in stock, reliable) as the backbone.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 12.0,
+        "stockout_units": 12.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-06-21",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 50.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 20
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 30
+        }
+      ],
+      "reasoning": "Demand is very stable at ~8.5 gal/day and we have only 11 gal on hand (~1.3 days coverage), below the 2-3 day lead time plus 3-day safety stock target (~5-6 days, ~45 gal needed). The 50 gal order size has been the most reliable recent pattern (low holding cost, occasional minor stockouts vs. the big overstock spikes of 100-130 gal orders), so we repeat it now before hitting zero. Splitting 20 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the gap fastest, and 30 gal to PlantBase Foods (in stock, reliable) as the backbone.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 12.96,
+        "stockout_units": 4.0,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-06-28",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 50.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 20
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 30
+        }
+      ],
+      "reasoning": "Demand has settled around 8 gal/day and we have 11 gal on hand (~1.4 days coverage), which is below the 2-3 day lead time plus 3-day safety stock target (~5-6 days, ~40-48 gal needed). The 50 gal order size has been the consistent, reasonably effective pattern recently (moderate holding cost, small residual stockouts vs. the costly 100-130 gal overstock cycles), so we repeat it now before hitting zero. Splitting 20 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the gap fastest, and 30 gal to PlantBase Foods (in stock, reliable) as the backbone.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 14.16,
+        "stockout_units": 3.0,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-07-05",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 50.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 20
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 30
+        }
+      ],
+      "reasoning": "Demand is steady at ~7.7 gal/day and we have 13 gal on hand (~1.7 days coverage), below the 2-3 day lead time plus 3-day safety stock target (~5-6 days, ~40-46 gal needed). The 50 gal order size has been the consistent, cost-effective pattern the last several cycles (low holding cost, minor residual stockouts vs. the costly 100-130 gal overstock cycles earlier), so we repeat it now before hitting zero. Splitting 20 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the gap fastest, and 30 gal to PlantBase Foods (in stock, reliable) as the backbone.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 14.4,
+        "stockout_units": 2.0,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-07-12",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is stable at ~7.3 gal/day and we have 16 gal on hand (~2.2 days coverage). The last several 50-gal orders were placed too late (at 6-13 gal on hand) causing repeated minor stockouts even after ordering, since the 2-3 day lead time plus order lag ate into the buffer. At 16 gal we still have a bit more runway than those prior order points, so we hold one more day but plan to order ~50 gal (20 Regional Dairy/30 PlantBase) within the next 1-2 days once stock nears 10-12 gal, ensuring the order lands before hitting safety stock and avoiding the small recurring stockouts seen in recent cycles.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 1.08,
+        "stockout_units": 34.0,
+        "stockout_days": 5
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-07-19",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 65.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 25
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 40
+        }
+      ],
+      "reasoning": "We're at zero stock and actively stocking out, with steady demand around 7-7.5 gal/day. The recent pattern of holding too long (waiting for stock to drop to 10-12 gal before ordering) has repeatedly caused stockouts since the 2-3 day lead time plus review lag eats the buffer; last cycle's hold at 16 gal led to 5 stockout days. Ordering 65 gal now (~9 days of coverage, above lead time + safety stock) rebuilds a real buffer, split 25 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) to close the gap fastest and 40 gal to PlantBase Foods (in stock, reliable) as the backbone, while avoiding the excess holding costs seen with 100-130 gal orders.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 19.8,
+        "stockout_units": 14.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-07-26",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 55.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 25
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 30
+        }
+      ],
+      "reasoning": "Demand has crept up to ~7.5-8 gal/day recently (even hitting 10 yesterday), and we have 23 gal on hand (~3 days coverage) - right at the edge of lead time (2-3 days) but below lead time + 3-day safety stock (~5-6 days, ~40-48 gal needed). History shows waiting until stock drops near 10-16 gal consistently causes stockouts since lead time plus review lag eats the buffer, so ordering now while still at 23 gal (rather than waiting for it to bottom out) should let deliveries land before we get critical. Splitting 25 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) for the fastest partial arrival, and 30 gal to PlantBase Foods (in stock, reliable) as the backbone, giving ~55 gal (~7 days coverage) to rebuild a safer buffer without the excess holding costs of the 100-130 gal orders.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 22.68,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-08-02",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 55.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 25
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 30
+        }
+      ],
+      "reasoning": "Demand is steady at ~7.7 gal/day and we have 23 gal on hand (~3 days coverage), right at the edge of the 2-3 day lead time and below the lead-time-plus-3-day-safety-stock target of ~5-6 days (~40-46 gal). The 55-gal order size at this exact stock level worked well last cycle (zero stockouts, moderate holding cost) versus waiting until stock nears 10-16 gal which has repeatedly caused stockouts due to lead time eating the buffer. Splitting 25 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) for the fastest partial arrival, and 30 gal to PlantBase Foods (in stock, reliable) as the backbone.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 22.32,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-08-09",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 55.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 25
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 30
+        }
+      ],
+      "reasoning": "Demand is stable at ~7.8 gal/day and we have 22 gal on hand (~2.8 days coverage), below the lead-time-plus-safety-stock target of ~5-6 days (~40-47 gal). The 55-gal order at this same stock level worked perfectly the last two cycles (zero stockouts, moderate holding cost ~$22), so we repeat that proven pattern rather than waiting until stock drops further and risking a repeat of the stockouts seen when holding too long. Splitting 25 gal to Regional Dairy Co-op (2-day lead, 0.96 reliability) for the fastest partial arrival, and 30 gal to PlantBase Foods (in stock, reliable) as the backbone.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 24.12,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-08-16",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 55.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 25
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 30
+        }
+      ],
+      "reasoning": "Demand is steady around 8 gal/day and we have 28 gal on hand (~3.5 days coverage), below the lead-time (2-3 days) plus 3-day safety stock target of ~5-6 days (~40-48 gal needed). The 55-gal order at similar stock levels has produced zero stockouts with moderate holding cost the last three cycles, so we repeat that proven pattern rather than waiting until stock drops further. Splitting 25 gal to Regional Dairy Co-op (faster 2-day lead, 0.96 reliability) for the quickest partial arrival, and 30 gal to PlantBase Foods (in stock, reliable) as the backbone.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 27.36,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-08-23",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 55.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 25
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 30
+        }
+      ],
+      "reasoning": "Demand remains steady at ~7.9 gal/day and we have 30 gal on hand (~3.8 days coverage), below the lead-time (2-3 days) plus 3-day safety stock target of ~5-6 days (~40-48 gal needed). This 55-gal order at similar or lower stock levels has produced zero stockouts with moderate holding cost over the last four cycles, so we repeat that proven pattern rather than waiting until stock drops further and risking a stockout given lead-time delay. Splitting 25 gal to Regional Dairy Co-op (faster 2-day lead, 0.96 reliability) for the quickest partial arrival, and 30 gal to PlantBase Foods (in stock, reliable) as the backbone.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 24.84,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-08-30",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 55.0,
+      "allocation": [
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 25
+        },
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 30
+        }
+      ],
+      "reasoning": "Demand is steady around 8 gal/day and we have 25 gal on hand (~3.1 days coverage), below the lead-time (2-3 days) plus 3-day safety stock target of ~5-6 days (~40-48 gal needed). The 55-gal order at similar stock levels has produced zero stockouts with moderate holding cost over the last five cycles, so we repeat that proven pattern rather than waiting until stock drops further. Splitting 25 gal to Regional Dairy Co-op (faster 2-day lead, 0.96 reliability) for the quickest partial arrival, and 30 gal to PlantBase Foods (in stock, reliable) as the backbone.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 2,
+        "holding_cost": 3.36,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    }
+  ],
+  "daily_log": [
+    {
+      "date": "2025-08-31",
+      "on_hand": 69.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-01",
+      "on_hand": 69.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-02",
+      "on_hand": 60.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-03",
+      "on_hand": 51.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-04",
+      "on_hand": 42.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-05",
+      "on_hand": 32.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-06",
+      "on_hand": 24.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-07",
+      "on_hand": 14.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-08",
+      "on_hand": 7.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-09",
+      "on_hand": 39.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 40.0
+    },
+    {
+      "date": "2025-09-10",
+      "on_hand": 29.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-11",
+      "on_hand": 19.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-12",
+      "on_hand": 10.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-13",
+      "on_hand": 3.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-14",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-15",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-16",
+      "on_hand": 31.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 40.0
+    },
+    {
+      "date": "2025-09-17",
+      "on_hand": 24.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-18",
+      "on_hand": 16.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-19",
+      "on_hand": 7.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-20",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 2.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-21",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-22",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-23",
+      "on_hand": 52.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 60.0
+    },
+    {
+      "date": "2025-09-24",
+      "on_hand": 45.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-25",
+      "on_hand": 36.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-26",
+      "on_hand": 27.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-27",
+      "on_hand": 19.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-28",
+      "on_hand": 10.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-29",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-30",
+      "on_hand": 31.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 40.0
+    },
+    {
+      "date": "2025-10-01",
+      "on_hand": 23.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-02",
+      "on_hand": 14.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-03",
+      "on_hand": 3.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-04",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 6.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-05",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-06",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-07",
+      "on_hand": 28.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 35.0
+    },
+    {
+      "date": "2025-10-08",
+      "on_hand": 59.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 40.0
+    },
+    {
+      "date": "2025-10-09",
+      "on_hand": 52.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-10",
+      "on_hand": 43.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-11",
+      "on_hand": 33.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-12",
+      "on_hand": 22.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-13",
+      "on_hand": 12.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-14",
+      "on_hand": 3.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-15",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-16",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-17",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-18",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-19",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-20",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-21",
+      "on_hand": 29.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 40.0
+    },
+    {
+      "date": "2025-10-22",
+      "on_hand": 55.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 35.0
+    },
+    {
+      "date": "2025-10-23",
+      "on_hand": 47.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-24",
+      "on_hand": 39.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-25",
+      "on_hand": 29.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-26",
+      "on_hand": 21.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-27",
+      "on_hand": 11.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-28",
+      "on_hand": 2.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-29",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-30",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-31",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-01",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-02",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-03",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-04",
+      "on_hand": 45.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 45.0
+    },
+    {
+      "date": "2025-11-05",
+      "on_hand": 81.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 45.0
+    },
+    {
+      "date": "2025-11-06",
+      "on_hand": 71.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-07",
+      "on_hand": 61.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-08",
+      "on_hand": 52.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-09",
+      "on_hand": 41.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-10",
+      "on_hand": 32.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-11",
+      "on_hand": 22.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-12",
+      "on_hand": 12.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-13",
+      "on_hand": 2.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-14",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-15",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-16",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-17",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 12.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-18",
+      "on_hand": 32.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 40.0
+    },
+    {
+      "date": "2025-11-19",
+      "on_hand": 82.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 60.0
+    },
+    {
+      "date": "2025-11-20",
+      "on_hand": 72.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-21",
+      "on_hand": 63.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-22",
+      "on_hand": 54.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-23",
+      "on_hand": 44.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-24",
+      "on_hand": 34.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-25",
+      "on_hand": 25.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-26",
+      "on_hand": 15.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-27",
+      "on_hand": 6.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-28",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 5.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-29",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-30",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 12.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-01",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-02",
+      "on_hand": 35.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 45.0
+    },
+    {
+      "date": "2025-12-03",
+      "on_hand": 80.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.0
+    },
+    {
+      "date": "2025-12-04",
+      "on_hand": 71.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-05",
+      "on_hand": 61.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-06",
+      "on_hand": 49.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-07",
+      "on_hand": 40.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-08",
+      "on_hand": 30.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-09",
+      "on_hand": 20.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-10",
+      "on_hand": 0.0,
+      "demand": 52.0,
+      "stockout_units": 32.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-11",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-12",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-13",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 12.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-14",
+      "on_hand": 0.0,
+      "demand": 13.0,
+      "stockout_units": 13.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-15",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-16",
+      "on_hand": 33.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 45.0
+    },
+    {
+      "date": "2025-12-17",
+      "on_hand": 75.0,
+      "demand": 13.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.0
+    },
+    {
+      "date": "2025-12-18",
+      "on_hand": 65.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-19",
+      "on_hand": 55.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-20",
+      "on_hand": 44.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-21",
+      "on_hand": 34.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-22",
+      "on_hand": 22.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-23",
+      "on_hand": 11.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-24",
+      "on_hand": 0.0,
+      "demand": 13.0,
+      "stockout_units": 2.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-25",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-26",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-27",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-28",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-29",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-30",
+      "on_hand": 33.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 45.0
+    },
+    {
+      "date": "2025-12-31",
+      "on_hand": 78.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.0
+    },
+    {
+      "date": "2026-01-01",
+      "on_hand": 67.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-02",
+      "on_hand": 55.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-03",
+      "on_hand": 46.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-04",
+      "on_hand": 34.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-05",
+      "on_hand": 25.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-06",
+      "on_hand": 14.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-07",
+      "on_hand": 6.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-08",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 3.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-09",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-10",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-11",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 12.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-12",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-13",
+      "on_hand": 36.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 45.0
+    },
+    {
+      "date": "2026-01-14",
+      "on_hand": 81.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.0
+    },
+    {
+      "date": "2026-01-15",
+      "on_hand": 71.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-16",
+      "on_hand": 61.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-17",
+      "on_hand": 49.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-18",
+      "on_hand": 37.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-19",
+      "on_hand": 25.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-20",
+      "on_hand": 13.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-21",
+      "on_hand": 2.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-22",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-23",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-24",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-25",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-26",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-27",
+      "on_hand": 33.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 45.0
+    },
+    {
+      "date": "2026-01-28",
+      "on_hand": 77.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.0
+    },
+    {
+      "date": "2026-01-29",
+      "on_hand": 67.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-30",
+      "on_hand": 55.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-31",
+      "on_hand": 45.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-01",
+      "on_hand": 36.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-02",
+      "on_hand": 25.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-03",
+      "on_hand": 16.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-04",
+      "on_hand": 5.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-05",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-06",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-07",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-08",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-09",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-10",
+      "on_hand": 34.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 45.0
+    },
+    {
+      "date": "2026-02-11",
+      "on_hand": 80.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.0
+    },
+    {
+      "date": "2026-02-12",
+      "on_hand": 70.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-13",
+      "on_hand": 60.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-14",
+      "on_hand": 49.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-15",
+      "on_hand": 36.0,
+      "demand": 13.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-16",
+      "on_hand": 26.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-17",
+      "on_hand": 17.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-18",
+      "on_hand": 6.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-19",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 5.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-20",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-21",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-22",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-23",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-24",
+      "on_hand": 36.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 45.0
+    },
+    {
+      "date": "2026-02-25",
+      "on_hand": 81.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.0
+    },
+    {
+      "date": "2026-02-26",
+      "on_hand": 71.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-27",
+      "on_hand": 62.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-28",
+      "on_hand": 51.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-01",
+      "on_hand": 43.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-02",
+      "on_hand": 34.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-03",
+      "on_hand": 25.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-04",
+      "on_hand": 16.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-05",
+      "on_hand": 7.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-06",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 3.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-07",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-08",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-09",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-10",
+      "on_hand": 33.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 45.0
+    },
+    {
+      "date": "2026-03-11",
+      "on_hand": 77.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.0
+    },
+    {
+      "date": "2026-03-12",
+      "on_hand": 67.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-13",
+      "on_hand": 58.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-14",
+      "on_hand": 46.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-15",
+      "on_hand": 34.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-16",
+      "on_hand": 26.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-17",
+      "on_hand": 16.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-18",
+      "on_hand": 8.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-19",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 2.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-20",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-21",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-22",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-23",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-24",
+      "on_hand": 34.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 45.0
+    },
+    {
+      "date": "2026-03-25",
+      "on_hand": 80.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.0
+    },
+    {
+      "date": "2026-03-26",
+      "on_hand": 70.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-27",
+      "on_hand": 62.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-28",
+      "on_hand": 51.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-29",
+      "on_hand": 41.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-30",
+      "on_hand": 30.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-31",
+      "on_hand": 21.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-01",
+      "on_hand": 11.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-02",
+      "on_hand": 2.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-03",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-04",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-05",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-06",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-07",
+      "on_hand": 35.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 45.0
+    },
+    {
+      "date": "2026-04-08",
+      "on_hand": 80.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.0
+    },
+    {
+      "date": "2026-04-09",
+      "on_hand": 70.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-10",
+      "on_hand": 60.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-11",
+      "on_hand": 53.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-12",
+      "on_hand": 45.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-13",
+      "on_hand": 36.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-14",
+      "on_hand": 26.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-15",
+      "on_hand": 18.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-16",
+      "on_hand": 8.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-17",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-18",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-19",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-20",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-21",
+      "on_hand": 44.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.0
+    },
+    {
+      "date": "2026-04-22",
+      "on_hand": 110.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 75.0
+    },
+    {
+      "date": "2026-04-23",
+      "on_hand": 100.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-24",
+      "on_hand": 91.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-25",
+      "on_hand": 82.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-26",
+      "on_hand": 71.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-27",
+      "on_hand": 63.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-28",
+      "on_hand": 54.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-29",
+      "on_hand": 45.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-30",
+      "on_hand": 36.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-01",
+      "on_hand": 28.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-02",
+      "on_hand": 19.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-03",
+      "on_hand": 9.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-04",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-05",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-06",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-07",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-08",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-09",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-10",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-11",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-12",
+      "on_hand": 46.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.0
+    },
+    {
+      "date": "2026-05-13",
+      "on_hand": 112.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 75.0
+    },
+    {
+      "date": "2026-05-14",
+      "on_hand": 104.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-15",
+      "on_hand": 95.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-16",
+      "on_hand": 86.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-17",
+      "on_hand": 76.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-18",
+      "on_hand": 69.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-19",
+      "on_hand": 61.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-20",
+      "on_hand": 52.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-21",
+      "on_hand": 47.0,
+      "demand": 5.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-22",
+      "on_hand": 39.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-23",
+      "on_hand": 28.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-24",
+      "on_hand": 19.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-25",
+      "on_hand": 11.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-26",
+      "on_hand": 23.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 20.0
+    },
+    {
+      "date": "2026-05-27",
+      "on_hand": 45.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 30.0
+    },
+    {
+      "date": "2026-05-28",
+      "on_hand": 35.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-29",
+      "on_hand": 29.0,
+      "demand": 6.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-30",
+      "on_hand": 20.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-31",
+      "on_hand": 10.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-01",
+      "on_hand": 1.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-02",
+      "on_hand": 13.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 20.0
+    },
+    {
+      "date": "2026-06-03",
+      "on_hand": 35.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 30.0
+    },
+    {
+      "date": "2026-06-04",
+      "on_hand": 26.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-05",
+      "on_hand": 17.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-06",
+      "on_hand": 8.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-07",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 1.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-08",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-09",
+      "on_hand": 12.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 20.0
+    },
+    {
+      "date": "2026-06-10",
+      "on_hand": 33.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 30.0
+    },
+    {
+      "date": "2026-06-11",
+      "on_hand": 23.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-12",
+      "on_hand": 15.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-13",
+      "on_hand": 6.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-14",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 3.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-15",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-16",
+      "on_hand": 11.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 20.0
+    },
+    {
+      "date": "2026-06-17",
+      "on_hand": 34.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 30.0
+    },
+    {
+      "date": "2026-06-18",
+      "on_hand": 26.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-19",
+      "on_hand": 18.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-20",
+      "on_hand": 11.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-21",
+      "on_hand": 4.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-22",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 4.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-23",
+      "on_hand": 12.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 20.0
+    },
+    {
+      "date": "2026-06-24",
+      "on_hand": 35.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 30.0
+    },
+    {
+      "date": "2026-06-25",
+      "on_hand": 27.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-26",
+      "on_hand": 19.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-27",
+      "on_hand": 11.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-28",
+      "on_hand": 5.0,
+      "demand": 6.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-29",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 3.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-30",
+      "on_hand": 13.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 20.0
+    },
+    {
+      "date": "2026-07-01",
+      "on_hand": 36.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 30.0
+    },
+    {
+      "date": "2026-07-02",
+      "on_hand": 29.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-03",
+      "on_hand": 22.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-04",
+      "on_hand": 13.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-05",
+      "on_hand": 4.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-06",
+      "on_hand": 0.0,
+      "demand": 6.0,
+      "stockout_units": 2.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-07",
+      "on_hand": 12.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 20.0
+    },
+    {
+      "date": "2026-07-08",
+      "on_hand": 36.0,
+      "demand": 6.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 30.0
+    },
+    {
+      "date": "2026-07-09",
+      "on_hand": 29.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-10",
+      "on_hand": 23.0,
+      "demand": 6.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-11",
+      "on_hand": 16.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-12",
+      "on_hand": 9.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-13",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-14",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-15",
+      "on_hand": 0.0,
+      "demand": 5.0,
+      "stockout_units": 5.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-16",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-17",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-18",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-19",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-20",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-21",
+      "on_hand": 18.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 25.0
+    },
+    {
+      "date": "2026-07-22",
+      "on_hand": 50.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 40.0
+    },
+    {
+      "date": "2026-07-23",
+      "on_hand": 41.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-24",
+      "on_hand": 33.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-25",
+      "on_hand": 23.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-26",
+      "on_hand": 16.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-27",
+      "on_hand": 7.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-28",
+      "on_hand": 24.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 25.0
+    },
+    {
+      "date": "2026-07-29",
+      "on_hand": 47.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 30.0
+    },
+    {
+      "date": "2026-07-30",
+      "on_hand": 40.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-31",
+      "on_hand": 32.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-01",
+      "on_hand": 23.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-02",
+      "on_hand": 17.0,
+      "demand": 6.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-03",
+      "on_hand": 9.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-04",
+      "on_hand": 25.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 25.0
+    },
+    {
+      "date": "2026-08-05",
+      "on_hand": 46.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 30.0
+    },
+    {
+      "date": "2026-08-06",
+      "on_hand": 37.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-07",
+      "on_hand": 30.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-08",
+      "on_hand": 22.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-09",
+      "on_hand": 14.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-10",
+      "on_hand": 6.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-11",
+      "on_hand": 24.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 25.0
+    },
+    {
+      "date": "2026-08-12",
+      "on_hand": 46.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 30.0
+    },
+    {
+      "date": "2026-08-13",
+      "on_hand": 46.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-14",
+      "on_hand": 37.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-15",
+      "on_hand": 28.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-16",
+      "on_hand": 19.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-17",
+      "on_hand": 12.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-18",
+      "on_hand": 31.0,
+      "demand": 6.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 25.0
+    },
+    {
+      "date": "2026-08-19",
+      "on_hand": 52.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 30.0
+    },
+    {
+      "date": "2026-08-20",
+      "on_hand": 46.0,
+      "demand": 6.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-21",
+      "on_hand": 38.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-22",
+      "on_hand": 30.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-23",
+      "on_hand": 21.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-24",
+      "on_hand": 12.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-25",
+      "on_hand": 27.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 25.0
+    },
+    {
+      "date": "2026-08-26",
+      "on_hand": 48.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 30.0
+    },
+    {
+      "date": "2026-08-27",
+      "on_hand": 41.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-28",
+      "on_hand": 33.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-29",
+      "on_hand": 25.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-30",
+      "on_hand": 18.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-31",
+      "on_hand": 10.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    }
+  ]
+}

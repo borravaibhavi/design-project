@@ -1,0 +1,3949 @@
+{
+  "policy": "or_baseline_weekly",
+  "sku": "Oat Milk",
+  "start_date": "2025-08-31",
+  "end_date": "2026-08-31",
+  "days_simulated": 366,
+  "total_holding_cost": 871.63,
+  "total_ordering_cost": 1150.0,
+  "total_cost": 2021.63,
+  "order_count": 46,
+  "stockout_days": 90,
+  "stockout_units": 492.3,
+  "total_demand": 3387.0,
+  "service_level": 0.8547,
+  "decisions": [
+    {
+      "sku": "Oat Milk",
+      "date": "2025-08-31",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 8.21,
+      "reorder_point": 23.4,
+      "safety_stock": 2.8,
+      "reasoning": "On-hand (78.0) is above the reorder point (23.4); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 41.64,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-09-07",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 58.9,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 53.9
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 8.31,
+      "reorder_point": 25.3,
+      "safety_stock": 4.5,
+      "reasoning": "On-hand (24.0) is at or below the reorder point (25.3). Ordering 58.9 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 19.39,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-09-14",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 59.2,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 54.2
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 8.42,
+      "reorder_point": 25.7,
+      "safety_stock": 4.7,
+      "reasoning": "On-hand (21.9) is at or below the reorder point (25.7). Ordering 59.2 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 19.09,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-09-21",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 59.2,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 54.2
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 8.41,
+      "reorder_point": 25.9,
+      "safety_stock": 4.8,
+      "reasoning": "On-hand (22.1) is at or below the reorder point (25.9). Ordering 59.2 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 19.74,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-09-28",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 58.8,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 53.8
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 8.31,
+      "reorder_point": 25.4,
+      "safety_stock": 4.6,
+      "reasoning": "On-hand (23.3) is at or below the reorder point (25.4). Ordering 58.8 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 17.44,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-10-05",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 60.1,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 55.1
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 8.68,
+      "reorder_point": 24.5,
+      "safety_stock": 2.8,
+      "reasoning": "On-hand (17.1) is at or below the reorder point (24.5). Ordering 60.1 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 17.47,
+        "stockout_units": 0.9,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-10-12",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 59.8,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 54.8
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 8.57,
+      "reorder_point": 24.1,
+      "safety_stock": 2.6,
+      "reasoning": "On-hand (20.1) is at or below the reorder point (24.1). Ordering 59.8 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 16.36,
+        "stockout_units": 4.9,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-10-19",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 60.5,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 55.5
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 8.79,
+      "reorder_point": 24.9,
+      "safety_stock": 2.9,
+      "reasoning": "On-hand (19.8) is at or below the reorder point (24.9). Ordering 60.5 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 17.83,
+        "stockout_units": 4.2,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-10-26",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 61.2,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 56.2
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 9.0,
+      "reorder_point": 25.5,
+      "safety_stock": 3.0,
+      "reasoning": "On-hand (20.5) is at or below the reorder point (25.5). Ordering 61.2 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 16.66,
+        "stockout_units": 1.5,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-11-02",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 61.6,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 56.6
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 9.11,
+      "reorder_point": 25.8,
+      "safety_stock": 3.1,
+      "reasoning": "On-hand (15.2) is at or below the reorder point (25.8). Ordering 61.6 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 19.51,
+        "stockout_units": 2.8,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-11-09",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 62.4,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 57.4
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 9.36,
+      "reorder_point": 25.9,
+      "safety_stock": 2.5,
+      "reasoning": "On-hand (23.6) is at or below the reorder point (25.9). Ordering 62.4 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 16.9,
+        "stockout_units": 1.4,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-11-16",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 63.4,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 58.4
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 9.64,
+      "reorder_point": 26.6,
+      "safety_stock": 2.5,
+      "reasoning": "On-hand (14.4) is at or below the reorder point (26.6). Ordering 63.4 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 16.92,
+        "stockout_units": 10.6,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-11-23",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 63.9,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 58.9
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 9.79,
+      "reorder_point": 27.0,
+      "safety_stock": 2.5,
+      "reasoning": "On-hand (20.4) is at or below the reorder point (27.0). Ordering 63.9 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 17.69,
+        "stockout_units": 3.6,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-11-30",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 64.0,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 59.0
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 9.82,
+      "reorder_point": 27.0,
+      "safety_stock": 2.4,
+      "reasoning": "On-hand (18.9) is at or below the reorder point (27.0). Ordering 64.0 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 17.27,
+        "stockout_units": 8.1,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-12-07",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 64.9,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 59.9
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 10.11,
+      "reorder_point": 27.9,
+      "safety_stock": 2.6,
+      "reasoning": "On-hand (18.0) is at or below the reorder point (27.9). Ordering 64.9 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 2.03,
+        "stockout_units": 31.1,
+        "stockout_days": 5
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-12-14",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 68.5,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 63.5
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 11.27,
+      "reorder_point": 44.6,
+      "safety_stock": 16.4,
+      "reasoning": "On-hand (0.0) is at or below the reorder point (44.6). Ordering 68.5 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 16.92,
+        "stockout_units": 31.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-12-21",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 69.8,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 64.8
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 11.7,
+      "reorder_point": 45.6,
+      "safety_stock": 16.3,
+      "reasoning": "On-hand (19.5) is at or below the reorder point (45.6). Ordering 69.8 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 19.28,
+        "stockout_units": 8.5,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2025-12-28",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 70.4,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 65.4
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 11.89,
+      "reorder_point": 46.1,
+      "safety_stock": 16.4,
+      "reasoning": "On-hand (23.8) is at or below the reorder point (46.1). Ordering 70.4 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 20.66,
+        "stockout_units": 4.2,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-01-04",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 70.6,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 65.6
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 11.96,
+      "reorder_point": 46.2,
+      "safety_stock": 16.3,
+      "reasoning": "On-hand (23.4) is at or below the reorder point (46.2). Ordering 70.6 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 22.22,
+        "stockout_units": 3.6,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-01-11",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 66.7,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 61.7
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 10.68,
+      "reorder_point": 30.3,
+      "safety_stock": 3.6,
+      "reasoning": "On-hand (27.6) is at or below the reorder point (30.3). Ordering 66.7 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 21.6,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-01-18",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 65.8,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 60.8
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 10.39,
+      "reorder_point": 29.4,
+      "safety_stock": 3.4,
+      "reasoning": "On-hand (22.3) is at or below the reorder point (29.4). Ordering 65.8 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 17.94,
+        "stockout_units": 8.7,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-01-25",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 66.3,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 61.3
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 10.54,
+      "reorder_point": 29.5,
+      "safety_stock": 3.2,
+      "reasoning": "On-hand (18.8) is at or below the reorder point (29.5). Ordering 66.3 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 17.4,
+        "stockout_units": 9.2,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-02-01",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 66.4,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 61.4
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 10.57,
+      "reorder_point": 29.5,
+      "safety_stock": 3.1,
+      "reasoning": "On-hand (18.3) is at or below the reorder point (29.5). Ordering 66.4 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 17.51,
+        "stockout_units": 5.7,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-02-08",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 66.5,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 61.5
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 10.61,
+      "reorder_point": 29.4,
+      "safety_stock": 2.9,
+      "reasoning": "On-hand (19.4) is at or below the reorder point (29.4). Ordering 66.5 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 19.01,
+        "stockout_units": 7.6,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-02-15",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 66.5,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 61.5
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 10.61,
+      "reorder_point": 29.2,
+      "safety_stock": 2.6,
+      "reasoning": "On-hand (21.5) is at or below the reorder point (29.2). Ordering 66.5 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 17.82,
+        "stockout_units": 5.5,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-02-22",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 66.0,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 61.0
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 10.46,
+      "reorder_point": 28.9,
+      "safety_stock": 2.7,
+      "reasoning": "On-hand (19.5) is at or below the reorder point (28.9). Ordering 66.0 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 18.54,
+        "stockout_units": 5.5,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-03-01",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 65.4,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 60.4
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 10.25,
+      "reorder_point": 28.3,
+      "safety_stock": 2.7,
+      "reasoning": "On-hand (21.0) is at or below the reorder point (28.3). Ordering 65.4 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 19.99,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-03-08",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 64.4,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 59.4
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 9.96,
+      "reorder_point": 27.7,
+      "safety_stock": 2.7,
+      "reasoning": "On-hand (23.4) is at or below the reorder point (27.7). Ordering 64.4 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 18.41,
+        "stockout_units": 2.6,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-03-15",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 64.5,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 59.5
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 10.0,
+      "reorder_point": 28.2,
+      "safety_stock": 3.2,
+      "reasoning": "On-hand (17.4) is at or below the reorder point (28.2). Ordering 64.5 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 18.17,
+        "stockout_units": 7.6,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-03-22",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 63.9,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 58.9
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 9.79,
+      "reorder_point": 27.5,
+      "safety_stock": 3.1,
+      "reasoning": "On-hand (21.5) is at or below the reorder point (27.5). Ordering 63.9 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 18.43,
+        "stockout_units": 5.5,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-03-29",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 63.9,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 58.9
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 9.79,
+      "reorder_point": 27.7,
+      "safety_stock": 3.2,
+      "reasoning": "On-hand (20.9) is at or below the reorder point (27.7). Ordering 63.9 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 17.82,
+        "stockout_units": 4.1,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-04-05",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 64.7,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 59.7
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 10.04,
+      "reorder_point": 28.2,
+      "safety_stock": 3.1,
+      "reasoning": "On-hand (18.9) is at or below the reorder point (28.2). Ordering 64.7 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 17.96,
+        "stockout_units": 7.1,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-04-12",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 64.1,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 59.1
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 9.86,
+      "reorder_point": 27.5,
+      "safety_stock": 2.9,
+      "reasoning": "On-hand (22.7) is at or below the reorder point (27.5). Ordering 64.1 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 20.68,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-04-19",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 63.5,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 58.5
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 9.68,
+      "reorder_point": 27.0,
+      "safety_stock": 2.8,
+      "reasoning": "On-hand (23.8) is at or below the reorder point (27.0). Ordering 63.5 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 19.15,
+        "stockout_units": 1.2,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-04-26",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 63.2,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 58.2
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 9.57,
+      "reorder_point": 26.5,
+      "safety_stock": 2.6,
+      "reasoning": "On-hand (21.5) is at or below the reorder point (26.5). Ordering 63.2 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 18.94,
+        "stockout_units": 1.5,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-05-03",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 62.3,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 57.3
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 9.32,
+      "reorder_point": 25.9,
+      "safety_stock": 2.6,
+      "reasoning": "On-hand (23.2) is at or below the reorder point (25.9). Ordering 62.3 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 20.35,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-05-10",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 9.04,
+      "reorder_point": 25.1,
+      "safety_stock": 2.6,
+      "reasoning": "On-hand (25.5) is above the reorder point (25.1); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 3.54,
+        "stockout_units": 33.5,
+        "stockout_days": 4
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-05-17",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 60.9,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 55.9
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 8.89,
+      "reorder_point": 24.8,
+      "safety_stock": 2.5,
+      "reasoning": "On-hand (0.0) is at or below the reorder point (24.8). Ordering 60.9 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 17.47,
+        "stockout_units": 20.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-05-24",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 59.8,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 54.8
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 8.57,
+      "reorder_point": 24.7,
+      "safety_stock": 3.2,
+      "reasoning": "On-hand (22.9) is at or below the reorder point (24.7). Ordering 59.8 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 20.46,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-05-31",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 8.39,
+      "reorder_point": 24.3,
+      "safety_stock": 3.3,
+      "reasoning": "On-hand (24.7) is above the reorder point (24.3); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 2.45,
+        "stockout_units": 37.3,
+        "stockout_days": 5
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-06-07",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 59.4,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 54.4
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 8.46,
+      "reorder_point": 24.3,
+      "safety_stock": 3.2,
+      "reasoning": "On-hand (0.0) is at or below the reorder point (24.3). Ordering 59.4 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 15.19,
+        "stockout_units": 22.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-06-14",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 59.9,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 54.9
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 8.61,
+      "reorder_point": 24.7,
+      "safety_stock": 3.2,
+      "reasoning": "On-hand (18.4) is at or below the reorder point (24.7). Ordering 59.9 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 18.53,
+        "stockout_units": 3.6,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-06-21",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 8.57,
+      "reorder_point": 23.9,
+      "safety_stock": 2.5,
+      "reasoning": "On-hand (24.9) is above the reorder point (23.9); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 3.56,
+        "stockout_units": 29.1,
+        "stockout_days": 4
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-06-28",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 59.3,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 54.3
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 8.43,
+      "reorder_point": 23.3,
+      "safety_stock": 2.3,
+      "reasoning": "On-hand (0.0) is at or below the reorder point (23.3). Ordering 59.3 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 17.42,
+        "stockout_units": 16.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-07-05",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 8.04,
+      "reorder_point": 22.6,
+      "safety_stock": 2.6,
+      "reasoning": "On-hand (24.3) is above the reorder point (22.6); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 3.11,
+        "stockout_units": 24.7,
+        "stockout_days": 4
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-07-12",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 56.0,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 51.0
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 7.54,
+      "reorder_point": 21.3,
+      "safety_stock": 2.5,
+      "reasoning": "On-hand (0.0) is at or below the reorder point (21.3). Ordering 56.0 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 16.8,
+        "stockout_units": 18.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-07-19",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 7.29,
+      "reorder_point": 20.7,
+      "safety_stock": 2.5,
+      "reasoning": "On-hand (24.0) is above the reorder point (20.7); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 3.6,
+        "stockout_units": 32.0,
+        "stockout_days": 4
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-07-26",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 55.4,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 50.4
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 7.36,
+      "reorder_point": 21.3,
+      "safety_stock": 2.9,
+      "reasoning": "On-hand (0.0) is at or below the reorder point (21.3). Ordering 55.4 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 15.31,
+        "stockout_units": 19.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-08-02",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 55.9,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 50.9
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 7.5,
+      "reorder_point": 21.7,
+      "safety_stock": 2.9,
+      "reasoning": "On-hand (19.4) is at or below the reorder point (21.7). Ordering 55.9 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 17.33,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-08-09",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 56.8,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 51.8
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 7.75,
+      "reorder_point": 22.2,
+      "safety_stock": 2.8,
+      "reasoning": "On-hand (19.3) is at or below the reorder point (22.2). Ordering 56.8 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 20.32,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-08-16",
+      "policy": "or_baseline_weekly",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "forecast_level": 8.02,
+      "reorder_point": 22.5,
+      "safety_stock": 2.4,
+      "reasoning": "On-hand (27.1) is above the reorder point (22.5); no action needed.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 4.12,
+        "stockout_units": 25.9,
+        "stockout_days": 4
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-08-23",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 57.4,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 52.4
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 7.91,
+      "reorder_point": 22.3,
+      "safety_stock": 2.6,
+      "reasoning": "On-hand (0.0) is at or below the reorder point (22.3). Ordering 57.4 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 7,
+        "holding_cost": 15.43,
+        "stockout_units": 23.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Oat Milk",
+      "date": "2026-08-30",
+      "policy": "or_baseline_weekly",
+      "action": "order",
+      "order_qty": 58.1,
+      "allocation": [
+        {
+          "supplier": "PlantBase Foods",
+          "qty": 53.1
+        },
+        {
+          "supplier": "Regional Dairy Co-op",
+          "qty": 5.0
+        }
+      ],
+      "forecast_level": 8.09,
+      "reorder_point": 22.9,
+      "safety_stock": 2.7,
+      "reasoning": "On-hand (20.4) is at or below the reorder point (22.9). Ordering 58.1 units across 2 supplier(s) per LP allocation.",
+      "outcome": {
+        "days": 2,
+        "holding_cost": 2.26,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    }
+  ],
+  "daily_log": [
+    {
+      "date": "2025-08-31",
+      "on_hand": 69.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-01",
+      "on_hand": 69.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-02",
+      "on_hand": 60.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-03",
+      "on_hand": 51.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-04",
+      "on_hand": 42.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-05",
+      "on_hand": 32.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-06",
+      "on_hand": 24.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-07",
+      "on_hand": 14.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-08",
+      "on_hand": 7.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-09",
+      "on_hand": 4.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-09-10",
+      "on_hand": 47.9,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 53.9
+    },
+    {
+      "date": "2025-09-11",
+      "on_hand": 37.9,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-12",
+      "on_hand": 28.9,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-13",
+      "on_hand": 21.9,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-14",
+      "on_hand": 11.9,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-15",
+      "on_hand": 4.9,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-16",
+      "on_hand": 0.9,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-09-17",
+      "on_hand": 48.1,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 54.2
+    },
+    {
+      "date": "2025-09-18",
+      "on_hand": 40.1,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-19",
+      "on_hand": 31.1,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-20",
+      "on_hand": 22.1,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-21",
+      "on_hand": 13.1,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-22",
+      "on_hand": 5.1,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-23",
+      "on_hand": 2.1,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-09-24",
+      "on_hand": 49.3,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 54.2
+    },
+    {
+      "date": "2025-09-25",
+      "on_hand": 40.3,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-26",
+      "on_hand": 31.3,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-27",
+      "on_hand": 23.3,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-28",
+      "on_hand": 14.3,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-29",
+      "on_hand": 4.3,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-30",
+      "on_hand": 0.3,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-10-01",
+      "on_hand": 46.1,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 53.8
+    },
+    {
+      "date": "2025-10-02",
+      "on_hand": 37.1,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-03",
+      "on_hand": 26.1,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-04",
+      "on_hand": 17.1,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-05",
+      "on_hand": 9.1,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-06",
+      "on_hand": 1.1,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-07",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 0.9,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-10-08",
+      "on_hand": 46.1,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.1
+    },
+    {
+      "date": "2025-10-09",
+      "on_hand": 39.1,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-10",
+      "on_hand": 30.1,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-11",
+      "on_hand": 20.1,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-12",
+      "on_hand": 9.1,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-13",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 0.9,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-14",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 4.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-10-15",
+      "on_hand": 43.8,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 54.8
+    },
+    {
+      "date": "2025-10-16",
+      "on_hand": 35.8,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-17",
+      "on_hand": 27.8,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-18",
+      "on_hand": 19.8,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-19",
+      "on_hand": 10.8,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-20",
+      "on_hand": 1.8,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-21",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 4.2,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-10-22",
+      "on_hand": 46.5,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.5
+    },
+    {
+      "date": "2025-10-23",
+      "on_hand": 38.5,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-24",
+      "on_hand": 30.5,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-25",
+      "on_hand": 20.5,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-26",
+      "on_hand": 12.5,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-27",
+      "on_hand": 2.5,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-28",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 1.5,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-10-29",
+      "on_hand": 46.2,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 56.2
+    },
+    {
+      "date": "2025-10-30",
+      "on_hand": 36.2,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-31",
+      "on_hand": 26.2,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-01",
+      "on_hand": 15.2,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-02",
+      "on_hand": 6.2,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-03",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 2.8,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-04",
+      "on_hand": 5.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-11-05",
+      "on_hand": 52.6,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 56.6
+    },
+    {
+      "date": "2025-11-06",
+      "on_hand": 42.6,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-07",
+      "on_hand": 32.6,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-08",
+      "on_hand": 23.6,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-09",
+      "on_hand": 12.6,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-10",
+      "on_hand": 3.6,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-11",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 1.4,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-11-12",
+      "on_hand": 47.4,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 57.4
+    },
+    {
+      "date": "2025-11-13",
+      "on_hand": 37.4,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-14",
+      "on_hand": 25.4,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-15",
+      "on_hand": 14.4,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-16",
+      "on_hand": 4.4,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-17",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 7.6,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-18",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 3.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-11-19",
+      "on_hand": 48.4,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 58.4
+    },
+    {
+      "date": "2025-11-20",
+      "on_hand": 38.4,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-21",
+      "on_hand": 29.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-22",
+      "on_hand": 20.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-23",
+      "on_hand": 10.4,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-24",
+      "on_hand": 0.4,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-25",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 3.6,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-11-26",
+      "on_hand": 48.9,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 58.9
+    },
+    {
+      "date": "2025-11-27",
+      "on_hand": 39.9,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-28",
+      "on_hand": 28.9,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-29",
+      "on_hand": 18.9,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-30",
+      "on_hand": 6.9,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-01",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 3.1,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-02",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 5.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-12-03",
+      "on_hand": 49.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 59.0
+    },
+    {
+      "date": "2025-12-04",
+      "on_hand": 40.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-05",
+      "on_hand": 30.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-06",
+      "on_hand": 18.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-07",
+      "on_hand": 9.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-08",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 1.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-09",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 5.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-12-10",
+      "on_hand": 7.9,
+      "demand": 52.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 59.9
+    },
+    {
+      "date": "2025-12-11",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 3.1,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-12",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-13",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 12.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-14",
+      "on_hand": 0.0,
+      "demand": 13.0,
+      "stockout_units": 13.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-15",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-16",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-12-17",
+      "on_hand": 50.5,
+      "demand": 13.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 63.5
+    },
+    {
+      "date": "2025-12-18",
+      "on_hand": 40.5,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-19",
+      "on_hand": 30.5,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-20",
+      "on_hand": 19.5,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-21",
+      "on_hand": 9.5,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-22",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 2.5,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-23",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 6.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-12-24",
+      "on_hand": 51.8,
+      "demand": 13.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 64.8
+    },
+    {
+      "date": "2025-12-25",
+      "on_hand": 41.8,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-26",
+      "on_hand": 33.8,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-27",
+      "on_hand": 23.8,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-28",
+      "on_hand": 13.8,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-29",
+      "on_hand": 2.8,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-30",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 4.2,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2025-12-31",
+      "on_hand": 55.4,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 65.4
+    },
+    {
+      "date": "2026-01-01",
+      "on_hand": 44.4,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-02",
+      "on_hand": 32.4,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-03",
+      "on_hand": 23.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-04",
+      "on_hand": 11.4,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-05",
+      "on_hand": 2.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-06",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 3.6,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-01-07",
+      "on_hand": 57.6,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 65.6
+    },
+    {
+      "date": "2026-01-08",
+      "on_hand": 48.6,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-09",
+      "on_hand": 37.6,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-10",
+      "on_hand": 27.6,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-11",
+      "on_hand": 15.6,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-12",
+      "on_hand": 6.6,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-13",
+      "on_hand": 2.6,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-01-14",
+      "on_hand": 54.3,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 61.7
+    },
+    {
+      "date": "2026-01-15",
+      "on_hand": 44.3,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-16",
+      "on_hand": 34.3,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-17",
+      "on_hand": 22.3,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-18",
+      "on_hand": 10.3,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-19",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 1.7,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-20",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-01-21",
+      "on_hand": 49.8,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 60.8
+    },
+    {
+      "date": "2026-01-22",
+      "on_hand": 40.8,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-23",
+      "on_hand": 29.8,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-24",
+      "on_hand": 18.8,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-25",
+      "on_hand": 7.8,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-26",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 2.2,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-27",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-01-28",
+      "on_hand": 50.3,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 61.3
+    },
+    {
+      "date": "2026-01-29",
+      "on_hand": 40.3,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-30",
+      "on_hand": 28.3,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-31",
+      "on_hand": 18.3,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-01",
+      "on_hand": 9.3,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-02",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 1.7,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-03",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 4.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-02-04",
+      "on_hand": 50.4,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 61.4
+    },
+    {
+      "date": "2026-02-05",
+      "on_hand": 38.4,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-06",
+      "on_hand": 28.4,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-07",
+      "on_hand": 19.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-08",
+      "on_hand": 9.4,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-09",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 1.6,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-10",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 6.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-02-11",
+      "on_hand": 52.5,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 61.5
+    },
+    {
+      "date": "2026-02-12",
+      "on_hand": 42.5,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-13",
+      "on_hand": 32.5,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-14",
+      "on_hand": 21.5,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-15",
+      "on_hand": 8.5,
+      "demand": 13.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-16",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 1.5,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-17",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 4.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-02-18",
+      "on_hand": 50.5,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 61.5
+    },
+    {
+      "date": "2026-02-19",
+      "on_hand": 39.5,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-20",
+      "on_hand": 30.5,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-21",
+      "on_hand": 19.5,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-22",
+      "on_hand": 9.5,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-23",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 1.5,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-24",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 4.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-02-25",
+      "on_hand": 51.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 61.0
+    },
+    {
+      "date": "2026-02-26",
+      "on_hand": 41.0,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-27",
+      "on_hand": 32.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-28",
+      "on_hand": 21.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-01",
+      "on_hand": 13.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-02",
+      "on_hand": 4.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-03",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-03-04",
+      "on_hand": 51.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 60.4
+    },
+    {
+      "date": "2026-03-05",
+      "on_hand": 42.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-06",
+      "on_hand": 32.4,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-07",
+      "on_hand": 23.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-08",
+      "on_hand": 15.4,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-09",
+      "on_hand": 4.4,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-10",
+      "on_hand": 0.0,
+      "demand": 12.0,
+      "stockout_units": 2.6,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-03-11",
+      "on_hand": 48.4,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 59.4
+    },
+    {
+      "date": "2026-03-12",
+      "on_hand": 38.4,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-13",
+      "on_hand": 29.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-14",
+      "on_hand": 17.4,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-15",
+      "on_hand": 5.4,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-16",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 2.6,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-17",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 5.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-03-18",
+      "on_hand": 51.5,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 59.5
+    },
+    {
+      "date": "2026-03-19",
+      "on_hand": 41.5,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-20",
+      "on_hand": 31.5,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-21",
+      "on_hand": 21.5,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-22",
+      "on_hand": 10.5,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-23",
+      "on_hand": 0.5,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-24",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 5.5,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-03-25",
+      "on_hand": 49.9,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 58.9
+    },
+    {
+      "date": "2026-03-26",
+      "on_hand": 39.9,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-27",
+      "on_hand": 31.9,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-28",
+      "on_hand": 20.9,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-29",
+      "on_hand": 10.9,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-30",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 0.1,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-31",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 4.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-04-01",
+      "on_hand": 48.9,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 58.9
+    },
+    {
+      "date": "2026-04-02",
+      "on_hand": 39.9,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-03",
+      "on_hand": 29.9,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-04",
+      "on_hand": 18.9,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-05",
+      "on_hand": 7.9,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-06",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 2.1,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-07",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 5.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-04-08",
+      "on_hand": 49.7,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 59.7
+    },
+    {
+      "date": "2026-04-09",
+      "on_hand": 39.7,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-10",
+      "on_hand": 29.7,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-11",
+      "on_hand": 22.7,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-12",
+      "on_hand": 14.7,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-13",
+      "on_hand": 5.7,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-14",
+      "on_hand": 0.7,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-04-15",
+      "on_hand": 51.8,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 59.1
+    },
+    {
+      "date": "2026-04-16",
+      "on_hand": 41.8,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-17",
+      "on_hand": 33.8,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-18",
+      "on_hand": 23.8,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-19",
+      "on_hand": 13.8,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-20",
+      "on_hand": 4.8,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-21",
+      "on_hand": 0.0,
+      "demand": 11.0,
+      "stockout_units": 1.2,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-04-22",
+      "on_hand": 49.5,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 58.5
+    },
+    {
+      "date": "2026-04-23",
+      "on_hand": 39.5,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-24",
+      "on_hand": 30.5,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-25",
+      "on_hand": 21.5,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-26",
+      "on_hand": 10.5,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-27",
+      "on_hand": 2.5,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-28",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 1.5,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-04-29",
+      "on_hand": 49.2,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 58.2
+    },
+    {
+      "date": "2026-04-30",
+      "on_hand": 40.2,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-01",
+      "on_hand": 32.2,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-02",
+      "on_hand": 23.2,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-03",
+      "on_hand": 13.2,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-04",
+      "on_hand": 4.2,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-05",
+      "on_hand": 2.2,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-05-06",
+      "on_hand": 49.5,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 57.3
+    },
+    {
+      "date": "2026-05-07",
+      "on_hand": 41.5,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-08",
+      "on_hand": 33.5,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-09",
+      "on_hand": 25.5,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-10",
+      "on_hand": 17.5,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-11",
+      "on_hand": 10.5,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-12",
+      "on_hand": 1.5,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-13",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 7.5,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-14",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-15",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-16",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-17",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-18",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-19",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 3.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-05-20",
+      "on_hand": 46.9,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 55.9
+    },
+    {
+      "date": "2026-05-21",
+      "on_hand": 41.9,
+      "demand": 5.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-22",
+      "on_hand": 33.9,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-23",
+      "on_hand": 22.9,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-24",
+      "on_hand": 13.9,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-25",
+      "on_hand": 5.9,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-26",
+      "on_hand": 2.9,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-05-27",
+      "on_hand": 49.7,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 54.8
+    },
+    {
+      "date": "2026-05-28",
+      "on_hand": 39.7,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-29",
+      "on_hand": 33.7,
+      "demand": 6.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-30",
+      "on_hand": 24.7,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-31",
+      "on_hand": 14.7,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-01",
+      "on_hand": 5.7,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-02",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 2.3,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-03",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-04",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-05",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-06",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-07",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-08",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-09",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 3.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-06-10",
+      "on_hand": 45.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 54.4
+    },
+    {
+      "date": "2026-06-11",
+      "on_hand": 35.4,
+      "demand": 10.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-12",
+      "on_hand": 27.4,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-13",
+      "on_hand": 18.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-14",
+      "on_hand": 9.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-15",
+      "on_hand": 0.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-16",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 3.6,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-06-17",
+      "on_hand": 47.9,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 54.9
+    },
+    {
+      "date": "2026-06-18",
+      "on_hand": 39.9,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-19",
+      "on_hand": 31.9,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-20",
+      "on_hand": 24.9,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-21",
+      "on_hand": 17.9,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-22",
+      "on_hand": 9.9,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-23",
+      "on_hand": 1.9,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-24",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 5.1,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-25",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-26",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-27",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-28",
+      "on_hand": 0.0,
+      "demand": 6.0,
+      "stockout_units": 6.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-29",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-30",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 2.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-07-01",
+      "on_hand": 47.3,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 54.3
+    },
+    {
+      "date": "2026-07-02",
+      "on_hand": 40.3,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-03",
+      "on_hand": 33.3,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-04",
+      "on_hand": 24.3,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-05",
+      "on_hand": 15.3,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-06",
+      "on_hand": 9.3,
+      "demand": 6.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-07",
+      "on_hand": 1.3,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-08",
+      "on_hand": 0.0,
+      "demand": 6.0,
+      "stockout_units": 4.7,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-09",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-10",
+      "on_hand": 0.0,
+      "demand": 6.0,
+      "stockout_units": 6.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-11",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-12",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-13",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-14",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 2.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-07-15",
+      "on_hand": 46.0,
+      "demand": 5.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 51.0
+    },
+    {
+      "date": "2026-07-16",
+      "on_hand": 39.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-17",
+      "on_hand": 31.0,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-18",
+      "on_hand": 24.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-19",
+      "on_hand": 17.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-20",
+      "on_hand": 10.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-21",
+      "on_hand": 3.0,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-22",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 5.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-23",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-24",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-25",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-26",
+      "on_hand": 0.0,
+      "demand": 7.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-27",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-28",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 3.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-07-29",
+      "on_hand": 43.4,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.4
+    },
+    {
+      "date": "2026-07-30",
+      "on_hand": 36.4,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-31",
+      "on_hand": 28.4,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-01",
+      "on_hand": 19.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-02",
+      "on_hand": 13.4,
+      "demand": 6.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-03",
+      "on_hand": 5.4,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-04",
+      "on_hand": 1.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-08-05",
+      "on_hand": 43.3,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 50.9
+    },
+    {
+      "date": "2026-08-06",
+      "on_hand": 34.3,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-07",
+      "on_hand": 27.3,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-08",
+      "on_hand": 19.3,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-09",
+      "on_hand": 11.3,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-10",
+      "on_hand": 3.3,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-11",
+      "on_hand": 1.3,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-08-12",
+      "on_hand": 45.1,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 51.8
+    },
+    {
+      "date": "2026-08-13",
+      "on_hand": 45.1,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-14",
+      "on_hand": 36.1,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-15",
+      "on_hand": 27.1,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-16",
+      "on_hand": 18.1,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-17",
+      "on_hand": 11.1,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-18",
+      "on_hand": 5.1,
+      "demand": 6.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-19",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 3.9,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-20",
+      "on_hand": 0.0,
+      "demand": 6.0,
+      "stockout_units": 6.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-21",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-22",
+      "on_hand": 0.0,
+      "demand": 8.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-23",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-24",
+      "on_hand": 0.0,
+      "demand": 9.0,
+      "stockout_units": 9.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-25",
+      "on_hand": 0.0,
+      "demand": 10.0,
+      "stockout_units": 5.0,
+      "arrived_qty": 5.0
+    },
+    {
+      "date": "2026-08-26",
+      "on_hand": 43.4,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 52.4
+    },
+    {
+      "date": "2026-08-27",
+      "on_hand": 36.4,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-28",
+      "on_hand": 28.4,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-29",
+      "on_hand": 20.4,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-30",
+      "on_hand": 13.4,
+      "demand": 7.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-31",
+      "on_hand": 5.4,
+      "demand": 8.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    }
+  ]
+}

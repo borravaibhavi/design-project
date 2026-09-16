@@ -1,0 +1,3652 @@
+{
+  "policy": "llm_agent",
+  "sku": "Espresso Beans (Arabica)",
+  "start_date": "2025-08-31",
+  "end_date": "2026-08-31",
+  "days_simulated": 366,
+  "total_holding_cost": 2075.76,
+  "total_ordering_cost": 1720.0,
+  "total_cost": 3795.76,
+  "order_count": 43,
+  "stockout_days": 36,
+  "stockout_units": 565.0,
+  "total_demand": 6683.0,
+  "service_level": 0.9155,
+  "decisions": [
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-08-31",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 100
+        }
+      ],
+      "reasoning": "Average daily usage is ~17 lb/day. With Highland's 6-day lead time, expected demand during lead time is ~102 lb, and current stock of 138 lb would drop to roughly 36 lb by the time a new order arrives after covering lead-time demand, which is below our 5-day safety stock target (~85 lb). Ordering 100 lb from Highland Roasters Co-op now balances reasonable price (6.75/lb, cheaper than Direct Trade) with solid reliability (95%) and a moderate lead time, ensuring stock lasts through lead time plus safety buffer without overordering like the slower, higher-MOQ Continental option.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 36.66,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-09-07",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 100
+        }
+      ],
+      "reasoning": "Average daily usage is ~17 lb/day. With Highland's 6-day lead time, expected demand during lead time is ~102 lb, and safety stock (5 days) adds ~85 lb, putting our reorder point around 187 lb. Current stock of 136 lb is already below that threshold, so we need to order now. Highland offers a good balance of price (6.75/lb) and high reliability (95%) with a moderate lead time, making it preferable to the cheaper but slower Continental (9-day lead time increases stockout risk) or the pricier, limited-availability Direct Trade option; ordering 100 lb covers lead-time demand plus buffer without excessive holding costs.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 40.98,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-09-14",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 100
+        }
+      ],
+      "reasoning": "Average daily usage is ~17 lb/day. With Highland's 6-day lead time, expected lead-time demand is ~102 lb, and 5-day safety stock adds ~85 lb, giving a reorder point of ~187 lb. Current stock of 132 lb is already below that threshold, so we need to order now. Highland remains the best balance of price (6.75/lb) and high reliability (95%) versus the slower Continental (9-day lead time, higher stockout risk) or pricier, limited-availability Direct Trade; ordering 100 lb (consistent with past successful orders that avoided stockouts) covers lead-time demand plus buffer without excessive holding costs.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 33.12,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-09-21",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 100
+        }
+      ],
+      "reasoning": "Average daily usage is ~17 lb/day. With Highland's 6-day lead time, expected lead-time demand is ~102 lb, and 5-day safety stock adds ~85 lb, giving a reorder point of ~187 lb. Current stock of 113 lb is well below that threshold, so we need to order now to avoid a stockout before a new order could arrive. Highland Roasters remains the best balance of price (6.75/lb) and high reliability (95%) versus the slower Continental (9-day lead time, higher risk) or pricier, limited-availability Direct Trade; ordering 100 lb, consistent with past successful cycles that avoided stockouts while keeping holding costs reasonable, is the right call.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 23.34,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-09-28",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 100
+        }
+      ],
+      "reasoning": "Average daily usage is ~17.5 lb/day. With Highland's 6-day lead time, expected lead-time demand is ~105 lb, and 5-day safety stock adds ~87 lb, giving a reorder point of ~192 lb - well above current stock of 85 lb, so we must order now to avoid a stockout. Highland Roasters again offers the best balance of price (6.75/lb) and high reliability (95%) versus the slower Continental (9-day lead time) or pricier, limited-availability Direct Trade; ordering 100 lb matches the consistent, proven cadence from recent cycles that kept us stockout-free with manageable holding costs.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 13.98,
+        "stockout_units": 25.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-10-05",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 100.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 100
+        }
+      ],
+      "reasoning": "Average daily usage is ~18 lb/day and rising slightly. With Highland's 6-day lead time, expected lead-time demand is ~108 lb, plus 5-day safety stock (~90 lb) gives a reorder point of ~198 lb - well above current stock of 80 lb, so we must order now. Last cycle's stockout occurred because we let stock run too low (85 lb) before reordering; ordering 100 lb now from Highland Roasters (good price/reliability balance) restores buffer promptly and avoids repeating that gap, while Continental's longer lead time and Direct Trade's limited availability make them less suitable for this urgent replenishment.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 12.84,
+        "stockout_units": 28.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-10-12",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Average daily usage is ~18 lb/day. With Highland's 6-day lead time, lead-time demand is ~108 lb, plus 5-day safety stock (~90 lb) gives a reorder point of ~198 lb - well above current stock of 83 lb, so we must order now. The last two 100 lb orders both resulted in stockouts (25 and 28 units short) because 100 lb only covered about 5.5 days at current usage before the next order's 6-day lead time was up, leaving no safety margin; bumping to 150 lb from reliable, moderately-priced Highland Roasters (95% reliability, 6.75/lb) covers lead-time demand plus a full safety buffer and should finally close the gap that's been causing repeated stockouts, while still costing less per unit than Direct Trade and arriving faster than Continental.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 18.3,
+        "stockout_units": 23.0,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-10-19",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Average usage is ~18 lb/day. Highland's 6-day lead time means ~108 lb needed just to bridge to delivery, plus 5-day safety stock (~90 lb) gives a reorder point near 200 lb - current stock of 133 lb is already below that, and we've had repeated stockouts recently (3 of last 4 cycles) suggesting our safety margin has been too thin, possibly due to demand upticks or reliability variance. Ordering 150 lb now from Highland (best balance of price and reliability, 6-day lead time) covers lead-time demand plus a solid buffer; given recurring shortfalls, erring toward this larger order is safer than risking another stockout, even at modest extra holding cost.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 34.8,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-10-26",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Average daily usage is steady at ~18 lb/day. With Highland's 6-day lead time, lead-time demand is ~108 lb, plus 5-day safety stock (~90 lb) gives a reorder point of ~198 lb; current stock of 155 lb is below that threshold, and given the repeated stockouts in recent cycles when we let stock run lower before ordering, it's better to reorder now while stock is still healthy rather than wait. Sticking with the 150 lb order size that finally eliminated stockouts last cycle, sourced from Highland Roasters (good price/reliability balance, 6-day lead time) keeps supply steady without the excess holding cost of Continental's larger MOQ or the premium of Direct Trade.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 42.72,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-11-02",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage has crept up to ~19 lb/day (last week averaging ~20). With Highland's 6-day lead time, lead-time demand is ~114 lb, plus 5-day safety stock (~95 lb) gives a reorder point of ~209 lb; current stock of 168 lb is already below that, so we should order now rather than wait. The 150 lb order size has been reliable the last two cycles (zero stockouts) at moderate holding cost, so sticking with Highland Roasters (good price/reliability balance, 6-day lead time) keeps supply steady without the excess capital tie-up of a larger order or the higher cost of Direct Trade.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 48.36,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-11-09",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady at ~18-19 lb/day. With Highland's 6-day lead time, lead-time demand is ~114 lb, plus 5-day safety stock (~95 lb) gives a reorder point of ~209 lb; current stock of 190 lb is just below that threshold, so ordering now keeps us ahead of the curve rather than waiting until stock gets critically low as happened in past stockout cycles. Sticking with 150 lb from Highland Roasters (good price/reliability balance, moderate 6-day lead time) has produced zero stockouts in the last three cycles, so continuing this proven cadence is the safest, most cost-effective choice versus the slower Continental or pricier Direct Trade options.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 56.34,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-11-16",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady at ~18-19 lb/day. With Highland's 6-day lead time, lead-time demand is ~114 lb, plus 5-day safety stock (~95 lb) gives a reorder point of ~209 lb; current stock of 206 lb is right at that threshold, so ordering now maintains our buffer before it erodes further. The 150 lb cadence from Highland Roasters (good price/reliability balance, 6-day lead time) has produced zero stockouts over the last three cycles, so continuing this proven pattern is safer and more cost-effective than switching to slower Continental or pricier Direct Trade.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 64.5,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-11-23",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 19 lb/day. With Highland's 6-day lead time, lead-time demand is ~114 lb, plus 5-day safety stock (~95 lb) gives a reorder point of ~209 lb; current stock of 222 lb is just above that but will cross it within a day or two, so ordering now keeps us ahead of the threshold. The 150 lb cadence from Highland Roasters (good price/reliability balance, moderate 6-day lead time) has produced zero stockouts over the last four cycles, so continuing this proven pattern is safer and more cost-effective than switching to slower Continental or pricier Direct Trade.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 69.66,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-11-30",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 19 lb/day. With Highland's 6-day lead time, lead-time demand is ~114 lb, plus 5-day safety stock (~95 lb) gives a reorder point of ~209 lb; current stock of 235 lb will cross that threshold within 1-2 days, so ordering now keeps us ahead rather than waiting until stock is critically low. The 150 lb cadence from Highland Roasters (good price/reliability balance, 6-day lead time) has produced zero stockouts over the last five cycles, so continuing this proven, cost-effective pattern beats switching to slower Continental or pricier Direct Trade.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 74.64,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-12-07",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Daily usage is steady around 19 lb/day. Reorder point (6-day lead time demand ~114 lb + 5-day safety stock ~95 lb) is ~209 lb; current stock of 251 lb is comfortably above that, and holding costs have been climbing each cycle as we've been ordering slightly too early. Holding now avoids extra carrying cost while stock still covers lead time plus buffer; we'll reorder once stock nears ~209 lb in the next couple of days.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 70.86,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-12-14",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Daily usage is steady at ~20 lb/day. With Highland's 6-day lead time, lead-time demand is ~120 lb, plus 5-day safety stock (~100 lb) gives a reorder point of ~220 lb; current stock of 107 lb is well below that. Wait - actually stock is only 107 lb, which is below the reorder point, so we should order. Correcting: order now from Highland Roasters at 150 lb, the proven cadence that has avoided stockouts, since 107 lb on hand covers only ~5 days and won't bridge the 6-day lead time plus safety buffer.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 9.12,
+        "stockout_units": 95.0,
+        "stockout_days": 5
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-12-21",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 250.0,
+      "allocation": [
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 40
+        },
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 210
+        }
+      ],
+      "reasoning": "We are currently at zero stock and stocked out, with average demand ~20 lb/day (recent days trending 19-26/day plus a 76-unit spike). This is a critical situation: the Dec 14 hold decision led to a 5-day, 95-unit stockout because we misjudged the reorder point, and we cannot repeat that error. To close the gap fast, I'm splitting the order: 40 lb from Direct Trade Partners (4-day lead time, 98% reliable) to get partial relief as quickly as possible despite the higher price, and 210 lb from Highland Roasters Co-op (6-day lead time, 95% reliable, better price) to rebuild a full buffer covering lead-time demand (~120 lb) plus safety stock (~100 lb) and then some, given how costly recent stockouts have been. This dual-sourcing approach minimizes further lost sales while controlling cost versus ordering everything from the pricier, limited-availability Direct Trade supplier.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 12.54,
+        "stockout_units": 84.0,
+        "stockout_days": 5
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2025-12-28",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Daily usage is steady at ~20-21 lb/day (excluding the one-off 76 lb spike). Reorder point = lead-time demand (Highland 6 days x 20 = ~120 lb) plus 5-day safety stock (~100 lb) = ~220 lb. We just received the large order placed Dec 21 (250 lb, split Direct Trade 40 + Highland 210, arriving within 4-6 days), and current on-hand of 192 lb plus that incoming shipment will comfortably cover demand through the next lead time. Holding now avoids piling on more inventory and holding cost while the recent order is still in transit; we'll reassess once stock is confirmed received and trends toward the ~220 lb reorder threshold.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 49.38,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-01-04",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 20 lb/day. With Highland's 6-day lead time, lead-time demand is ~120 lb, plus 5-day safety stock (~100 lb) gives a reorder point of ~220 lb; current stock of 75 lb is well below that, so we must order now to avoid a repeat of the recent stockouts. Ordering 150 lb from Highland Roasters (good price/reliability balance, proven cadence) rebuilds coverage through lead time plus a safety buffer without over-ordering into Continental's slower 9-day lead time or Direct Trade's pricier, limited-availability supply.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 13.98,
+        "stockout_units": 53.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-01-11",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 20-21 lb/day. With Highland's 6-day lead time, lead-time demand is ~120-126 lb, plus 5-day safety stock (~100-105 lb) gives a reorder point of roughly 220-230 lb; current stock of 131 lb is already well below that, and we've had repeated stockouts recently from waiting too long, so ordering now is necessary. Sticking with the proven 150 lb order from Highland Roasters (good price/reliability balance, 6-day lead time) rebuilds our buffer without the excess cost of Direct Trade or the slow 9-day lead time of Continental; given how thin our margin is at 131 lb, we should not delay further.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 29.46,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-01-18",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady at ~20 lb/day. With Highland's 6-day lead time, lead-time demand is ~120 lb, plus 5-day safety stock (~100 lb) gives a reorder point of ~220 lb; current stock of 138 lb is well below that, so we should order now rather than let it erode further and risk another stockout like several recent cycles. Sticking with the proven 150 lb order from Highland Roasters (good price/reliability balance, 6-day lead time) rebuilds the buffer at reasonable cost, avoiding Direct Trade's premium price or Continental's slower 9-day lead time.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 35.28,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-01-25",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 20 lb/day. With Highland's 6-day lead time, lead-time demand is ~120 lb, plus 5-day safety stock (~100 lb) gives a reorder point of ~220 lb; current stock of 152 lb is already below that threshold, and past cycles show waiting until stock drops much further (below ~140 lb) has repeatedly caused stockouts. Ordering 150 lb now from Highland Roasters (best balance of price and reliability) rebuilds our buffer in time, avoiding both the slower 9-day Continental option and the pricier, limited-availability Direct Trade supplier.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 37.68,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-02-01",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 20-21 lb/day. With Highland's 6-day lead time, lead-time demand is ~126 lb, plus 5-day safety stock (~105 lb) gives a reorder point of ~230 lb; current stock of 153 lb is already well below that, and the recent history shows waiting until stock drops into the 130-150 lb range repeatedly causes stockouts once the order finally arrives. Ordering 150 lb now from Highland Roasters (best price/reliability balance) keeps us on the proven weekly cadence that has avoided stockouts when initiated early enough, versus the slower Continental or pricier Direct Trade options.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 40.68,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-02-08",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 20 lb/day. With Highland's 6-day lead time, lead-time demand is ~120 lb, plus 5-day safety stock (~100 lb) gives a reorder point of ~220 lb; current stock of 168 lb is already below that threshold. This weekly 150 lb cadence from Highland Roasters (best price/reliability balance, 6-day lead time) has consistently avoided stockouts in the last several cycles when ordered at this stock level, so we continue that proven pattern rather than risk a gap versus slower Continental or pricier Direct Trade.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 43.44,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-02-15",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady at ~20 lb/day. With Highland's 6-day lead time, lead-time demand is ~120 lb, plus 5-day safety stock (~100 lb) gives a reorder point of ~220 lb; current stock of 169 lb is already below that threshold, so we should order now to keep the pipeline full given our weekly cadence. The proven 150 lb order from Highland Roasters (good price/reliability balance, 6-day lead time) has avoided stockouts in the last several cycles at this stock level, so we continue that pattern rather than risk a gap from delaying or switching to slower/pricier suppliers.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 46.98,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-02-22",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady at ~20-21 lb/day. With Highland's 6-day lead time, lead-time demand is ~126 lb, plus 5-day safety stock (~105 lb) gives a reorder point of ~230 lb; current stock of 178 lb is already below that, and last week's order of 150 lb should be arriving soon on the same weekly cadence. Continuing the proven 150 lb order from Highland Roasters (best price/reliability balance, moderate lead time) has avoided stockouts for the last several cycles at this stock level, so we stick with that pattern rather than risk a gap.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 51.6,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-03-01",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 20 lb/day. With Highland's 6-day lead time, lead-time demand is ~120 lb, plus 5-day safety stock (~100 lb) gives a reorder point of ~220 lb; current stock of 192 lb is already below that threshold, so we should order now on our weekly cadence rather than let it erode further. Continuing the proven 150 lb order from Highland Roasters (best price/reliability balance, moderate lead time) has avoided stockouts for the last several consecutive cycles at this stock level, so we stick with that pattern rather than switch to slower Continental or pricier Direct Trade.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 54.36,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-03-08",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 20-21 lb/day. With Highland's 6-day lead time, lead-time demand is ~126 lb, plus 5-day safety stock (~105 lb) gives a reorder point of ~230 lb; current stock of 196 lb is already below that threshold, so ordering now keeps us ahead on our proven weekly cadence. This 150 lb order from Highland Roasters (best price/reliability balance) has avoided stockouts for the last several consecutive cycles at this stock level, so we continue that pattern rather than risk a gap by waiting or switching to slower Continental or pricier Direct Trade.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 57.3,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-03-15",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 20 lb/day. With Highland's 6-day lead time, lead-time demand is ~120 lb, plus 5-day safety stock (~100 lb) gives a reorder point of ~220 lb; current stock of 206 lb is already below that threshold, and this weekly 150 lb cadence from Highland Roasters has consistently avoided stockouts over the last several cycles. Continuing this proven pattern (good price/reliability balance) is safer and more cost-effective than waiting or switching to slower Continental or pricier Direct Trade.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 66.36,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-03-22",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Daily usage is steady around 19-20 lb/day. With Highland's 6-day lead time, lead-time demand is ~114-120 lb, plus 5-day safety stock (~95-100 lb) gives a reorder point of ~210-220 lb. Current stock of 236 lb is still above that threshold, and last week's 150 lb order should be arriving within the next day or two, so ordering now would risk excess holding cost and inventory pile-up. We'll hold and reassess once stock nears ~220 lb, which should be within a day or two given current usage.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 68.46,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-03-29",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Recent daily usage has actually slowed to ~15-20 lb/day (avg ~18), but with Highland's 6-day lead time (~108 lb lead-time demand) plus 5-day safety stock (~90 lb), the reorder point is still around 200 lb. Current stock of 113 lb is well below that threshold, so we need to order now to avoid a repeat of the stockouts we've seen in past cycles when we waited too long. Sticking with the proven 150 lb order from Highland Roasters (best price/reliability balance, established weekly cadence) rebuilds our buffer without the excess cost of Direct Trade or the slow 9-day lead time of Continental.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 24.72,
+        "stockout_units": 2.0,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-04-05",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Daily usage is steady at ~19 lb/day. Reorder point = lead-time demand (6 days x 19 \u2248 114 lb) + 5-day safety stock (~95 lb) \u2248 210 lb. Current stock of 132 lb is below that on paper, but we just received last week's 150 lb Highland order (placed 3/29) which should be landing within the next day or two given the 6-day lead time, so effective incoming coverage is strong. Holding today avoids stacking a duplicate order into the pipeline (which has caused excess holding cost in past cycles); we'll reassess once the incoming shipment posts and reorder promptly if stock still trends toward the ~210 lb threshold.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 22.2,
+        "stockout_units": 11.0,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-04-12",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 200.0,
+      "allocation": [
+        {
+          "supplier": "Direct Trade Partners",
+          "qty": 80
+        },
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 120
+        }
+      ],
+      "reasoning": "We are currently at zero stock and actively stocked out, with steady demand of ~19-20 lb/day. To stop the bleeding fastest, I'm splitting the order: 80 lb from Direct Trade Partners (4-day lead time, 98% reliable) to get beans in-house as quickly as possible despite the premium price, and 120 lb from Highland Roasters Co-op (6-day lead time, good price/reliability) to rebuild a full buffer covering lead-time demand (~120 lb) plus the 5-day safety stock (~100 lb) once it lands. This dual-sourcing approach minimizes further lost sales during the gap versus relying solely on the slower single-supplier cadence that has repeatedly caused stockouts recently.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 16.74,
+        "stockout_units": 71.0,
+        "stockout_days": 4
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-04-19",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady at ~18-19 lb/day. Reorder point = lead-time demand (6 days x ~19 \u2248 114 lb) + 5-day safety stock (~95 lb) \u2248 210 lb; current stock of 156 lb is already below that threshold, so we should order now rather than wait, especially given several recent cycles where delaying caused stockouts. Sticking with the proven 150 lb order from Highland Roasters (best price/reliability balance) rebuilds the buffer through the lead time without the premium cost of Direct Trade or the slower 9-day Continental lead time.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 43.38,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-04-26",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Recent daily usage has settled around 17-18 lb/day (last 2 weeks average ~17.6). Reorder point = lead-time demand (6 days x 18 \u2248 108 lb) + 5-day safety stock (~90 lb) \u2248 200 lb. Current stock of 183 lb is close to but still slightly below that on paper, however we just placed a 150 lb Highland order on 4/19 (6-day lead time) which should land within the next 1-2 days, so incoming supply will cover the gap. Holding avoids stacking a duplicate order into the pipeline and the excess holding cost that's occurred in past cycles when we over-ordered while stock was still healthy; we'll reassess once the incoming shipment posts.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 46.5,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-05-03",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage has averaged ~18 lb/day over the last month. With Highland's 6-day lead time, lead-time demand is ~108 lb, plus 5-day safety stock (~90 lb) gives a reorder point of ~198 lb; current stock of 64 lb is far below that, so we need to order now to avoid another stockout like several recent cycles where waiting too long caused 50-95 lb of lost sales. Sticking with the proven 150 lb order from Highland Roasters (best price/reliability balance) rebuilds the buffer through the lead time without the premium cost of Direct Trade or the slower 9-day Continental lead time.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 13.2,
+        "stockout_units": 48.0,
+        "stockout_days": 3
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-05-10",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 18 lb/day. With Highland's 6-day lead time, lead-time demand is ~108 lb, plus 5-day safety stock (~90 lb) gives a reorder point of ~198 lb; current stock of 132 lb is below that threshold, and the 5/3 order of 150 lb should be landing very soon but we still need to keep the pipeline full to avoid the recurring stockouts seen in past cycles when orders were delayed. Continuing the 150 lb order from Highland Roasters (best price/reliability balance) rebuilds the buffer without the premium cost of Direct Trade or the slower 9-day Continental lead time.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 34.2,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-05-17",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 18 lb/day. With Highland's 6-day lead time, lead-time demand is ~108 lb, plus 5-day safety stock (~90 lb) gives a reorder point of ~198 lb; current stock of 157 lb is already below that threshold, and past cycles show waiting until stock drops further consistently causes stockouts once the order finally arrives. Ordering 150 lb now from Highland Roasters (best price/reliability balance, proven weekly cadence) rebuilds the buffer through the lead time without the premium cost of Direct Trade or the slower 9-day Continental lead time.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 46.38,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-05-24",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Daily usage is steady at ~17-18 lb/day. Reorder point = lead-time demand (6 days x 18 \u2248 108 lb) + 5-day safety stock (~90 lb) \u2248 198 lb. Current stock of 190 lb is just below that, but we placed a 150 lb Highland order on 5/17 (6-day lead time) that should land within the next 1-2 days, giving strong incoming coverage. Holding avoids stacking a duplicate order into the pipeline (which has repeatedly driven up holding costs in past cycles); we'll reassess once the shipment posts and reorder promptly if stock keeps eroding.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 52.14,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-05-31",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 17-18 lb/day. With Highland's 6-day lead time, lead-time demand is ~105-108 lb, plus 5-day safety stock (~85-90 lb) gives a reorder point of ~195 lb; current stock of 74 lb is far below that, and history shows waiting this low has repeatedly caused costly stockouts (e.g. 5/3 cycle lost 48 units). Ordering 150 lb now from Highland Roasters (best price/reliability balance, proven weekly cadence) rebuilds the buffer promptly without the premium cost of Direct Trade or the slower 9-day Continental lead time.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 14.7,
+        "stockout_units": 34.0,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-06-07",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady at ~17.5 lb/day. With Highland's 6-day lead time, lead-time demand is ~105 lb, plus 5-day safety stock (~88 lb) gives a reorder point of ~193 lb; current stock of 132 lb is already below that, and history shows repeated costly stockouts (e.g. 4/12, 5/3, 5/31 cycles) whenever we wait until stock drops much further before ordering. Ordering 150 lb now from Highland Roasters (best price/reliability balance, proven cadence) rebuilds the buffer ahead of the lead time without the premium cost of Direct Trade or the slower 9-day Continental lead time.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 34.02,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-06-14",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 17-18 lb/day. With Highland's 6-day lead time, lead-time demand is ~105-108 lb, plus 5-day safety stock (~88-90 lb) gives a reorder point of ~195 lb; current stock of 155 lb is already below that threshold, and history shows repeated costly stockouts whenever we wait until stock drops much further before ordering. Ordering 150 lb now from Highland Roasters (best price/reliability balance, proven weekly cadence) rebuilds the buffer ahead of the lead time without the premium cost of Direct Trade or the slower 9-day Continental lead time.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 44.16,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-06-21",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady at ~17-18 lb/day. With Highland's 6-day lead time, lead-time demand is ~105-108 lb, plus 5-day safety stock (~88-90 lb) gives a reorder point of ~195 lb; current stock of 184 lb is already below that threshold. Ordering 150 lb now from Highland Roasters (best price/reliability balance, proven weekly cadence) keeps the pipeline full and avoids the repeated stockouts we've seen historically when orders are delayed until stock drops further.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 58.02,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-06-28",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Daily usage has stabilized around 16-17 lb/day. Reorder point = lead-time demand (6 days x 17 \u2248 102 lb) + 5-day safety stock (~85 lb) \u2248 187 lb. Current stock of 218 lb is comfortably above that threshold, and last week's 150 lb Highland order (placed 6/21) should be arriving within the next day or two, adding further coverage. Holding avoids stacking a duplicate order and unnecessary holding costs; we'll reorder once stock nears ~190 lb.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 64.62,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-07-05",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 17 lb/day. With Highland's 6-day lead time, lead-time demand is ~102 lb, plus 5-day safety stock (~85 lb) gives a reorder point of ~187 lb; current stock of 104 lb is well below that, so we should order now to avoid a stockout like several past cycles where waiting too long cost us. Sticking with the proven 150 lb order from Highland Roasters (best price/reliability balance, established weekly cadence) rebuilds the buffer without the premium cost of Direct Trade or the slower 9-day Continental lead time.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 28.44,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-07-12",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage has averaged ~16 lb/day recently. With Highland's 6-day lead time, lead-time demand is ~96 lb, plus 5-day safety stock (~80 lb) gives a reorder point of ~176 lb; current stock of 148 lb is already below that threshold, so ordering now keeps the pipeline full ahead of the lead time. We're sticking with the proven 150 lb order from Highland Roasters (best price/reliability balance, established weekly cadence) rather than the pricier Direct Trade or slower Continental option.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 49.2,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-07-19",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Daily usage is steady around 16 lb/day. Reorder point = lead-time demand (6 days x 16 \u2248 96 lb) + 5-day safety stock (~80 lb) \u2248 176 lb. Current stock of 202 lb is comfortably above that threshold, and the 150 lb Highland order placed 7/12 should be arriving within the next day or so, adding further coverage. Holding avoids stacking a duplicate order into the pipeline and the excess holding costs seen in past cycles when we ordered while stock was still healthy; we'll reorder once stock nears ~180 lb.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 56.34,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-07-26",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 16-17 lb/day. With Highland's 6-day lead time, lead-time demand is ~100 lb, plus 5-day safety stock (~85 lb) gives a reorder point of ~185 lb; current stock of 84 lb is well below that, so we need to order now to avoid a stockout like several recent cycles where waiting too long cost us sales. Sticking with the proven 150 lb order from Highland Roasters (best price/reliability balance, established weekly cadence) rebuilds the buffer without the premium cost of Direct Trade or the slower 9-day Continental lead time.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 21.84,
+        "stockout_units": 1.0,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-08-02",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Daily usage is steady around 16-17 lb/day. Reorder point = lead-time demand (6 days x 17 \u2248 102 lb) + 5-day safety stock (~85 lb) \u2248 187 lb. Current stock of 131 lb is below that on paper, but the 150 lb Highland order placed 7/26 should be arriving within the next day or two given the 6-day lead time, giving strong incoming coverage. Holding avoids stacking a duplicate order into the pipeline and excess holding costs; we'll reassess once the shipment posts and reorder promptly if stock keeps eroding.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 25.14,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-08-09",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Current stock is only 8 lb against daily usage of ~17 lb/day, and Highland's 6-day lead time means lead-time demand alone is ~102 lb plus ~85 lb safety stock (5 days) for a reorder point near 187 lb - we're deeply below threshold and already at risk of imminent stockout. Ordering 150 lb now from Highland Roasters (best price/reliability balance, proven weekly cadence) is the priority; even Direct Trade's faster 4-day lead time won't fully cover the gap alone given its limited availability, so we stick with our reliable primary supplier to rebuild the buffer as fast as possible.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 8.1,
+        "stockout_units": 90.0,
+        "stockout_days": 6
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-08-16",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady at ~17 lb/day. With Highland's 6-day lead time, lead-time demand is ~102 lb, plus 5-day safety stock (~85 lb) gives a reorder point of ~187 lb; current stock of 135 lb is below that threshold, and history shows waiting until stock drops much further (e.g. 8/9 cycle) causes severe stockouts. Ordering 150 lb now from Highland Roasters (best price/reliability balance, proven weekly cadence) rebuilds the buffer ahead of the lead time without the premium cost of Direct Trade or the slower 9-day Continental lead time.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 39.84,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-08-23",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 16.6 lb/day. With Highland's 6-day lead time, lead-time demand is ~100 lb, plus 5-day safety stock (~83 lb) gives a reorder point of ~183 lb; current stock of 175 lb is already below that, and the 8/16 order (150 lb) landed and has been consumed, so the pipeline is now empty again. Ordering 150 lb now from Highland Roasters keeps the proven weekly cadence going, balancing price/reliability without the premium of Direct Trade or the slower Continental lead time, and avoids repeating the severe stockout seen when we let stock run too low before ordering.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 52.92,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Espresso Beans (Arabica)",
+      "date": "2026-08-30",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 150.0,
+      "allocation": [
+        {
+          "supplier": "Highland Roasters Co-op",
+          "qty": 150
+        }
+      ],
+      "reasoning": "Daily usage is steady around 17 lb/day (last 4 weeks avg ~17). With Highland's 6-day lead time, lead-time demand is ~102 lb, plus 5-day safety stock (~85 lb) gives a reorder point of ~187 lb; current stock of 200 lb is just above that but the prior 150 lb order (placed 8/23) has likely already landed and is being drawn down, so ordering now keeps the weekly cadence intact and avoids repeating past stockouts (e.g. 8/9, 5/31) caused by waiting too long. Sticking with Highland Roasters for the best price/reliability balance over the pricier Direct Trade or slower 9-day Continental option.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 2,
+        "holding_cost": 21.24,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    }
+  ],
+  "daily_log": [
+    {
+      "date": "2025-08-31",
+      "on_hand": 119.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-01",
+      "on_hand": 104.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-02",
+      "on_hand": 87.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-03",
+      "on_hand": 74.0,
+      "demand": 13.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-04",
+      "on_hand": 55.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-05",
+      "on_hand": 36.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-06",
+      "on_hand": 136.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 100.0
+    },
+    {
+      "date": "2025-09-07",
+      "on_hand": 119.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-08",
+      "on_hand": 119.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-09",
+      "on_hand": 104.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-10",
+      "on_hand": 86.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-11",
+      "on_hand": 70.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-12",
+      "on_hand": 53.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-13",
+      "on_hand": 132.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 100.0
+    },
+    {
+      "date": "2025-09-14",
+      "on_hand": 114.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-15",
+      "on_hand": 99.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-16",
+      "on_hand": 82.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-17",
+      "on_hand": 67.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-18",
+      "on_hand": 46.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-19",
+      "on_hand": 31.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-20",
+      "on_hand": 113.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 100.0
+    },
+    {
+      "date": "2025-09-21",
+      "on_hand": 97.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-22",
+      "on_hand": 76.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-23",
+      "on_hand": 59.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-24",
+      "on_hand": 42.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-25",
+      "on_hand": 25.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-26",
+      "on_hand": 5.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-27",
+      "on_hand": 85.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 100.0
+    },
+    {
+      "date": "2025-09-28",
+      "on_hand": 66.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-29",
+      "on_hand": 49.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-09-30",
+      "on_hand": 28.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-01",
+      "on_hand": 10.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-02",
+      "on_hand": 0.0,
+      "demand": 18.0,
+      "stockout_units": 8.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-03",
+      "on_hand": 0.0,
+      "demand": 17.0,
+      "stockout_units": 17.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-04",
+      "on_hand": 80.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 100.0
+    },
+    {
+      "date": "2025-10-05",
+      "on_hand": 62.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-06",
+      "on_hand": 42.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-07",
+      "on_hand": 21.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-08",
+      "on_hand": 6.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-09",
+      "on_hand": 0.0,
+      "demand": 18.0,
+      "stockout_units": 12.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-10",
+      "on_hand": 0.0,
+      "demand": 16.0,
+      "stockout_units": 16.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-11",
+      "on_hand": 83.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 100.0
+    },
+    {
+      "date": "2025-10-12",
+      "on_hand": 68.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-13",
+      "on_hand": 52.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-14",
+      "on_hand": 36.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-15",
+      "on_hand": 16.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-16",
+      "on_hand": 0.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-17",
+      "on_hand": 0.0,
+      "demand": 23.0,
+      "stockout_units": 23.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-18",
+      "on_hand": 133.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2025-10-19",
+      "on_hand": 115.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-20",
+      "on_hand": 99.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-21",
+      "on_hand": 81.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-22",
+      "on_hand": 63.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-23",
+      "on_hand": 43.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-24",
+      "on_hand": 24.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-25",
+      "on_hand": 155.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2025-10-26",
+      "on_hand": 138.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-27",
+      "on_hand": 120.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-28",
+      "on_hand": 102.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-29",
+      "on_hand": 82.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-30",
+      "on_hand": 62.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-10-31",
+      "on_hand": 40.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-01",
+      "on_hand": 168.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2025-11-02",
+      "on_hand": 148.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-03",
+      "on_hand": 129.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-04",
+      "on_hand": 111.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-05",
+      "on_hand": 94.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-06",
+      "on_hand": 76.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-07",
+      "on_hand": 58.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-08",
+      "on_hand": 190.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2025-11-09",
+      "on_hand": 168.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-10",
+      "on_hand": 150.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-11",
+      "on_hand": 133.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-12",
+      "on_hand": 110.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-13",
+      "on_hand": 94.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-14",
+      "on_hand": 78.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-15",
+      "on_hand": 206.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2025-11-16",
+      "on_hand": 189.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-17",
+      "on_hand": 174.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-18",
+      "on_hand": 153.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-19",
+      "on_hand": 133.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-20",
+      "on_hand": 114.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-21",
+      "on_hand": 90.0,
+      "demand": 24.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-22",
+      "on_hand": 222.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2025-11-23",
+      "on_hand": 202.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-24",
+      "on_hand": 181.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-25",
+      "on_hand": 164.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-26",
+      "on_hand": 145.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-27",
+      "on_hand": 126.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-28",
+      "on_hand": 108.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-11-29",
+      "on_hand": 235.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2025-11-30",
+      "on_hand": 215.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-01",
+      "on_hand": 194.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-02",
+      "on_hand": 174.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-03",
+      "on_hand": 152.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-04",
+      "on_hand": 137.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-05",
+      "on_hand": 121.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-06",
+      "on_hand": 251.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2025-12-07",
+      "on_hand": 233.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-08",
+      "on_hand": 212.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-09",
+      "on_hand": 189.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-10",
+      "on_hand": 168.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-11",
+      "on_hand": 146.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-12",
+      "on_hand": 126.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-13",
+      "on_hand": 107.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-14",
+      "on_hand": 86.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-15",
+      "on_hand": 66.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-16",
+      "on_hand": 0.0,
+      "demand": 76.0,
+      "stockout_units": 10.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-17",
+      "on_hand": 0.0,
+      "demand": 15.0,
+      "stockout_units": 15.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-18",
+      "on_hand": 0.0,
+      "demand": 19.0,
+      "stockout_units": 19.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-19",
+      "on_hand": 0.0,
+      "demand": 25.0,
+      "stockout_units": 25.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-20",
+      "on_hand": 0.0,
+      "demand": 26.0,
+      "stockout_units": 26.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-21",
+      "on_hand": 0.0,
+      "demand": 20.0,
+      "stockout_units": 20.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-22",
+      "on_hand": 0.0,
+      "demand": 21.0,
+      "stockout_units": 21.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-23",
+      "on_hand": 0.0,
+      "demand": 20.0,
+      "stockout_units": 20.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-24",
+      "on_hand": 0.0,
+      "demand": 19.0,
+      "stockout_units": 19.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-25",
+      "on_hand": 17.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 40.0
+    },
+    {
+      "date": "2025-12-26",
+      "on_hand": 0.0,
+      "demand": 21.0,
+      "stockout_units": 4.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-27",
+      "on_hand": 192.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 210.0
+    },
+    {
+      "date": "2025-12-28",
+      "on_hand": 173.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-29",
+      "on_hand": 157.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-30",
+      "on_hand": 136.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2025-12-31",
+      "on_hand": 115.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-01",
+      "on_hand": 92.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-02",
+      "on_hand": 75.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-03",
+      "on_hand": 75.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-04",
+      "on_hand": 57.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-05",
+      "on_hand": 34.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-06",
+      "on_hand": 11.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-07",
+      "on_hand": 0.0,
+      "demand": 22.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-08",
+      "on_hand": 0.0,
+      "demand": 22.0,
+      "stockout_units": 22.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-09",
+      "on_hand": 0.0,
+      "demand": 20.0,
+      "stockout_units": 20.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-10",
+      "on_hand": 131.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-01-11",
+      "on_hand": 105.0,
+      "demand": 26.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-12",
+      "on_hand": 88.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-13",
+      "on_hand": 70.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-14",
+      "on_hand": 49.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-15",
+      "on_hand": 32.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-16",
+      "on_hand": 9.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-17",
+      "on_hand": 138.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-01-18",
+      "on_hand": 118.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-19",
+      "on_hand": 100.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-20",
+      "on_hand": 85.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-21",
+      "on_hand": 63.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-22",
+      "on_hand": 46.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-23",
+      "on_hand": 24.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-24",
+      "on_hand": 152.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-01-25",
+      "on_hand": 133.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-26",
+      "on_hand": 112.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-27",
+      "on_hand": 91.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-28",
+      "on_hand": 70.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-29",
+      "on_hand": 47.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-30",
+      "on_hand": 22.0,
+      "demand": 25.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-01-31",
+      "on_hand": 153.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-02-01",
+      "on_hand": 133.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-02",
+      "on_hand": 112.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-03",
+      "on_hand": 91.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-04",
+      "on_hand": 77.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-05",
+      "on_hand": 57.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-06",
+      "on_hand": 40.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-07",
+      "on_hand": 168.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-02-08",
+      "on_hand": 145.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-09",
+      "on_hand": 126.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-10",
+      "on_hand": 103.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-11",
+      "on_hand": 82.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-12",
+      "on_hand": 60.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-13",
+      "on_hand": 39.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-14",
+      "on_hand": 169.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-02-15",
+      "on_hand": 149.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-16",
+      "on_hand": 132.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-17",
+      "on_hand": 111.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-18",
+      "on_hand": 91.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-19",
+      "on_hand": 72.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-20",
+      "on_hand": 50.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-21",
+      "on_hand": 178.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-02-22",
+      "on_hand": 160.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-23",
+      "on_hand": 140.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-24",
+      "on_hand": 124.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-25",
+      "on_hand": 99.0,
+      "demand": 25.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-26",
+      "on_hand": 81.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-27",
+      "on_hand": 64.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-02-28",
+      "on_hand": 192.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-03-01",
+      "on_hand": 171.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-02",
+      "on_hand": 151.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-03",
+      "on_hand": 129.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-04",
+      "on_hand": 106.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-05",
+      "on_hand": 86.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-06",
+      "on_hand": 67.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-07",
+      "on_hand": 196.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-03-08",
+      "on_hand": 175.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-09",
+      "on_hand": 157.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-10",
+      "on_hand": 134.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-11",
+      "on_hand": 114.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-12",
+      "on_hand": 95.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-13",
+      "on_hand": 74.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-14",
+      "on_hand": 206.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-03-15",
+      "on_hand": 188.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-16",
+      "on_hand": 169.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-17",
+      "on_hand": 150.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-18",
+      "on_hand": 132.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-19",
+      "on_hand": 123.0,
+      "demand": 9.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-20",
+      "on_hand": 108.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-21",
+      "on_hand": 236.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-03-22",
+      "on_hand": 216.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-23",
+      "on_hand": 196.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-24",
+      "on_hand": 176.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-25",
+      "on_hand": 162.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-26",
+      "on_hand": 147.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-27",
+      "on_hand": 131.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-28",
+      "on_hand": 113.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-29",
+      "on_hand": 95.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-30",
+      "on_hand": 75.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-03-31",
+      "on_hand": 56.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-01",
+      "on_hand": 37.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-02",
+      "on_hand": 17.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-03",
+      "on_hand": 0.0,
+      "demand": 19.0,
+      "stockout_units": 2.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-04",
+      "on_hand": 132.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-04-05",
+      "on_hand": 113.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-06",
+      "on_hand": 90.0,
+      "demand": 23.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-07",
+      "on_hand": 74.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-08",
+      "on_hand": 53.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-09",
+      "on_hand": 31.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-10",
+      "on_hand": 9.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-11",
+      "on_hand": 0.0,
+      "demand": 20.0,
+      "stockout_units": 11.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-12",
+      "on_hand": 0.0,
+      "demand": 14.0,
+      "stockout_units": 14.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-13",
+      "on_hand": 0.0,
+      "demand": 20.0,
+      "stockout_units": 20.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-14",
+      "on_hand": 0.0,
+      "demand": 19.0,
+      "stockout_units": 19.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-15",
+      "on_hand": 0.0,
+      "demand": 18.0,
+      "stockout_units": 18.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-16",
+      "on_hand": 69.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 80.0
+    },
+    {
+      "date": "2026-04-17",
+      "on_hand": 54.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-18",
+      "on_hand": 156.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 120.0
+    },
+    {
+      "date": "2026-04-19",
+      "on_hand": 137.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-20",
+      "on_hand": 112.0,
+      "demand": 25.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-21",
+      "on_hand": 98.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-22",
+      "on_hand": 83.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-23",
+      "on_hand": 62.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-24",
+      "on_hand": 48.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-25",
+      "on_hand": 183.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-04-26",
+      "on_hand": 162.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-27",
+      "on_hand": 143.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-28",
+      "on_hand": 129.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-29",
+      "on_hand": 111.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-04-30",
+      "on_hand": 91.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-01",
+      "on_hand": 75.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-02",
+      "on_hand": 64.0,
+      "demand": 11.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-03",
+      "on_hand": 47.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-04",
+      "on_hand": 29.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-05",
+      "on_hand": 12.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-06",
+      "on_hand": 0.0,
+      "demand": 19.0,
+      "stockout_units": 7.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-07",
+      "on_hand": 0.0,
+      "demand": 23.0,
+      "stockout_units": 23.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-08",
+      "on_hand": 0.0,
+      "demand": 18.0,
+      "stockout_units": 18.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-09",
+      "on_hand": 132.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-05-10",
+      "on_hand": 115.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-11",
+      "on_hand": 96.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-12",
+      "on_hand": 76.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-13",
+      "on_hand": 60.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-14",
+      "on_hand": 42.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-15",
+      "on_hand": 24.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-16",
+      "on_hand": 157.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-05-17",
+      "on_hand": 137.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-18",
+      "on_hand": 122.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-19",
+      "on_hand": 107.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-20",
+      "on_hand": 89.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-21",
+      "on_hand": 73.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-22",
+      "on_hand": 55.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-23",
+      "on_hand": 190.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-05-24",
+      "on_hand": 177.0,
+      "demand": 13.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-25",
+      "on_hand": 155.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-26",
+      "on_hand": 140.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-27",
+      "on_hand": 125.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-28",
+      "on_hand": 106.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-29",
+      "on_hand": 92.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-30",
+      "on_hand": 74.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-05-31",
+      "on_hand": 55.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-01",
+      "on_hand": 37.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-02",
+      "on_hand": 18.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-03",
+      "on_hand": 3.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-04",
+      "on_hand": 0.0,
+      "demand": 17.0,
+      "stockout_units": 14.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-05",
+      "on_hand": 0.0,
+      "demand": 20.0,
+      "stockout_units": 20.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-06",
+      "on_hand": 132.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-06-07",
+      "on_hand": 116.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-08",
+      "on_hand": 95.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-09",
+      "on_hand": 78.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-10",
+      "on_hand": 59.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-11",
+      "on_hand": 40.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-12",
+      "on_hand": 24.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-13",
+      "on_hand": 155.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-06-14",
+      "on_hand": 134.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-15",
+      "on_hand": 116.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-16",
+      "on_hand": 100.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-17",
+      "on_hand": 84.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-18",
+      "on_hand": 67.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-19",
+      "on_hand": 51.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-20",
+      "on_hand": 184.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-06-21",
+      "on_hand": 168.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-22",
+      "on_hand": 150.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-23",
+      "on_hand": 133.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-24",
+      "on_hand": 116.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-25",
+      "on_hand": 99.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-26",
+      "on_hand": 83.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-27",
+      "on_hand": 218.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-06-28",
+      "on_hand": 202.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-29",
+      "on_hand": 185.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-06-30",
+      "on_hand": 169.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-01",
+      "on_hand": 155.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-02",
+      "on_hand": 138.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-03",
+      "on_hand": 124.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-04",
+      "on_hand": 104.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-05",
+      "on_hand": 89.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-06",
+      "on_hand": 77.0,
+      "demand": 12.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-07",
+      "on_hand": 62.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-08",
+      "on_hand": 46.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-09",
+      "on_hand": 33.0,
+      "demand": 13.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-10",
+      "on_hand": 19.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-11",
+      "on_hand": 148.0,
+      "demand": 21.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-07-12",
+      "on_hand": 132.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-13",
+      "on_hand": 115.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-14",
+      "on_hand": 115.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-15",
+      "on_hand": 100.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-16",
+      "on_hand": 86.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-17",
+      "on_hand": 70.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-18",
+      "on_hand": 202.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-07-19",
+      "on_hand": 185.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-20",
+      "on_hand": 167.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-21",
+      "on_hand": 153.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-22",
+      "on_hand": 134.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-23",
+      "on_hand": 117.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-24",
+      "on_hand": 99.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-25",
+      "on_hand": 84.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-26",
+      "on_hand": 67.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-27",
+      "on_hand": 67.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-28",
+      "on_hand": 49.0,
+      "demand": 18.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-29",
+      "on_hand": 33.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-30",
+      "on_hand": 17.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-07-31",
+      "on_hand": 0.0,
+      "demand": 18.0,
+      "stockout_units": 1.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-01",
+      "on_hand": 131.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-08-02",
+      "on_hand": 111.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-03",
+      "on_hand": 95.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-04",
+      "on_hand": 78.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-05",
+      "on_hand": 58.0,
+      "demand": 20.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-06",
+      "on_hand": 44.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-07",
+      "on_hand": 25.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-08",
+      "on_hand": 8.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-09",
+      "on_hand": 0.0,
+      "demand": 14.0,
+      "stockout_units": 6.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-10",
+      "on_hand": 0.0,
+      "demand": 18.0,
+      "stockout_units": 18.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-11",
+      "on_hand": 0.0,
+      "demand": 16.0,
+      "stockout_units": 16.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-12",
+      "on_hand": 0.0,
+      "demand": 15.0,
+      "stockout_units": 15.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-13",
+      "on_hand": 0.0,
+      "demand": 17.0,
+      "stockout_units": 17.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-14",
+      "on_hand": 0.0,
+      "demand": 18.0,
+      "stockout_units": 18.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-15",
+      "on_hand": 135.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-08-16",
+      "on_hand": 121.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-17",
+      "on_hand": 104.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-18",
+      "on_hand": 89.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-19",
+      "on_hand": 74.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-20",
+      "on_hand": 60.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-21",
+      "on_hand": 41.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-22",
+      "on_hand": 175.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-08-23",
+      "on_hand": 159.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-24",
+      "on_hand": 140.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-25",
+      "on_hand": 121.0,
+      "demand": 19.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-26",
+      "on_hand": 106.0,
+      "demand": 15.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-27",
+      "on_hand": 89.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-28",
+      "on_hand": 67.0,
+      "demand": 22.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-29",
+      "on_hand": 200.0,
+      "demand": 17.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 150.0
+    },
+    {
+      "date": "2026-08-30",
+      "on_hand": 184.0,
+      "demand": 16.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    },
+    {
+      "date": "2026-08-31",
+      "on_hand": 170.0,
+      "demand": 14.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0
+    }
+  ]
+}
