@@ -66,6 +66,79 @@ def load_dataset(data_dir: Path | str) -> tuple[pd.DataFrame, pd.DataFrame, pd.D
     return demand, skus, suppliers
 
 
+def load_market_trends(path: Path | str) -> pd.DataFrame:
+    """Load market_data/market_trends.csv (see market_data/build_market_trends.py
+    for exactly where each series comes from and which ones are proxies)."""
+    df = pd.read_csv(path, parse_dates=["date"])
+    df["date"] = df["date"].dt.date
+    return df.sort_values(["sku", "date"])
+
+
+# a real monthly economic release for month M is not actually published
+# and knowable until well after M ends -- this lag keeps a monthly print
+# from leaking into a decision date that falls inside the same month
+MARKET_TREND_PUBLICATION_LAG_DAYS = 30
+
+
+def build_market_trend_signal(
+    market_trends: pd.DataFrame,
+    sku: str,
+    as_of: dt.date,
+    lookback_months: int = 12,
+    publication_lag_days: int = MARKET_TREND_PUBLICATION_LAG_DAYS,
+) -> dict | None:
+    """Real external market-price context for this sku's raw commodity, as
+    of `as_of` -- or None if this sku has no mapped series, or not enough
+    lagged history exists yet. See market_data/build_market_trends.py for
+    exact source citations and which signals are proxies vs. direct
+    matches.
+
+    No-lookahead treatment: a monthly print observed for calendar date O
+    is only treated as knowable starting O + publication_lag_days, not on
+    O itself -- real index revisions/releases lag the reference month.
+    Only points whose (observation date + lag) is strictly before as_of
+    are used.
+    """
+    sku_rows = market_trends.loc[market_trends["sku"] == sku]
+    if sku_rows.empty:
+        return None
+
+    lag = dt.timedelta(days=publication_lag_days)
+    known = sku_rows.loc[sku_rows["date"].apply(lambda d: d + lag) < as_of]
+    if known.empty:
+        return None
+
+    trailing = known.tail(lookback_months)
+    latest = trailing.iloc[-1]
+
+    # FRED's monthly series are always dated to the 1st of the month, so
+    # a plain year-1 replace is safe (no Feb-29 edge case to handle)
+    yoy_prior = None
+    target_date = latest["date"].replace(year=latest["date"].year - 1)
+    prior_candidates = known.loc[known["date"] <= target_date]
+    if not prior_candidates.empty:
+        yoy_prior = prior_candidates.iloc[-1]
+
+    pct_change_yoy = None
+    if yoy_prior is not None and yoy_prior["value"]:
+        pct_change_yoy = round((latest["value"] - yoy_prior["value"]) / yoy_prior["value"] * 100, 1)
+
+    return {
+        "series_id": latest["series_id"],
+        "source_name": latest["source_name"],
+        "source_url": latest["source_url"],
+        "is_proxy": bool(latest["is_proxy"]),
+        "note": latest["note"],
+        "latest_value": float(latest["value"]),
+        "latest_known_as_of": _date_str(latest["date"]),
+        "pct_change_yoy": pct_change_yoy,
+        "trailing_monthly_series": [
+            {"date": _date_str(r["date"]), "value": float(r["value"])}
+            for _, r in trailing.iterrows()
+        ],
+    }
+
+
 def get_decision_dates(demand: pd.DataFrame, sku: str, history_days: int = 90) -> list[dt.date]:
     """Dates for which build_state() can produce a state with a full
     history_days window for this sku, i.e. valid walk-forward steps."""
@@ -120,6 +193,7 @@ def build_state(
     decision_history_limit: int = 20,
     current_on_hand: float | None = None,
     currently_stockout: bool | None = None,
+    market_trends: pd.DataFrame | None = None,
 ) -> dict:
     """Everything an agent would have known when deciding for `sku` at
     the start of `as_of`. No row dated >= as_of is ever included.
@@ -147,6 +221,16 @@ def build_state(
     on-hand here instead -- otherwise every agent after the first
     decision would be reasoning about a fictional inventory level that
     has nothing to do with what its own choices actually produced.
+
+    market_trends: optional real external commodity/producer-price data
+    (see market_data/build_market_trends.py) to attach as
+    state["market_trend"] -- None if not supplied, or if this sku has
+    no mapped series, or not enough lagged history exists yet. This is
+    deliberately NOT passed to or_agent's own state calls in the
+    backtest engine's normal wiring -- the classical EOQ/LP model has no
+    mechanism to use a forward-looking market signal at all, so giving
+    it one would be theater, not a real capability. It's meant for
+    llm_agent, where it can actually change the decision.
     """
     as_of = _to_date(as_of)
     decision_log = decision_log or []
@@ -217,6 +301,9 @@ def build_state(
         "decision_history": recent_decisions,
     }
 
+    if market_trends is not None:
+        state["market_trend"] = build_market_trend_signal(market_trends, sku, as_of)
+
     validate_no_lookahead(state, as_of)
     return state
 
@@ -255,3 +342,14 @@ if __name__ == "__main__":
         print("[guardrail check] FAILED to catch future decision_log leak")
     except LookaheadError as e:
         print(f"[guardrail check] PASSED -- correctly rejected future decision_log entry: {e}")
+
+    market_trends = load_market_trends(Path(__file__).parent.parent / "market_data" / "market_trends.csv")
+    late_date = dates[-1]  # near the end of history, where a coffee price spike shows up
+    state_with_trend = build_state(demand, skus, suppliers, sku, late_date, history_days=28,
+                                    market_trends=market_trends)
+    mt = state_with_trend["market_trend"]
+    print(f"\n[market trend] {sku!r} as_of={late_date}: {mt['source_name']}")
+    print(f"  latest_known_as_of={mt['latest_known_as_of']} (lagged, not as_of itself) "
+          f"value={mt['latest_value']} pct_change_yoy={mt['pct_change_yoy']}%")
+    assert _to_date(mt["latest_known_as_of"]) < late_date
+    print("[market trend] guardrail check: latest known point is strictly before as_of -- OK")

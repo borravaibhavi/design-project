@@ -19,6 +19,24 @@ can't crash a multi-year backtest -- but the fallback is flagged
 zero-cost decision, since that would quietly flatter the LLM's numbers
 in the final comparison.
 
+If the state includes a "market_trend" field (see backtest/state.py's
+market_trends param and market_data/build_market_trends.py), the LLM
+also sees a real external commodity/producer-price signal for this
+ingredient -- e.g. "coffee is up 13% year over year" -- and can weigh
+proactively ordering ahead of a rising trend. This is a genuine
+LLM-only capability: the classical EOQ/LP math in or_agent.py has no
+mechanism to use a forward-looking signal like this at all, so
+or_agent's own state calls never include it.
+
+decide_live() is a separate, non-backtested capability: it gives the
+model a real web-search tool (server-side, no beta header, no round
+trip needed) so it can look up actual current news/prices before
+deciding "today". It is NOT used inside the walk-forward backtest --
+live search results aren't reproducible or point-in-time-safe the way
+the historical market_trend signal is, so mixing them into the
+backtest would quietly break the no-lookahead guarantee. Treat it as a
+demo of what a live deployment could do, scored separately if at all.
+
 IMPORTANT (per the project brief): sanity-check this on a handful of
 hand-picked days (run this file directly) BEFORE running it across
 years of history through backtest_engine -- each call costs real API
@@ -74,19 +92,35 @@ SYSTEM_PROMPT = (
     "reordering one raw-material SKU. You will see recent demand history, "
     "current stock on hand, this ingredient's cost/ordering parameters, the "
     "available suppliers (price, lead time, reliability, availability, "
-    "minimum order quantity), and your own recent decisions and what actually "
-    "happened after them (stockouts, holding cost incurred). Decide today's "
-    "action: place a replenishment order now, or hold. Balance the risk of a "
-    "stockout (running out before a new order could arrive, given lead time) "
-    "against the cost of ordering too early or too much (cash tied up, "
-    "holding cost, needing somewhere to store it). Use ONLY the data in this "
-    "message -- do not assume information you were not given. Call "
-    "record_decision exactly once with your decision."
+    "minimum order quantity), your own recent decisions and what actually "
+    "happened after them (stockouts, holding cost incurred), and sometimes a "
+    "market_trend field with a real external commodity/producer-price signal "
+    "for this ingredient's raw input. Decide today's action: place a "
+    "replenishment order now, or hold. Balance the risk of a stockout "
+    "(running out before a new order could arrive, given lead time) against "
+    "the cost of ordering too early or too much (cash tied up, holding cost, "
+    "needing somewhere to store it). If market_trend is present, weigh "
+    "whether a rising price trend justifies ordering more now to hedge "
+    "against paying more later -- but check its 'is_proxy' and 'note' fields "
+    "first: a proxy signal (e.g. a manufacturing cost index standing in for a "
+    "raw commodity) deserves less weight than a direct global spot price. "
+    "Use ONLY the data in this message -- do not assume information you were "
+    "not given. Call record_decision exactly once with your decision."
+)
+
+LIVE_SYSTEM_PROMPT = (
+    SYSTEM_PROMPT
+    + " You also have a web_search tool. You may search a few times (2-3 max) "
+    "for real current news or prices that could affect this ingredient's supply "
+    "or cost (e.g. a drought or harvest report in a major growing region, a "
+    "recent commodity price move) before deciding -- only if it seems likely "
+    "to change the decision, not by default. Then call record_decision exactly "
+    "once with your final decision, citing anything you found in your reasoning."
 )
 
 
 def _compact_state_for_prompt(state: dict) -> dict:
-    return {
+    payload = {
         "sku": state["sku"],
         "unit": state["unit"],
         "as_of_date": state["as_of_date"],
@@ -97,6 +131,9 @@ def _compact_state_for_prompt(state: dict) -> dict:
         "recent_demand_history": state["demand_history"],
         "your_recent_decisions_and_outcomes": state["decision_history"],
     }
+    if state.get("market_trend") is not None:
+        payload["market_trend"] = state["market_trend"]
+    return payload
 
 
 def _fallback_decision(sku: str, date: str, reason: str) -> dict:
@@ -162,16 +199,80 @@ def decide(state: dict, model: str = MODEL, client: "anthropic.Anthropic | None"
     }
 
 
+def decide_live(state: dict, model: str = MODEL, client: "anthropic.Anthropic | None" = None,
+                 max_search_uses: int = 3) -> dict:
+    """Live-only variant of decide(): the model may use a real, server-side
+    web_search tool before committing to record_decision. NOT used inside
+    the walk-forward backtest -- see module docstring for why. tool_choice
+    is "auto" here (not forced) since forcing record_decision would prevent
+    the model from searching first.
+    """
+    sku = state["sku"]
+    date = state["as_of_date"]
+
+    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    if not api_key and client is None:
+        return _fallback_decision(sku, date, "ANTHROPIC_API_KEY not set")
+
+    if client is None:
+        workspace_id = os.environ.get("ANTHROPIC_WORKSPACE_ID")
+        default_headers = {"anthropic-workspace-id": workspace_id} if workspace_id else None
+        client = anthropic.Anthropic(api_key=api_key, default_headers=default_headers)
+
+    payload = _compact_state_for_prompt(state)
+    web_search_tool = {"type": "web_search_20260209", "name": "web_search", "max_uses": max_search_uses}
+    try:
+        msg = client.messages.create(
+            model=model,
+            max_tokens=3000,
+            system=LIVE_SYSTEM_PROMPT,
+            tools=[web_search_tool, DECISION_TOOL],
+            tool_choice={"type": "auto"},
+            messages=[{"role": "user", "content": json.dumps(payload, default=str)}],
+        )
+        tool_call = next(
+            (b for b in msg.content if b.type == "tool_use" and b.name == "record_decision"), None
+        )
+        if tool_call is None:
+            return _fallback_decision(sku, date, "model did not call record_decision")
+        result = tool_call.input
+        searches = [b for b in msg.content if b.type == "web_search_tool_result"]
+    except Exception as e:
+        return _fallback_decision(sku, date, f"{type(e).__name__}: {e}")
+
+    action = result.get("action")
+    if action not in ("order", "hold"):
+        return _fallback_decision(sku, date, f"model returned invalid action={action!r}")
+
+    allocation = result.get("allocation") or []
+    order_qty = float(result.get("order_qty") or 0.0)
+    if action == "hold":
+        allocation, order_qty = [], 0.0
+
+    return {
+        "sku": sku,
+        "date": date,
+        "policy": "llm_agent_live",
+        "action": action,
+        "order_qty": order_qty,
+        "allocation": allocation,
+        "reasoning": result.get("reasoning", ""),
+        "web_searches_used": len(searches),
+        "llm_error_fallback": False,
+    }
+
+
 if __name__ == "__main__":
     # Sanity-check step (per the project brief): run on a handful of
     # hand-picked days BEFORE the wide backtest. This costs a small,
     # bounded number of real API calls -- not years of history.
     from pathlib import Path
 
-    from backtest.state import build_state, get_decision_dates, load_dataset
+    from backtest.state import build_state, get_decision_dates, load_dataset, load_market_trends
 
     data_dir = Path(__file__).parent.parent / "data_synthetic_backup"
     demand, skus, suppliers = load_dataset(data_dir)
+    market_trends = load_market_trends(Path(__file__).parent.parent / "market_data" / "market_trends.csv")
 
     SAMPLE_SKUS = ["Espresso Beans (Arabica)", "Oat Milk"]
     N_SAMPLES = 3
@@ -193,3 +294,34 @@ if __name__ == "__main__":
             print(f"  on_hand={state['current_on_hand']:.1f}  reasoning: {decision['reasoning']}")
             if decision.get("llm_error_fallback"):
                 print("  *** FALLBACK USED -- investigate before running the full backtest ***")
+
+    # Market-trend sanity check: same idea, but now with a real external
+    # commodity signal wired in, on the SKU with the strongest real data
+    # (coffee, up ~13% YoY as of mid-2026 -- see backtest/state.py's smoke test)
+    print("\n=== Espresso Beans (Arabica) -- WITH market_trend ===")
+    trend_sku = "Espresso Beans (Arabica)"
+    trend_dates = get_decision_dates(demand, trend_sku, history_days=90)
+    for d in [trend_dates[-30], trend_dates[-1]]:
+        state = build_state(demand, skus, suppliers, trend_sku, d, history_days=28,
+                             market_trends=market_trends)
+        decision = decide(state)
+        mt = state.get("market_trend")
+        print(f"{decision['date']}: action={decision['action']:5s} qty={decision['order_qty']:>6.1f}")
+        if mt:
+            print(f"  market_trend: {mt['source_name']} pct_change_yoy={mt['pct_change_yoy']}% "
+                  f"is_proxy={mt['is_proxy']}")
+        print(f"  reasoning: {decision['reasoning']}")
+        if decision.get("llm_error_fallback"):
+            print("  *** FALLBACK USED ***")
+
+    # Live-mode sanity check: ONE call, web search enabled, no backtest
+    # involvement. Real API spend -- kept to a single call here on purpose.
+    print("\n=== Espresso Beans (Arabica) -- LIVE mode (web search) ===")
+    live_state = build_state(demand, skus, suppliers, trend_sku, trend_dates[-1], history_days=28,
+                              market_trends=market_trends)
+    live_decision = decide_live(live_state)
+    print(f"action={live_decision['action']} qty={live_decision.get('order_qty')} "
+          f"web_searches_used={live_decision.get('web_searches_used')}")
+    print(f"reasoning: {live_decision['reasoning']}")
+    if live_decision.get("llm_error_fallback"):
+        print("  *** FALLBACK USED ***")
