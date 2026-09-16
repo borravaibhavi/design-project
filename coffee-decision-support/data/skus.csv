@@ -1,17 +1,7 @@
 sku,unit,holding_cost_per_unit_day,ordering_cost,safety_stock_days
-Espresso beans,kg,0.00658,12.0,3
-Whole Milk,L,0.00066,12.0,3
-Cheddar,kg,0.00816,12.0,3
-Mozzarella,kg,0.00548,12.0,3
-Whipped cream,L,0.00247,12.0,3
-Barista chocolate syrup,L,0.00465,12.0,3
-Barista white chocolate syrup,L,0.00465,12.0,3
-Barista caramel sauce,L,0.00465,12.0,3
-Sugar,kg,0.00082,12.0,3
-Panini Bread,unit,0.00018,12.0,3
-Cocoa powder,kg,0.01205,12.0,3
-Chocolate,kg,0.00575,12.0,3
-Lemons,unit,0.00016,12.0,3
-Ham,kg,0.01507,12.0,3
-Salami,kg,0.00849,12.0,3
-Black Tea,kg,0.00877,12.0,3
+Espresso Beans (Arabica),lb,0.06,40,5
+Whole Milk,gal,0.1,25,2
+Oat Milk,gal,0.12,25,3
+Paper Cups (12oz),case,0.03,15,7
+Vanilla Syrup,btl,0.04,15,6
+Sugar,lb,0.02,10,10
