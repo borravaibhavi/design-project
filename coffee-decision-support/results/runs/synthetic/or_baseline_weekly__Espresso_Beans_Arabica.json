@@ -6,7 +6,8 @@
   "days_simulated": 366,
   "total_holding_cost": 1602.82,
   "total_ordering_cost": 1600.0,
-  "total_cost": 3202.82,
+  "total_purchase_cost": 41800.48,
+  "total_cost": 45003.29,
   "order_count": 40,
   "stockout_days": 33,
   "stockout_units": 427.7,
@@ -1492,2564 +1493,3296 @@
     {
       "date": "2025-08-31",
       "on_hand": 119.0,
+      "holding_cost_today": 7.14,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-01",
       "on_hand": 104.0,
+      "holding_cost_today": 6.24,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-02",
       "on_hand": 87.0,
+      "holding_cost_today": 5.22,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-03",
       "on_hand": 74.0,
+      "holding_cost_today": 4.44,
       "demand": 13.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-04",
       "on_hand": 55.0,
+      "holding_cost_today": 3.3,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-05",
       "on_hand": 36.0,
+      "holding_cost_today": 2.16,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-06",
       "on_hand": 36.0,
+      "holding_cost_today": 2.16,
       "demand": 0.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-07",
       "on_hand": 19.0,
+      "holding_cost_today": 1.14,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1010.975
     },
     {
       "date": "2025-09-08",
       "on_hand": 19.0,
+      "holding_cost_today": 1.14,
       "demand": 0.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-09",
       "on_hand": 4.0,
+      "holding_cost_today": 0.24,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-10",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 18.0,
       "stockout_units": 14.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-11",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 16.0,
       "stockout_units": 6.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-12",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 17.0,
       "stockout_units": 17.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-13",
       "on_hand": 70.7,
+      "holding_cost_today": 4.242,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 91.7
+      "arrived_qty": 91.7,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-14",
       "on_hand": 52.7,
+      "holding_cost_today": 3.162,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 991.4
     },
     {
       "date": "2025-09-15",
       "on_hand": 37.7,
+      "holding_cost_today": 2.262,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-16",
       "on_hand": 70.7,
+      "holding_cost_today": 4.242,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-17",
       "on_hand": 55.7,
+      "holding_cost_today": 3.342,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-18",
       "on_hand": 44.7,
+      "holding_cost_today": 2.682,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-19",
       "on_hand": 29.7,
+      "holding_cost_today": 1.782,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-20",
       "on_hand": 100.5,
+      "holding_cost_today": 6.03,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 88.8
+      "arrived_qty": 88.8,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-21",
       "on_hand": 84.5,
+      "holding_cost_today": 5.07,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 988.025
     },
     {
       "date": "2025-09-22",
       "on_hand": 63.5,
+      "holding_cost_today": 3.81,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-23",
       "on_hand": 96.5,
+      "holding_cost_today": 5.79,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-24",
       "on_hand": 79.5,
+      "holding_cost_today": 4.77,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-25",
       "on_hand": 72.5,
+      "holding_cost_today": 4.35,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-26",
       "on_hand": 52.5,
+      "holding_cost_today": 3.15,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-27",
       "on_hand": 120.8,
+      "holding_cost_today": 7.248,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 88.3
+      "arrived_qty": 88.3,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-28",
       "on_hand": 101.8,
+      "holding_cost_today": 6.108,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 999.5
     },
     {
       "date": "2025-09-29",
       "on_hand": 84.8,
+      "holding_cost_today": 5.088,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-09-30",
       "on_hand": 113.8,
+      "holding_cost_today": 6.828,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-01",
       "on_hand": 95.8,
+      "holding_cost_today": 5.748,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-02",
       "on_hand": 87.8,
+      "holding_cost_today": 5.268,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-03",
       "on_hand": 70.8,
+      "holding_cost_today": 4.248,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-04",
       "on_hand": 140.8,
+      "holding_cost_today": 8.448,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 90.0
+      "arrived_qty": 90.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-05",
       "on_hand": 122.8,
+      "holding_cost_today": 7.368,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-06",
       "on_hand": 102.8,
+      "holding_cost_today": 6.168,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-07",
       "on_hand": 131.8,
+      "holding_cost_today": 7.908,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-08",
       "on_hand": 116.8,
+      "holding_cost_today": 7.008,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-09",
       "on_hand": 98.8,
+      "holding_cost_today": 5.928,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-10",
       "on_hand": 82.8,
+      "holding_cost_today": 4.968,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-11",
       "on_hand": 65.8,
+      "holding_cost_today": 3.948,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-12",
       "on_hand": 50.8,
+      "holding_cost_today": 3.048,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1030.55
     },
     {
       "date": "2025-10-13",
       "on_hand": 34.8,
+      "holding_cost_today": 2.088,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-14",
       "on_hand": 18.8,
+      "holding_cost_today": 1.128,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-15",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 20.0,
       "stockout_units": 1.2,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-16",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 16.0,
       "stockout_units": 6.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-17",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 23.0,
       "stockout_units": 23.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-18",
       "on_hand": 77.6,
+      "holding_cost_today": 4.656,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 94.6
+      "arrived_qty": 94.6,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-19",
       "on_hand": 59.6,
+      "holding_cost_today": 3.576,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1034.6
     },
     {
       "date": "2025-10-20",
       "on_hand": 43.6,
+      "holding_cost_today": 2.616,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-21",
       "on_hand": 75.6,
+      "holding_cost_today": 4.536,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-22",
       "on_hand": 57.6,
+      "holding_cost_today": 3.456,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-23",
       "on_hand": 47.6,
+      "holding_cost_today": 2.856,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-24",
       "on_hand": 28.6,
+      "holding_cost_today": 1.716,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-25",
       "on_hand": 104.8,
+      "holding_cost_today": 6.288,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 95.2
+      "arrived_qty": 95.2,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-26",
       "on_hand": 87.8,
+      "holding_cost_today": 5.268,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1034.6
     },
     {
       "date": "2025-10-27",
       "on_hand": 69.8,
+      "holding_cost_today": 4.188,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-28",
       "on_hand": 101.8,
+      "holding_cost_today": 6.108,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-29",
       "on_hand": 81.8,
+      "holding_cost_today": 4.908,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-30",
       "on_hand": 71.8,
+      "holding_cost_today": 4.308,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-10-31",
       "on_hand": 49.8,
+      "holding_cost_today": 2.988,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-01",
       "on_hand": 123.0,
+      "holding_cost_today": 7.38,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 95.2
+      "arrived_qty": 95.2,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-02",
       "on_hand": 103.0,
+      "holding_cost_today": 6.18,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1042.025
     },
     {
       "date": "2025-11-03",
       "on_hand": 84.0,
+      "holding_cost_today": 5.04,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-04",
       "on_hand": 116.0,
+      "holding_cost_today": 6.96,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-05",
       "on_hand": 99.0,
+      "holding_cost_today": 5.94,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-06",
       "on_hand": 91.0,
+      "holding_cost_today": 5.46,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-07",
       "on_hand": 73.0,
+      "holding_cost_today": 4.38,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-08",
       "on_hand": 151.3,
+      "holding_cost_today": 9.078,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 96.3
+      "arrived_qty": 96.3,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-09",
       "on_hand": 129.3,
+      "holding_cost_today": 7.758,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-10",
       "on_hand": 111.3,
+      "holding_cost_today": 6.678,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-11",
       "on_hand": 144.3,
+      "holding_cost_today": 8.658,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-12",
       "on_hand": 121.3,
+      "holding_cost_today": 7.278,
       "demand": 23.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-13",
       "on_hand": 105.3,
+      "holding_cost_today": 6.318,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-14",
       "on_hand": 89.3,
+      "holding_cost_today": 5.358,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-15",
       "on_hand": 67.3,
+      "holding_cost_today": 4.038,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-16",
       "on_hand": 50.3,
+      "holding_cost_today": 3.018,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1056.2
     },
     {
       "date": "2025-11-17",
       "on_hand": 35.3,
+      "holding_cost_today": 2.118,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-18",
       "on_hand": 14.3,
+      "holding_cost_today": 0.858,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-19",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 20.0,
       "stockout_units": 5.7,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-20",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 19.0,
       "stockout_units": 9.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-21",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 24.0,
       "stockout_units": 24.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-22",
       "on_hand": 80.4,
+      "holding_cost_today": 4.824,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 98.4
+      "arrived_qty": 98.4,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-23",
       "on_hand": 60.4,
+      "holding_cost_today": 3.624,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1062.275
     },
     {
       "date": "2025-11-24",
       "on_hand": 39.4,
+      "holding_cost_today": 2.364,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-25",
       "on_hand": 72.4,
+      "holding_cost_today": 4.344,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-26",
       "on_hand": 53.4,
+      "holding_cost_today": 3.204,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-27",
       "on_hand": 44.4,
+      "holding_cost_today": 2.664,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-28",
       "on_hand": 26.4,
+      "holding_cost_today": 1.584,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-29",
       "on_hand": 102.7,
+      "holding_cost_today": 6.162,
       "demand": 23.0,
       "stockout_units": 0.0,
-      "arrived_qty": 99.3
+      "arrived_qty": 99.3,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-11-30",
       "on_hand": 82.7,
+      "holding_cost_today": 4.962,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1062.275
     },
     {
       "date": "2025-12-01",
       "on_hand": 61.7,
+      "holding_cost_today": 3.702,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-02",
       "on_hand": 91.7,
+      "holding_cost_today": 5.502,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-03",
       "on_hand": 69.7,
+      "holding_cost_today": 4.182,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-04",
       "on_hand": 64.7,
+      "holding_cost_today": 3.882,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-05",
       "on_hand": 48.7,
+      "holding_cost_today": 2.922,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-06",
       "on_hand": 128.0,
+      "holding_cost_today": 7.68,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 99.3
+      "arrived_qty": 99.3,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-07",
       "on_hand": 110.0,
+      "holding_cost_today": 6.6,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1068.35
     },
     {
       "date": "2025-12-08",
       "on_hand": 89.0,
+      "holding_cost_today": 5.34,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-09",
       "on_hand": 116.0,
+      "holding_cost_today": 6.96,
       "demand": 23.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-10",
       "on_hand": 95.0,
+      "holding_cost_today": 5.7,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-11",
       "on_hand": 83.0,
+      "holding_cost_today": 4.98,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-12",
       "on_hand": 63.0,
+      "holding_cost_today": 3.78,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-13",
       "on_hand": 144.2,
+      "holding_cost_today": 8.652,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 100.2
+      "arrived_qty": 100.2,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-14",
       "on_hand": 123.2,
+      "holding_cost_today": 7.392,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-15",
       "on_hand": 103.2,
+      "holding_cost_today": 6.192,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-16",
       "on_hand": 77.2,
+      "holding_cost_today": 4.632,
       "demand": 76.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-17",
       "on_hand": 62.2,
+      "holding_cost_today": 3.732,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-18",
       "on_hand": 43.2,
+      "holding_cost_today": 2.592,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-19",
       "on_hand": 18.2,
+      "holding_cost_today": 1.092,
       "demand": 25.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-20",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 26.0,
       "stockout_units": 7.8,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-21",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 20.0,
       "stockout_units": 20.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1134.5
     },
     {
       "date": "2025-12-22",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 21.0,
       "stockout_units": 21.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-23",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 20.0,
       "stockout_units": 20.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-24",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 19.0,
       "stockout_units": 19.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-25",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 23.0,
       "stockout_units": 13.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-26",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 21.0,
       "stockout_units": 21.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-27",
       "on_hand": 92.0,
+      "holding_cost_today": 5.52,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 110.0
+      "arrived_qty": 110.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-28",
       "on_hand": 73.0,
+      "holding_cost_today": 4.38,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1138.55
     },
     {
       "date": "2025-12-29",
       "on_hand": 57.0,
+      "holding_cost_today": 3.42,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-30",
       "on_hand": 86.0,
+      "holding_cost_today": 5.16,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2025-12-31",
       "on_hand": 65.0,
+      "holding_cost_today": 3.9,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-01",
       "on_hand": 52.0,
+      "holding_cost_today": 3.12,
       "demand": 23.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-02",
       "on_hand": 35.0,
+      "holding_cost_today": 2.1,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-03",
       "on_hand": 145.6,
+      "holding_cost_today": 8.736,
       "demand": 0.0,
       "stockout_units": 0.0,
-      "arrived_qty": 110.6
+      "arrived_qty": 110.6,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-04",
       "on_hand": 127.6,
+      "holding_cost_today": 7.656,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1138.55
     },
     {
       "date": "2026-01-05",
       "on_hand": 104.6,
+      "holding_cost_today": 6.276,
       "demand": 23.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-06",
       "on_hand": 131.6,
+      "holding_cost_today": 7.896,
       "demand": 23.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-07",
       "on_hand": 109.6,
+      "holding_cost_today": 6.576,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-08",
       "on_hand": 97.6,
+      "holding_cost_today": 5.856,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-09",
       "on_hand": 77.6,
+      "holding_cost_today": 4.656,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-10",
       "on_hand": 169.2,
+      "holding_cost_today": 10.152,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 110.6
+      "arrived_qty": 110.6,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-11",
       "on_hand": 143.2,
+      "holding_cost_today": 8.592,
       "demand": 26.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1141.925
     },
     {
       "date": "2026-01-12",
       "on_hand": 126.2,
+      "holding_cost_today": 7.572,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-13",
       "on_hand": 158.2,
+      "holding_cost_today": 9.492,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-14",
       "on_hand": 137.2,
+      "holding_cost_today": 8.232,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-15",
       "on_hand": 130.2,
+      "holding_cost_today": 7.812,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-16",
       "on_hand": 107.2,
+      "holding_cost_today": 6.432,
       "demand": 23.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-17",
       "on_hand": 197.3,
+      "holding_cost_today": 11.838,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 111.1
+      "arrived_qty": 111.1,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-18",
       "on_hand": 177.3,
+      "holding_cost_today": 10.638,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-19",
       "on_hand": 159.3,
+      "holding_cost_today": 9.558,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-20",
       "on_hand": 194.3,
+      "holding_cost_today": 11.658,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-21",
       "on_hand": 172.3,
+      "holding_cost_today": 10.338,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-22",
       "on_hand": 155.3,
+      "holding_cost_today": 9.318,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-23",
       "on_hand": 133.3,
+      "holding_cost_today": 7.998,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-24",
       "on_hand": 111.3,
+      "holding_cost_today": 6.678,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-25",
       "on_hand": 92.3,
+      "holding_cost_today": 5.538,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1089.95
     },
     {
       "date": "2026-01-26",
       "on_hand": 71.3,
+      "holding_cost_today": 4.278,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-27",
       "on_hand": 50.3,
+      "holding_cost_today": 3.018,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-28",
       "on_hand": 29.3,
+      "holding_cost_today": 1.758,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-29",
       "on_hand": 16.3,
+      "holding_cost_today": 0.978,
       "demand": 23.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-30",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 25.0,
       "stockout_units": 8.7,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-01-31",
       "on_hand": 84.4,
+      "holding_cost_today": 5.064,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 103.4
+      "arrived_qty": 103.4,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-01",
       "on_hand": 64.4,
+      "holding_cost_today": 3.864,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1104.125
     },
     {
       "date": "2026-02-02",
       "on_hand": 43.4,
+      "holding_cost_today": 2.604,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-03",
       "on_hand": 72.4,
+      "holding_cost_today": 4.344,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-04",
       "on_hand": 58.4,
+      "holding_cost_today": 3.504,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-05",
       "on_hand": 48.4,
+      "holding_cost_today": 2.904,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-06",
       "on_hand": 31.4,
+      "holding_cost_today": 1.884,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-07",
       "on_hand": 114.9,
+      "holding_cost_today": 6.894,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 105.5
+      "arrived_qty": 105.5,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-08",
       "on_hand": 91.9,
+      "holding_cost_today": 5.514,
       "demand": 23.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1091.975
     },
     {
       "date": "2026-02-09",
       "on_hand": 72.9,
+      "holding_cost_today": 4.374,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-10",
       "on_hand": 99.9,
+      "holding_cost_today": 5.994,
       "demand": 23.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-11",
       "on_hand": 78.9,
+      "holding_cost_today": 4.734,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-12",
       "on_hand": 66.9,
+      "holding_cost_today": 4.014,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-13",
       "on_hand": 45.9,
+      "holding_cost_today": 2.754,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-14",
       "on_hand": 129.6,
+      "holding_cost_today": 7.776,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 103.7
+      "arrived_qty": 103.7,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-15",
       "on_hand": 109.6,
+      "holding_cost_today": 6.576,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1098.05
     },
     {
       "date": "2026-02-16",
       "on_hand": 92.6,
+      "holding_cost_today": 5.556,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-17",
       "on_hand": 121.6,
+      "holding_cost_today": 7.296,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-18",
       "on_hand": 101.6,
+      "holding_cost_today": 6.096,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-19",
       "on_hand": 92.6,
+      "holding_cost_today": 5.556,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-20",
       "on_hand": 70.6,
+      "holding_cost_today": 4.236,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-21",
       "on_hand": 153.2,
+      "holding_cost_today": 9.192,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 104.6
+      "arrived_qty": 104.6,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-22",
       "on_hand": 135.2,
+      "holding_cost_today": 8.112,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-23",
       "on_hand": 115.2,
+      "holding_cost_today": 6.912,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-24",
       "on_hand": 149.2,
+      "holding_cost_today": 8.952,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-25",
       "on_hand": 124.2,
+      "holding_cost_today": 7.452,
       "demand": 25.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-26",
       "on_hand": 106.2,
+      "holding_cost_today": 6.372,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-27",
       "on_hand": 89.2,
+      "holding_cost_today": 5.352,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-02-28",
       "on_hand": 67.2,
+      "holding_cost_today": 4.032,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-01",
       "on_hand": 46.2,
+      "holding_cost_today": 2.772,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1089.95
     },
     {
       "date": "2026-03-02",
       "on_hand": 26.2,
+      "holding_cost_today": 1.572,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-03",
       "on_hand": 4.2,
+      "holding_cost_today": 0.252,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-04",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 23.0,
       "stockout_units": 18.8,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-05",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 20.0,
       "stockout_units": 10.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-06",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 19.0,
       "stockout_units": 19.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-07",
       "on_hand": 82.4,
+      "holding_cost_today": 4.944,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 103.4
+      "arrived_qty": 103.4,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-08",
       "on_hand": 61.4,
+      "holding_cost_today": 3.684,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1100.75
     },
     {
       "date": "2026-03-09",
       "on_hand": 43.4,
+      "holding_cost_today": 2.604,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-10",
       "on_hand": 70.4,
+      "holding_cost_today": 4.224,
       "demand": 23.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-11",
       "on_hand": 50.4,
+      "holding_cost_today": 3.024,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-12",
       "on_hand": 41.4,
+      "holding_cost_today": 2.484,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-13",
       "on_hand": 20.4,
+      "holding_cost_today": 1.224,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-14",
       "on_hand": 107.4,
+      "holding_cost_today": 6.444,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 105.0
+      "arrived_qty": 105.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-15",
       "on_hand": 89.4,
+      "holding_cost_today": 5.364,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1091.975
     },
     {
       "date": "2026-03-16",
       "on_hand": 70.4,
+      "holding_cost_today": 4.224,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-17",
       "on_hand": 101.4,
+      "holding_cost_today": 6.084,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-18",
       "on_hand": 83.4,
+      "holding_cost_today": 5.004,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-19",
       "on_hand": 84.4,
+      "holding_cost_today": 5.064,
       "demand": 9.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-20",
       "on_hand": 69.4,
+      "holding_cost_today": 4.164,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-21",
       "on_hand": 151.1,
+      "holding_cost_today": 9.066,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 103.7
+      "arrived_qty": 103.7,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-22",
       "on_hand": 131.1,
+      "holding_cost_today": 7.866,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-23",
       "on_hand": 111.1,
+      "holding_cost_today": 6.666,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-24",
       "on_hand": 141.1,
+      "holding_cost_today": 8.466,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-25",
       "on_hand": 127.1,
+      "holding_cost_today": 7.626,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-26",
       "on_hand": 112.1,
+      "holding_cost_today": 6.726,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-27",
       "on_hand": 96.1,
+      "holding_cost_today": 5.766,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-28",
       "on_hand": 78.1,
+      "holding_cost_today": 4.686,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-29",
       "on_hand": 60.1,
+      "holding_cost_today": 3.606,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1058.225
     },
     {
       "date": "2026-03-30",
       "on_hand": 40.1,
+      "holding_cost_today": 2.406,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-03-31",
       "on_hand": 21.1,
+      "holding_cost_today": 1.266,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-01",
       "on_hand": 2.1,
+      "holding_cost_today": 0.126,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-02",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 20.0,
       "stockout_units": 7.9,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-03",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 19.0,
       "stockout_units": 19.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-04",
       "on_hand": 80.7,
+      "holding_cost_today": 4.842,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 98.7
+      "arrived_qty": 98.7,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-05",
       "on_hand": 61.7,
+      "holding_cost_today": 3.702,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1045.4
     },
     {
       "date": "2026-04-06",
       "on_hand": 38.7,
+      "holding_cost_today": 2.322,
       "demand": 23.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-07",
       "on_hand": 72.7,
+      "holding_cost_today": 4.362,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-08",
       "on_hand": 51.7,
+      "holding_cost_today": 3.102,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-09",
       "on_hand": 39.7,
+      "holding_cost_today": 2.382,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-10",
       "on_hand": 17.7,
+      "holding_cost_today": 1.062,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-11",
       "on_hand": 94.5,
+      "holding_cost_today": 5.67,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 96.8
+      "arrived_qty": 96.8,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-12",
       "on_hand": 80.5,
+      "holding_cost_today": 4.83,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1048.1
     },
     {
       "date": "2026-04-13",
       "on_hand": 60.5,
+      "holding_cost_today": 3.63,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-14",
       "on_hand": 91.5,
+      "holding_cost_today": 5.49,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-15",
       "on_hand": 73.5,
+      "holding_cost_today": 4.41,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-16",
       "on_hand": 72.5,
+      "holding_cost_today": 4.35,
       "demand": 11.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-17",
       "on_hand": 57.5,
+      "holding_cost_today": 3.45,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-18",
       "on_hand": 136.7,
+      "holding_cost_today": 8.202,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 97.2
+      "arrived_qty": 97.2,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-19",
       "on_hand": 117.7,
+      "holding_cost_today": 7.062,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-20",
       "on_hand": 92.7,
+      "holding_cost_today": 5.562,
       "demand": 25.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-21",
       "on_hand": 128.7,
+      "holding_cost_today": 7.722,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-22",
       "on_hand": 113.7,
+      "holding_cost_today": 6.822,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-23",
       "on_hand": 92.7,
+      "holding_cost_today": 5.562,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-24",
       "on_hand": 78.7,
+      "holding_cost_today": 4.722,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-25",
       "on_hand": 63.7,
+      "holding_cost_today": 3.822,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-26",
       "on_hand": 42.7,
+      "holding_cost_today": 2.562,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1042.7
     },
     {
       "date": "2026-04-27",
       "on_hand": 23.7,
+      "holding_cost_today": 1.422,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-28",
       "on_hand": 9.7,
+      "holding_cost_today": 0.582,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-29",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 18.0,
       "stockout_units": 8.3,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-04-30",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 20.0,
       "stockout_units": 10.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-01",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 16.0,
       "stockout_units": 16.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-02",
       "on_hand": 85.4,
+      "holding_cost_today": 5.124,
       "demand": 11.0,
       "stockout_units": 0.0,
-      "arrived_qty": 96.4
+      "arrived_qty": 96.4,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-03",
       "on_hand": 68.4,
+      "holding_cost_today": 4.104,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1028.525
     },
     {
       "date": "2026-05-04",
       "on_hand": 50.4,
+      "holding_cost_today": 3.024,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-05",
       "on_hand": 83.4,
+      "holding_cost_today": 5.004,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-06",
       "on_hand": 64.4,
+      "holding_cost_today": 3.864,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-07",
       "on_hand": 51.4,
+      "holding_cost_today": 3.084,
       "demand": 23.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-08",
       "on_hand": 33.4,
+      "holding_cost_today": 2.004,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-09",
       "on_hand": 109.7,
+      "holding_cost_today": 6.582,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 94.3
+      "arrived_qty": 94.3,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-10",
       "on_hand": 92.7,
+      "holding_cost_today": 5.562,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1015.025
     },
     {
       "date": "2026-05-11",
       "on_hand": 73.7,
+      "holding_cost_today": 4.422,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-12",
       "on_hand": 103.7,
+      "holding_cost_today": 6.222,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-13",
       "on_hand": 87.7,
+      "holding_cost_today": 5.262,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-14",
       "on_hand": 79.7,
+      "holding_cost_today": 4.782,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-15",
       "on_hand": 61.7,
+      "holding_cost_today": 3.702,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-16",
       "on_hand": 137.0,
+      "holding_cost_today": 8.22,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 92.3
+      "arrived_qty": 92.3,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-17",
       "on_hand": 117.0,
+      "holding_cost_today": 7.02,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-18",
       "on_hand": 102.0,
+      "holding_cost_today": 6.12,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-19",
       "on_hand": 137.0,
+      "holding_cost_today": 8.22,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-20",
       "on_hand": 119.0,
+      "holding_cost_today": 7.14,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-21",
       "on_hand": 103.0,
+      "holding_cost_today": 6.18,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-22",
       "on_hand": 85.0,
+      "holding_cost_today": 5.1,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-23",
       "on_hand": 70.0,
+      "holding_cost_today": 4.2,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-24",
       "on_hand": 57.0,
+      "holding_cost_today": 3.42,
       "demand": 13.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1019.075
     },
     {
       "date": "2026-05-25",
       "on_hand": 35.0,
+      "holding_cost_today": 2.1,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-26",
       "on_hand": 20.0,
+      "holding_cost_today": 1.2,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-27",
       "on_hand": 5.0,
+      "holding_cost_today": 0.3,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-28",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 19.0,
       "stockout_units": 4.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-29",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 14.0,
       "stockout_units": 14.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-30",
       "on_hand": 74.9,
+      "holding_cost_today": 4.494,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 92.9
+      "arrived_qty": 92.9,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-05-31",
       "on_hand": 55.9,
+      "holding_cost_today": 3.354,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1015.7
     },
     {
       "date": "2026-06-01",
       "on_hand": 37.9,
+      "holding_cost_today": 2.274,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-02",
       "on_hand": 68.9,
+      "holding_cost_today": 4.134,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-03",
       "on_hand": 53.9,
+      "holding_cost_today": 3.234,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-04",
       "on_hand": 46.9,
+      "holding_cost_today": 2.814,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-05",
       "on_hand": 26.9,
+      "holding_cost_today": 1.614,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-06",
       "on_hand": 101.3,
+      "holding_cost_today": 6.078,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 92.4
+      "arrived_qty": 92.4,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-07",
       "on_hand": 85.3,
+      "holding_cost_today": 5.118,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1011.65
     },
     {
       "date": "2026-06-08",
       "on_hand": 64.3,
+      "holding_cost_today": 3.858,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-09",
       "on_hand": 97.3,
+      "holding_cost_today": 5.838,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-10",
       "on_hand": 78.3,
+      "holding_cost_today": 4.698,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-11",
       "on_hand": 69.3,
+      "holding_cost_today": 4.158,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-12",
       "on_hand": 53.3,
+      "holding_cost_today": 3.198,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-13",
       "on_hand": 126.1,
+      "holding_cost_today": 7.566,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 91.8
+      "arrived_qty": 91.8,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-14",
       "on_hand": 105.1,
+      "holding_cost_today": 6.306,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-15",
       "on_hand": 87.1,
+      "holding_cost_today": 5.226,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-16",
       "on_hand": 121.1,
+      "holding_cost_today": 7.266,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-17",
       "on_hand": 105.1,
+      "holding_cost_today": 6.306,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-18",
       "on_hand": 88.1,
+      "holding_cost_today": 5.286,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-19",
       "on_hand": 72.1,
+      "holding_cost_today": 4.326,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-20",
       "on_hand": 55.1,
+      "holding_cost_today": 3.306,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-21",
       "on_hand": 39.1,
+      "holding_cost_today": 2.346,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1018.4
     },
     {
       "date": "2026-06-22",
       "on_hand": 21.1,
+      "holding_cost_today": 1.266,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-23",
       "on_hand": 4.1,
+      "holding_cost_today": 0.246,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-24",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 17.0,
       "stockout_units": 12.9,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-25",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 17.0,
       "stockout_units": 7.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-26",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 16.0,
       "stockout_units": 16.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-27",
       "on_hand": 77.8,
+      "holding_cost_today": 4.668,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 92.8
+      "arrived_qty": 92.8,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-28",
       "on_hand": 61.8,
+      "holding_cost_today": 3.708,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 1018.4
     },
     {
       "date": "2026-06-29",
       "on_hand": 44.8,
+      "holding_cost_today": 2.688,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-06-30",
       "on_hand": 78.8,
+      "holding_cost_today": 4.728,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-01",
       "on_hand": 64.8,
+      "holding_cost_today": 3.888,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-02",
       "on_hand": 57.8,
+      "holding_cost_today": 3.468,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-03",
       "on_hand": 43.8,
+      "holding_cost_today": 2.628,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-04",
       "on_hand": 116.6,
+      "holding_cost_today": 6.996,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 92.8
+      "arrived_qty": 92.8,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-05",
       "on_hand": 101.6,
+      "holding_cost_today": 6.096,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-06",
       "on_hand": 89.6,
+      "holding_cost_today": 5.376,
       "demand": 12.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-07",
       "on_hand": 124.6,
+      "holding_cost_today": 7.476,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-08",
       "on_hand": 108.6,
+      "holding_cost_today": 6.516,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-09",
       "on_hand": 95.6,
+      "holding_cost_today": 5.736,
       "demand": 13.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-10",
       "on_hand": 81.6,
+      "holding_cost_today": 4.896,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-11",
       "on_hand": 60.6,
+      "holding_cost_today": 3.636,
       "demand": 21.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-12",
       "on_hand": 44.6,
+      "holding_cost_today": 2.676,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 982.625
     },
     {
       "date": "2026-07-13",
       "on_hand": 27.6,
+      "holding_cost_today": 1.656,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-14",
       "on_hand": 27.6,
+      "holding_cost_today": 1.656,
       "demand": 0.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-15",
       "on_hand": 12.6,
+      "holding_cost_today": 0.756,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-16",
       "on_hand": 8.6,
+      "holding_cost_today": 0.516,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-17",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 16.0,
       "stockout_units": 7.4,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-18",
       "on_hand": 69.5,
+      "holding_cost_today": 4.17,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 87.5
+      "arrived_qty": 87.5,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-19",
       "on_hand": 52.5,
+      "holding_cost_today": 3.15,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 973.175
     },
     {
       "date": "2026-07-20",
       "on_hand": 34.5,
+      "holding_cost_today": 2.07,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-21",
       "on_hand": 70.5,
+      "holding_cost_today": 4.23,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-22",
       "on_hand": 51.5,
+      "holding_cost_today": 3.09,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-23",
       "on_hand": 44.5,
+      "holding_cost_today": 2.67,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-24",
       "on_hand": 26.5,
+      "holding_cost_today": 1.59,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-25",
       "on_hand": 97.6,
+      "holding_cost_today": 5.856,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 86.1
+      "arrived_qty": 86.1,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-26",
       "on_hand": 80.6,
+      "holding_cost_today": 4.836,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 975.2
     },
     {
       "date": "2026-07-27",
       "on_hand": 80.6,
+      "holding_cost_today": 4.836,
       "demand": 0.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-28",
       "on_hand": 112.6,
+      "holding_cost_today": 6.756,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-29",
       "on_hand": 96.6,
+      "holding_cost_today": 5.796,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-30",
       "on_hand": 90.6,
+      "holding_cost_today": 5.436,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-07-31",
       "on_hand": 72.6,
+      "holding_cost_today": 4.356,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-01",
       "on_hand": 140.0,
+      "holding_cost_today": 8.4,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 86.4
+      "arrived_qty": 86.4,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-02",
       "on_hand": 120.0,
+      "holding_cost_today": 7.2,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-03",
       "on_hand": 104.0,
+      "holding_cost_today": 6.24,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-04",
       "on_hand": 137.0,
+      "holding_cost_today": 8.22,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-05",
       "on_hand": 117.0,
+      "holding_cost_today": 7.02,
       "demand": 20.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-06",
       "on_hand": 103.0,
+      "holding_cost_today": 6.18,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-07",
       "on_hand": 84.0,
+      "holding_cost_today": 5.04,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-08",
       "on_hand": 67.0,
+      "holding_cost_today": 4.02,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-09",
       "on_hand": 53.0,
+      "holding_cost_today": 3.18,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 984.65
     },
     {
       "date": "2026-08-10",
       "on_hand": 35.0,
+      "holding_cost_today": 2.1,
       "demand": 18.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-11",
       "on_hand": 19.0,
+      "holding_cost_today": 1.14,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-12",
       "on_hand": 4.0,
+      "holding_cost_today": 0.24,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-13",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 17.0,
       "stockout_units": 3.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-14",
       "on_hand": 0.0,
+      "holding_cost_today": 0.0,
       "demand": 18.0,
       "stockout_units": 18.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-15",
       "on_hand": 72.8,
+      "holding_cost_today": 4.368,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 87.8
+      "arrived_qty": 87.8,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-16",
       "on_hand": 58.8,
+      "holding_cost_today": 3.528,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 986.0
     },
     {
       "date": "2026-08-17",
       "on_hand": 41.8,
+      "holding_cost_today": 2.508,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-18",
       "on_hand": 76.8,
+      "holding_cost_today": 4.608,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-19",
       "on_hand": 61.8,
+      "holding_cost_today": 3.708,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-20",
       "on_hand": 57.8,
+      "holding_cost_today": 3.468,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-21",
       "on_hand": 38.8,
+      "holding_cost_today": 2.328,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-22",
       "on_hand": 110.8,
+      "holding_cost_today": 6.648,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 88.0
+      "arrived_qty": 88.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-23",
       "on_hand": 94.8,
+      "holding_cost_today": 5.688,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 976.55
     },
     {
       "date": "2026-08-24",
       "on_hand": 75.8,
+      "holding_cost_today": 4.548,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-25",
       "on_hand": 106.8,
+      "holding_cost_today": 6.408,
       "demand": 19.0,
       "stockout_units": 0.0,
-      "arrived_qty": 50.0
+      "arrived_qty": 50.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-26",
       "on_hand": 91.8,
+      "holding_cost_today": 5.508,
       "demand": 15.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-27",
       "on_hand": 84.8,
+      "holding_cost_today": 5.088,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 10.0
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-28",
       "on_hand": 62.8,
+      "holding_cost_today": 3.768,
       "demand": 22.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-29",
       "on_hand": 132.4,
+      "holding_cost_today": 7.944,
       "demand": 17.0,
       "stockout_units": 0.0,
-      "arrived_qty": 86.6
+      "arrived_qty": 86.6,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-30",
       "on_hand": 116.4,
+      "holding_cost_today": 6.984,
       "demand": 16.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     },
     {
       "date": "2026-08-31",
       "on_hand": 102.4,
+      "holding_cost_today": 6.144,
       "demand": 14.0,
       "stockout_units": 0.0,
-      "arrived_qty": 0
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
     }
   ]
 }
