@@ -1,0 +1,14 @@
+sku,supplier,price,lead_time,reliability,moq,availability
+Espresso Beans (Arabica),Highland Roasters Co-op,11.962,6,0.95,25,In stock
+Espresso Beans (Arabica),Continental Green Coffee,11.226,9,0.9,50,In stock
+Espresso Beans (Arabica),Direct Trade Partners,12.353,4,0.98,10,Limited
+Whole Milk,Garden State Dairy,1.283,1,0.99,5,In stock
+Whole Milk,Regional Dairy Co-op,1.341,2,0.94,10,In stock
+Oat Milk,PlantBase Foods,4.5,3,0.93,5,In stock
+Oat Milk,Regional Dairy Co-op,4.8,2,0.96,5,Limited
+Paper Cups (12oz),EcoPack Supply,32.0,8,0.92,3,In stock
+Paper Cups (12oz),Metro Foodservice,35.5,4,0.97,2,In stock
+Vanilla Syrup,Torani Distribution,12.98,5,0.96,6,In stock
+Vanilla Syrup,Metro Foodservice,16.593,4,0.97,4,In stock
+Sugar,Regional Dairy Co-op,1.605,3,0.98,20,In stock
+Sugar,Metro Foodservice,1.435,4,0.97,10,In stock

@@ -1,0 +1,7 @@
+sku,unit,holding_cost_per_unit_day,ordering_cost,safety_stock_days
+Espresso Beans (Arabica),kg,0.00658,40,5
+Whole Milk,L,0.00066,25,2
+Oat Milk,gal,0.12,25,3
+Paper Cups (12oz),case,0.03,15,7
+Vanilla Syrup,L,0.00796,15,6
+Sugar,kg,0.00082,10,10
