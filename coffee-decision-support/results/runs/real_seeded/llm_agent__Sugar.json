@@ -1,0 +1,4192 @@
+{
+  "policy": "llm_agent",
+  "sku": "Sugar",
+  "start_date": "2025-08-31",
+  "end_date": "2026-08-31",
+  "days_simulated": 366,
+  "total_holding_cost": 2.33,
+  "total_ordering_cost": 60.0,
+  "total_purchase_cost": 87.52,
+  "total_cost": 149.85,
+  "order_count": 6,
+  "stockout_days": 3,
+  "stockout_units": 2.8,
+  "total_demand": 57.0,
+  "service_level": 0.9509,
+  "decisions": [
+    {
+      "sku": "Sugar",
+      "date": "2025-08-31",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand over the past month has been essentially zero (only 1 unit sold in 28 days), so current on-hand stock of 4.2kg vastly exceeds the 10-day safety stock requirement at this consumption rate. Placing an order now would tie up cash and incur holding costs with no near-term need, especially since both suppliers require MOQs (10-20kg) far above actual usage. The sugar market trend is also declining (-15.4% YoY, direct spot price signal), so there's no urgency to hedge against rising prices - waiting to reorder later when stock actually depletes is the more cost-effective choice.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.02,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-09-07",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains near-zero (2 units sold in the last 28 days), so 3.2kg on hand still covers many weeks of expected usage, well beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Ordering now would trigger a large MOQ (10-20kg) purchase that ties up cash and adds holding cost for stock we won't use soon, especially with the sugar spot price trend flat-to-declining (-11% YoY, direct signal) giving no urgency to hedge. Continue holding and monitor demand/stock levels.\"",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.02,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-09-14",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains essentially zero (2 units sold in the last 28 days), so 3.2kg on hand still far exceeds the 10-day safety stock need at this consumption rate, and both suppliers' 3-4 day lead times leave plenty of buffer. Ordering now would force a large MOQ purchase (10-20kg) tying up cash and adding holding costs for stock we won't use soon. The sugar spot price trend is flat-to-declining (-11% YoY, direct signal), so there's no hedging urgency - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.02,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-09-21",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand is essentially zero (only 2 units sold in the past 28 days), so at ~0.07kg/day average usage, the 2.2kg on hand covers roughly a month - far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Ordering now would force a large MOQ purchase (10-20kg) that ties up cash and adds holding costs for stock that won't be used for a very long time. The sugar spot price trend is flat and down -11% YoY (direct, non-proxy signal), so there's no hedging urgency - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.01,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-09-28",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains essentially zero (only ~2-3 units sold in the past month), so at roughly 0.07kg/day average usage, the 1.2kg on hand still covers well over two weeks - comfortably beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Placing an order now would force a large MOQ purchase (10-20kg) that ties up cash and adds holding costs for stock that won't be consumed for months, and the sugar spot price trend remains flat-to-declining (-11% YoY, direct signal), so there's no hedging urgency. Continue holding and monitor demand/stock levels.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.0,
+        "stockout_units": 1.8,
+        "stockout_days": 2
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-10-05",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 10.0,
+      "allocation": [
+        {
+          "supplier": "Metro Foodservice",
+          "qty": 10
+        }
+      ],
+      "reasoning": "We're currently at zero stock and already experienced a stockout, so we need to order now despite low average demand (~0.07-0.1 kg/day). Metro Foodservice's 10kg MOQ is the smallest available and cheaper per unit ($1.5448 vs $1.7278), and even though its lead time is a day longer, at this low demand rate 10kg will last many months, easily covering the safety stock buffer. Sugar's spot price trend is declining (-23.4% YoY, direct signal), so there's no reason to over-order beyond the minimum needed to end the stockout.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.02,
+        "stockout_units": 1.0,
+        "stockout_days": 1
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-10-12",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "We just received 10kg on 10/5 and demand remains near-zero (~0.1 kg/day, only a handful of units sold in the past month), so at current on-hand of 10kg we have well over a month of cover - far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. No need to reorder yet, and sugar's spot price trend continues to decline (-23.4% YoY, direct signal), so there's no hedging urgency to buy early. Continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.05,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-10-19",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains very low (~0.1 kg/day) and current on-hand of 8kg covers roughly 2-3 months of use, far exceeding the 10-day safety stock target and either supplier's 3-4 day lead time. The prior stockout occurred at zero inventory, not due to insufficient reorder point, so at 8kg there's ample buffer. Sugar's spot price trend continues to decline (-23.4% YoY, direct signal), so there's no hedging urgency to buy early - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.03,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-10-26",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains very low (~0.1 kg/day average) and current on-hand of 5kg still covers roughly 6-7 weeks of usage, well beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-23.4% YoY, direct spot signal), so there's no hedging urgency to buy early. Continue holding and monitor demand to avoid tying up cash in a large MOQ purchase (10-20kg) we won't need for months.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.02,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-11-02",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 10.0,
+      "allocation": [
+        {
+          "supplier": "Metro Foodservice",
+          "qty": 10
+        }
+      ],
+      "reasoning": "Demand is very low (~0.1 kg/day) but on-hand has dropped to 4kg, and we've previously stocked out at low levels with a 3-4 day lead time - so it's time to top up before hitting zero again. Metro Foodservice offers the lower price ($1.5222/kg) and the smallest MOQ (10kg), which at current usage rates will last several months, comfortably covering the 10-day safety stock target. Sugar's spot price trend is declining (-30.4% YoY, direct signal), so there's no reason to over-order beyond the minimum MOQ needed to avoid another stockout.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.04,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-11-09",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "We just restocked to 14kg on 11/2 and demand remains very low (~0.15kg/day recently), so 11kg on hand still covers 2+ months, well beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-30.4% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.06,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-11-16",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day over the past month) and current on-hand of 11kg covers well over 2 months of usage, far exceeding the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-30.4% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and monitor demand to avoid tying up cash in a large MOQ purchase (10-20kg) we won't need for months.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.06,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-11-23",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains very low (~0.1 kg/day average) and current on-hand of 9kg covers roughly 2-3 months of usage, well beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-30.4% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and monitor demand to avoid tying up cash in a large MOQ purchase we won't need for months.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.05,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-11-30",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1 kg/day) and 9kg on-hand still covers roughly 2-3 months of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-30.4% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and avoid tying up cash in a large MOQ purchase (10-20kg) we won't need for months.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.05,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-12-07",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day) and 8kg on-hand still covers well over two months of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-32.5% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and avoid tying up cash in a large MOQ purchase (10-20kg) we won't need for months.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.04,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-12-14",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day, only a few units sold in the past month) and current on-hand of 7kg still covers roughly 2 months of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-32.5% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and avoid tying up cash in a large MOQ purchase (10-20kg) we won't need for months.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.03,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-12-21",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 10.0,
+      "allocation": [
+        {
+          "supplier": "Metro Foodservice",
+          "qty": 10
+        }
+      ],
+      "reasoning": "On-hand has dropped to 3kg with demand ticking up slightly (~0.15kg/day recently, plus a stockout on 12/17) and we've been caught at low stock before - at this pace we're only days from stockout, less than either supplier's 3-4 day lead time. Metro Foodservice is cheaper ($1.43/kg vs $1.60/kg) and has the smaller MOQ (10kg), which will easily cover months of usage and the 10-day safety stock target. Sugar's spot price trend is still declining (-32.5% YoY, direct signal), so there's no reason to over-order beyond the minimum MOQ needed to avoid another stockout.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.04,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2025-12-28",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "We just restocked 10kg on 12/21 and demand remains very low (~0.15kg/day recently), so the current 11kg on hand covers well over two months of usage - far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-32.5% YoY, direct spot signal), so there's no hedging urgency to buy early; continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.05,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-01-04",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains very low (~0.4kg/day average over the past month) and current on-hand of 8kg covers roughly 3 weeks, well beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-26.5% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and monitor demand to avoid tying up cash in a large MOQ purchase (10-20kg) we won't need for weeks.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.04,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-01-11",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains very low (~0.3kg/day over the past month) and current on-hand of 7kg still covers over 20 days of usage, comfortably beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-26.5% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and avoid tying up cash in a large MOQ purchase (10-20kg) we won't need for weeks.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.03,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-01-18",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains very low (~0.25kg/day over the past 28 days) and current on-hand of 6kg still covers roughly 3+ weeks of usage, comfortably beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-26.5% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and monitor demand to avoid tying up cash in a large MOQ purchase (10-20kg) we won't need for weeks.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.03,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-01-25",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains very low (~0.15kg/day over the past 28 days) and current on-hand of 5kg still covers roughly a month of usage, comfortably beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-26.5% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and monitor demand to avoid tying up cash in a large MOQ purchase (10-20kg) we won't need for weeks.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.03,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-02-01",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 10.0,
+      "allocation": [
+        {
+          "supplier": "Metro Foodservice",
+          "qty": 10
+        }
+      ],
+      "reasoning": "On-hand has dropped to 4kg with recent demand ~0.15-0.2kg/day, but we've stocked out before at similar low levels and lead times are 3-4 days, so it's prudent to top up now rather than risk running dry. Metro Foodservice is cheaper ($1.4466/kg vs $1.6179/kg) and has the smaller MOQ (10kg), which will comfortably cover months of usage and the 10-day safety stock target. Sugar's spot price trend continues to decline (-21.9% YoY, direct spot signal), so there's no reason to over-order beyond the minimum MOQ needed to avoid another stockout.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.04,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-02-08",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "We just restocked 10kg on 2/1 and demand remains very low (~0.1kg/day over the past 28 days), so the current 13kg on hand covers well over 3 months of usage - far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-21.9% YoY, direct spot signal), so there's no hedging urgency to buy early; continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.07,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-02-15",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day average) and current on-hand of 12kg covers well over two months of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-21.9% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and monitor demand to avoid tying up cash in a large MOQ purchase we won't need for months.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.07,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-02-22",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day) and current on-hand of 12kg covers well over two months of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-21.9% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and monitor demand to avoid tying up cash in a large MOQ purchase we won't need for months.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.06,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-03-01",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day average over the past month) and current on-hand of 10kg still covers roughly 2-3 months of usage, well beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-21.9% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and monitor demand to avoid tying up cash in a large MOQ purchase we won't need for months.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.06,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-03-08",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day average) and current on-hand of 9kg covers roughly 2-3 months of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-29.6% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and monitor demand to avoid tying up cash in a large MOQ purchase we won't need for months.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.04,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-03-15",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day) and current on-hand of 7kg still covers roughly 2 months of usage, well beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-29.6% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and monitor demand to avoid tying up cash in a large MOQ purchase we won't need for months.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.04,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-03-22",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day) and current on-hand of 6kg still covers roughly 2 months of usage, well beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-29.6% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and monitor demand to avoid tying up cash in a large MOQ purchase we won't need for months.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.03,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-03-29",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day) and current on-hand of 6kg still covers roughly 2 months of usage, well beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to decline (-29.6% YoY, direct spot signal), so there's no hedging urgency to buy early - continue holding and monitor demand to avoid tying up cash in a large MOQ purchase we won't need for months.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.03,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-04-05",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day) and current on-hand of 5kg still covers roughly 5-7 weeks of usage, well beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend continues to be down significantly YoY (-22.4%, direct spot signal), so there's no hedging urgency to buy early - continue holding and monitor demand to avoid tying up cash in a large MOQ purchase we won't need for weeks.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.02,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-04-12",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 10.0,
+      "allocation": [
+        {
+          "supplier": "Metro Foodservice",
+          "qty": 10
+        }
+      ],
+      "reasoning": "On-hand has dropped to 3kg with demand ~0.1-0.15kg/day, and lead times are 3-4 days - we've stocked out before at this level, so it's time to top up rather than risk a stockout. Metro Foodservice is cheaper ($1.45/kg vs $1.62/kg) and has the smaller MOQ (10kg), which comfortably covers months of usage and the 10-day safety stock target. Sugar's spot price trend remains well below last year (-22.4% YoY, direct spot signal) so there's no reason to over-order beyond the minimum MOQ.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.04,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-04-19",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "We just restocked 10kg on 4/12 and demand remains extremely low (~0.1kg/day), so current on-hand of 13kg covers well over three months of usage - far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend remains well below last year (-22.4% YoY, direct spot signal) with no clear upward momentum, so there's no hedging urgency to buy early; continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.07,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-04-26",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day) and current on-hand of 11kg covers well over two months of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend remains well below last year (-22.4% YoY, direct spot signal) and has been flat/range-bound over recent months, so there's no hedging urgency to buy early - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.06,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-05-03",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day) and current on-hand of 11kg covers well over two months of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend is still down sharply YoY (-22.5%, direct spot signal) and range-bound recently, so there's no hedging urgency - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.06,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-05-10",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day) and current on-hand of 10kg covers well over two months of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend is still down sharply YoY (-22.5%, direct spot signal) and range-bound recently, so there's no hedging urgency - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.06,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-05-17",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.1kg/day) and current on-hand of 10kg covers well over two months of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend is still down sharply YoY (-22.5%, direct spot signal) and range-bound recently, so there's no hedging urgency - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.05,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-05-24",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.07kg/day over the past 28 days) and current on-hand of 9kg covers well over three months of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend remains well below last year (-22.5% YoY, direct spot signal) and range-bound recently, so there's no hedging urgency to buy early - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.05,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-05-31",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.07kg/day) and current on-hand of 8kg covers well over 100 days of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend remains well below last year (-22.5% YoY, direct spot signal) and range-bound recently, so there's no hedging urgency to buy early - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.05,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-06-07",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.08kg/day) and current on-hand of 7kg covers well over 80 days of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend is still down sharply YoY (-15.3%, direct spot signal) and range-bound recently, so there's no hedging urgency - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.04,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-06-14",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.08kg/day) and current on-hand of 7kg covers roughly 80+ days of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend is still down sharply YoY (-15.3%, direct spot signal) and range-bound recently, so there's no hedging urgency - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.04,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-06-21",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.07kg/day) and current on-hand of 7kg still covers roughly 100 days of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend remains well below last year (-15.3% YoY, direct spot signal) and range-bound recently, so there's no hedging urgency to buy early - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.04,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-06-28",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "Demand remains extremely low (~0.07kg/day) and current on-hand of 6kg still covers roughly 80+ days of usage, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price trend remains well below last year (-15.3% YoY, direct spot signal) and range-bound recently, so there's no hedging urgency to buy early - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.03,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-07-05",
+      "policy": "llm_agent",
+      "action": "order",
+      "order_qty": 10.0,
+      "allocation": [
+        {
+          "supplier": "Metro Foodservice",
+          "qty": 10
+        }
+      ],
+      "reasoning": "On-hand has dropped to 5kg with demand ~0.07-0.1kg/day, well above the 10-day safety stock threshold in usage terms, but we're approaching the level where we previously restocked (ordered at 3kg last time). Since Metro's lead time is 4 days and MOQ is 10kg, ordering now avoids risk while sugar's spot price is still down sharply YoY (-14.3%, direct spot signal) and range-bound, so no urgency to over-order beyond the MOQ. Metro Foodservice is cheaper ($1.36/kg vs $1.52/kg) and its 10kg MOQ comfortably covers months of usage.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.05,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-07-12",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "On-hand is 13kg with demand still extremely low (~0.1kg/day recently), covering well over 100 days of usage - far beyond the 10-day safety stock target and either supplier's 3-4 day lead time, and we just restocked 10kg a week ago. Sugar's spot price remains well below last year (-14.3% YoY, direct spot signal) and range-bound, so there's no hedging urgency to buy early; continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.07,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-07-19",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "On-hand of 13kg vastly exceeds the ~10-day safety stock need given demand of roughly 0.1kg/day (covering 100+ days), and both suppliers' 3-4 day lead times leave plenty of buffer. Sugar's spot price remains well below last year (-14.3% YoY, direct spot signal) and range-bound recently, so there's no hedging urgency to buy early - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.07,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-07-26",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "On-hand of 12kg vastly exceeds the ~10-day safety stock need given demand of roughly 0.07-0.1kg/day (covering 100+ days), well beyond either supplier's 3-4 day lead time. Sugar's spot price remains well below last year (-14.3% YoY, direct spot signal) and trending flat-to-down recently, so there's no hedging urgency to buy early - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.07,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-08-02",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "On-hand of 11kg still covers well over 100 days at the current ~0.07-0.1kg/day demand pace, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price remains well below last year (-9.5% YoY, direct spot signal) and range-bound over recent months, so there's no hedging urgency to buy early - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.06,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-08-09",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "On-hand of 11kg vastly exceeds the ~10-day safety stock need given demand of roughly 0.07kg/day (covering 150+ days), far beyond either supplier's 3-4 day lead time. Sugar's spot price remains well below last year (-9.5% YoY, direct spot signal) and range-bound recently with no clear upward breakout, so there's no hedging urgency to buy early - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.06,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-08-16",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "On-hand of 10kg still covers roughly 100+ days at the current ~0.07-0.1kg/day demand pace, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price remains well below last year (-9.5% YoY, direct spot signal) and range-bound over recent months, so there's no hedging urgency to buy early - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.06,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-08-23",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "On-hand of 10kg still covers well over 100 days at the current ~0.07kg/day demand pace, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price remains well below last year (-9.5% YoY, direct spot signal) and range-bound recently with no clear upward breakout, so there's no hedging urgency to buy early - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 7,
+        "holding_cost": 0.06,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    },
+    {
+      "sku": "Sugar",
+      "date": "2026-08-30",
+      "policy": "llm_agent",
+      "action": "hold",
+      "order_qty": 0.0,
+      "allocation": [],
+      "reasoning": "On-hand of 10kg still covers well over 100 days at the current ~0.07kg/day demand pace, far beyond the 10-day safety stock target and either supplier's 3-4 day lead time. Sugar's spot price remains well below last year (-9.5% YoY, direct spot signal) and range-bound recently with no clear upward breakout, so there's no hedging urgency to buy early - continue holding and monitor demand.",
+      "llm_error_fallback": false,
+      "outcome": {
+        "days": 2,
+        "holding_cost": 0.02,
+        "stockout_units": 0.0,
+        "stockout_days": 0
+      }
+    }
+  ],
+  "daily_log": [
+    {
+      "date": "2025-08-31",
+      "on_hand": 4.2,
+      "holding_cost_today": 0.0034,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-01",
+      "on_hand": 4.2,
+      "holding_cost_today": 0.0034,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-02",
+      "on_hand": 4.2,
+      "holding_cost_today": 0.0034,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-03",
+      "on_hand": 4.2,
+      "holding_cost_today": 0.0034,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-04",
+      "on_hand": 4.2,
+      "holding_cost_today": 0.0034,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-05",
+      "on_hand": 4.2,
+      "holding_cost_today": 0.0034,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-06",
+      "on_hand": 3.2,
+      "holding_cost_today": 0.0026,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-07",
+      "on_hand": 3.2,
+      "holding_cost_today": 0.0026,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-08",
+      "on_hand": 3.2,
+      "holding_cost_today": 0.0026,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-09",
+      "on_hand": 3.2,
+      "holding_cost_today": 0.0026,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-10",
+      "on_hand": 3.2,
+      "holding_cost_today": 0.0026,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-11",
+      "on_hand": 3.2,
+      "holding_cost_today": 0.0026,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-12",
+      "on_hand": 3.2,
+      "holding_cost_today": 0.0026,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-13",
+      "on_hand": 3.2,
+      "holding_cost_today": 0.0026,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-14",
+      "on_hand": 3.2,
+      "holding_cost_today": 0.0026,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-15",
+      "on_hand": 3.2,
+      "holding_cost_today": 0.0026,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-16",
+      "on_hand": 3.2,
+      "holding_cost_today": 0.0026,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-17",
+      "on_hand": 3.2,
+      "holding_cost_today": 0.0026,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-18",
+      "on_hand": 3.2,
+      "holding_cost_today": 0.0026,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-19",
+      "on_hand": 3.2,
+      "holding_cost_today": 0.0026,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-20",
+      "on_hand": 2.2,
+      "holding_cost_today": 0.0018,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-21",
+      "on_hand": 2.2,
+      "holding_cost_today": 0.0018,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-22",
+      "on_hand": 2.2,
+      "holding_cost_today": 0.0018,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-23",
+      "on_hand": 2.2,
+      "holding_cost_today": 0.0018,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-24",
+      "on_hand": 2.2,
+      "holding_cost_today": 0.0018,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-25",
+      "on_hand": 2.2,
+      "holding_cost_today": 0.0018,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-26",
+      "on_hand": 1.2,
+      "holding_cost_today": 0.001,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-27",
+      "on_hand": 1.2,
+      "holding_cost_today": 0.001,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-28",
+      "on_hand": 0.2,
+      "holding_cost_today": 0.0002,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-29",
+      "on_hand": 0.2,
+      "holding_cost_today": 0.0002,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-09-30",
+      "on_hand": 0.0,
+      "holding_cost_today": 0.0,
+      "demand": 1.0,
+      "stockout_units": 0.8,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-01",
+      "on_hand": 0.0,
+      "holding_cost_today": 0.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-02",
+      "on_hand": 0.0,
+      "holding_cost_today": 0.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-03",
+      "on_hand": 0.0,
+      "holding_cost_today": 0.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-04",
+      "on_hand": 0.0,
+      "holding_cost_today": 0.0,
+      "demand": 1.0,
+      "stockout_units": 1.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-05",
+      "on_hand": 0.0,
+      "holding_cost_today": 0.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 15.448
+    },
+    {
+      "date": "2025-10-06",
+      "on_hand": 0.0,
+      "holding_cost_today": 0.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-07",
+      "on_hand": 0.0,
+      "holding_cost_today": 0.0,
+      "demand": 1.0,
+      "stockout_units": 1.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-08",
+      "on_hand": 0.0,
+      "holding_cost_today": 0.0,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-09",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-10",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-11",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-12",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-13",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-14",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-15",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-16",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-17",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-18",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-19",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-20",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-21",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-22",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-23",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-24",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-25",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-26",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-27",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-28",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-29",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-30",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-10-31",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-01",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-02",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 15.222
+    },
+    {
+      "date": "2025-11-03",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-04",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-05",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-06",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-07",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-08",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-09",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-10",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-11",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-12",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-13",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-14",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-15",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-16",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-17",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-18",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-19",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-20",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-21",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-22",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-23",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-24",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-25",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-26",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-27",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-28",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-29",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-11-30",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-01",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-02",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-03",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-04",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-05",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-06",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-07",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-08",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-09",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-10",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-11",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-12",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-13",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-14",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-15",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-16",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-17",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-18",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-19",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-20",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-21",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 14.306
+    },
+    {
+      "date": "2025-12-22",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-23",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-24",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-25",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-26",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-27",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-28",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-29",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-30",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2025-12-31",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-01",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-02",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-03",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-04",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-05",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-06",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-07",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-08",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-09",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-10",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-11",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-12",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-13",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-14",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-15",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-16",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-17",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-18",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-19",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-20",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-21",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-22",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-23",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-24",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-25",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-26",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-27",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-28",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-29",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-30",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-01-31",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-01",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 14.466
+    },
+    {
+      "date": "2026-02-02",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-03",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-04",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-05",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-06",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-07",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-08",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-09",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-10",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-11",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-12",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-13",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-14",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-15",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-16",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-17",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-18",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-19",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-20",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-21",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-22",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-23",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-24",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-25",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-26",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-27",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-02-28",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-01",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-02",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-03",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-04",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-05",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-06",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-07",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-08",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-09",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-10",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-11",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-12",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-13",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-14",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-15",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-16",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-17",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-18",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-19",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-20",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-21",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-22",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-23",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-24",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-25",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-26",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-27",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-28",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-29",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-30",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-03-31",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-01",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-02",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-03",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-04",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-05",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-06",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-07",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-08",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-09",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-10",
+      "on_hand": 4.0,
+      "holding_cost_today": 0.0033,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-11",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-12",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 14.476
+    },
+    {
+      "date": "2026-04-13",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-14",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-15",
+      "on_hand": 3.0,
+      "holding_cost_today": 0.0025,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-16",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-17",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-18",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-19",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-20",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-21",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-22",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-23",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-24",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-25",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-26",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-27",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-28",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-29",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-04-30",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-01",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-02",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-03",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-04",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-05",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-06",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-07",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-08",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-09",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-10",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-11",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-12",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-13",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-14",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-15",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-16",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-17",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-18",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-19",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-20",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-21",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-22",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-23",
+      "on_hand": 9.0,
+      "holding_cost_today": 0.0074,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-24",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-25",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-26",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-27",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-28",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-29",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-30",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-05-31",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-01",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-02",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-03",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-04",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-05",
+      "on_hand": 8.0,
+      "holding_cost_today": 0.0066,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-06",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-07",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-08",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-09",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-10",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-11",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-12",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-13",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-14",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-15",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-16",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-17",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-18",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-19",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-20",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-21",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-22",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-23",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-24",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-25",
+      "on_hand": 7.0,
+      "holding_cost_today": 0.0057,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-26",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-27",
+      "on_hand": 6.0,
+      "holding_cost_today": 0.0049,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-28",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-29",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-06-30",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-01",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-02",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-03",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-04",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-05",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 13.606
+    },
+    {
+      "date": "2026-07-06",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-07",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-08",
+      "on_hand": 5.0,
+      "holding_cost_today": 0.0041,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-09",
+      "on_hand": 15.0,
+      "holding_cost_today": 0.0123,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 10.0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-10",
+      "on_hand": 14.0,
+      "holding_cost_today": 0.0115,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-11",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-12",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-13",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-14",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-15",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-16",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-17",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-18",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-19",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-20",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-21",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-22",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-23",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-24",
+      "on_hand": 13.0,
+      "holding_cost_today": 0.0107,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-25",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-26",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-27",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-28",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-29",
+      "on_hand": 12.0,
+      "holding_cost_today": 0.0098,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-30",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-07-31",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-01",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-02",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-03",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-04",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-05",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-06",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-07",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-08",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-09",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-10",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-11",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-12",
+      "on_hand": 11.0,
+      "holding_cost_today": 0.009,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-13",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 1.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-14",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-15",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-16",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-17",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-18",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-19",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-20",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-21",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-22",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-23",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-24",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-25",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-26",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-27",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-28",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-29",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-30",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    },
+    {
+      "date": "2026-08-31",
+      "on_hand": 10.0,
+      "holding_cost_today": 0.0082,
+      "demand": 0.0,
+      "stockout_units": 0.0,
+      "arrived_qty": 0,
+      "purchase_cost_today": 0.0
+    }
+  ]
+}
