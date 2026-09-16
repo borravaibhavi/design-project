@@ -139,6 +139,48 @@ def build_market_trend_signal(
     }
 
 
+def build_effective_supplier_price(
+    market_trends: pd.DataFrame,
+    sku: str,
+    as_of: dt.date,
+    base_price: float,
+    base_date: dt.date,
+    publication_lag_days: int = MARKET_TREND_PUBLICATION_LAG_DAYS,
+) -> float:
+    """Scales a supplier's listed base_price (as of base_date -- the
+    dataset's own start date) by how much the real market index has moved
+    between base_date and as_of, so the price every agent actually pays
+    reflects real market history instead of staying flat for the life of
+    the backtest. This is deliberately given to BOTH or_agent and
+    llm_agent (unlike the full market_trend field below) -- it's today's
+    real price, not a forecast, so there's no fairness reason to withhold
+    it from the classical policy. or_agent's LP will react to it (a
+    higher current price shifts its cost-minimizing supplier choice) even
+    though it has no way to anticipate where the price goes next; only
+    llm_agent, via market_trend, can reason about the trend itself.
+
+    Same publication-lag no-lookahead treatment as build_market_trend_signal.
+    Returns base_price unchanged if this sku has no mapped series or no
+    lagged history exists yet at as_of.
+    """
+    sku_rows = market_trends.loc[market_trends["sku"] == sku]
+    if sku_rows.empty:
+        return base_price
+
+    lag = dt.timedelta(days=publication_lag_days)
+    known = sku_rows.loc[sku_rows["date"].apply(lambda d: d + lag) < as_of]
+    if known.empty:
+        return base_price
+    current_value = float(known.iloc[-1]["value"])
+
+    base_known = sku_rows.loc[sku_rows["date"].apply(lambda d: d + lag) <= base_date]
+    base_value = float(base_known.iloc[-1]["value"]) if not base_known.empty else float(sku_rows.iloc[0]["value"])
+    if not base_value:
+        return base_price
+
+    return round(base_price * (current_value / base_value), 4)
+
+
 def get_decision_dates(demand: pd.DataFrame, sku: str, history_days: int = 90) -> list[dt.date]:
     """Dates for which build_state() can produce a state with a full
     history_days window for this sku, i.e. valid walk-forward steps."""
@@ -194,6 +236,7 @@ def build_state(
     current_on_hand: float | None = None,
     currently_stockout: bool | None = None,
     market_trends: pd.DataFrame | None = None,
+    market_price_base_date: dt.date | None = None,
 ) -> dict:
     """Everything an agent would have known when deciding for `sku` at
     the start of `as_of`. No row dated >= as_of is ever included.
@@ -223,14 +266,20 @@ def build_state(
     has nothing to do with what its own choices actually produced.
 
     market_trends: optional real external commodity/producer-price data
-    (see market_data/build_market_trends.py) to attach as
-    state["market_trend"] -- None if not supplied, or if this sku has
-    no mapped series, or not enough lagged history exists yet. This is
-    deliberately NOT passed to or_agent's own state calls in the
-    backtest engine's normal wiring -- the classical EOQ/LP model has no
-    mechanism to use a forward-looking market signal at all, so giving
-    it one would be theater, not a real capability. It's meant for
-    llm_agent, where it can actually change the decision.
+    (see market_data/build_market_trends.py). When supplied, it does TWO
+    different things, one shared and one LLM-only:
+      1. state["suppliers"][*]["price"] is rescaled from each supplier's
+         listed base price (as of market_price_base_date) to reflect real
+         market movement up to `as_of` -- see build_effective_supplier_price.
+         This is given to EVERY policy, including or_agent: it's today's
+         real price, not a forecast, so there's no fairness reason to
+         withhold it. Requires market_price_base_date; without it, prices
+         are left exactly as suppliers.csv lists them.
+      2. state["market_trend"] attaches the fuller forward-looking picture
+         (trailing history, YoY % change, proxy flag) -- None if this sku
+         has no mapped series or no lagged history exists yet. or_agent's
+         EOQ/LP math has no mechanism to act on a trend at all, so it
+         simply never reads this key; llm_agent's prompt does.
     """
     as_of = _to_date(as_of)
     decision_log = decision_log or []
@@ -280,7 +329,13 @@ def build_state(
         "suppliers": [
             {
                 "supplier": s["supplier"],
-                "price": float(s["price"]),
+                "price": (
+                    float(s["price"])
+                    if market_trends is None or market_price_base_date is None
+                    else build_effective_supplier_price(
+                        market_trends, sku, as_of, float(s["price"]), market_price_base_date
+                    )
+                ),
                 "lead_time": float(s["lead_time"]),
                 "reliability": float(s["reliability"]),
                 "moq": float(s["moq"]),
@@ -353,3 +408,18 @@ if __name__ == "__main__":
           f"value={mt['latest_value']} pct_change_yoy={mt['pct_change_yoy']}%")
     assert _to_date(mt["latest_known_as_of"]) < late_date
     print("[market trend] guardrail check: latest known point is strictly before as_of -- OK")
+
+    # effective supplier price should move with the real coffee price
+    # (up ~13.4% YoY per the check above) relative to the dataset's start
+    base_date = dates[0] - dt.timedelta(days=90)  # matches history_days=90 offset used above
+    state_early = build_state(demand, skus, suppliers, sku, dates[0], history_days=28,
+                               market_trends=market_trends, market_price_base_date=base_date)
+    state_late = build_state(demand, skus, suppliers, sku, late_date, history_days=28,
+                              market_trends=market_trends, market_price_base_date=base_date)
+    early_price = state_early["suppliers"][0]["price"]
+    late_price = state_late["suppliers"][0]["price"]
+    listed_price = float(suppliers.loc[suppliers["sku"] == sku].iloc[0]["price"])
+    print(f"\n[effective price] {state_early['suppliers'][0]['supplier']} listed={listed_price} "
+          f"early(as_of={dates[0]})={early_price} late(as_of={late_date})={late_price}")
+    assert late_price > early_price, "effective price should track the real coffee price rise"
+    print("[effective price] PASSED -- price correctly tracks real market movement over time")

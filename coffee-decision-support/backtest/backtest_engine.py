@@ -21,6 +21,13 @@ decision_interval_days lets a policy decide on a coarser cadence (e.g.
 weekly for the LLM agent, to bound API cost) while still being scored
 against daily consumption -- see the recommended fixed 28-day/weekly
 config for llm_agent in agents/llm_agent.py.
+
+market_trends (optional) makes supplier prices move with real market
+history instead of staying flat for the life of the backtest -- see
+state.py's build_effective_supplier_price. apply_decision() is given
+that day's STATE-adjusted supplier list (not a static snapshot), so
+purchase cost always reflects the price that was actually in effect
+when the order was placed, for every policy equally.
 """
 
 from __future__ import annotations
@@ -65,6 +72,8 @@ def run_backtest(
     state_window_days: int = 28,
     decision_interval_days: int = 1,
     log_dir: Path | str | None = None,
+    market_trends: pd.DataFrame | None = None,
+    market_price_base_date: dt.date | None = None,
 ) -> dict:
     all_dates = sorted(demand.loc[demand["sku"] == sku, "date"].unique())
     if len(all_dates) <= history_days:
@@ -78,10 +87,15 @@ def run_backtest(
     if not sim_dates:
         raise ValueError(f"empty date range for {sku!r}: {sim_start_date}..{sim_end_date}")
 
+    # suppliers.csv's listed price is anchored to the dataset's own start
+    # date, not the (possibly truncated) sim window -- see
+    # build_real_seeded_data.py's own docstring on this convention
+    if market_trends is not None and market_price_base_date is None:
+        market_price_base_date = all_dates[0]
+
     sku_row = skus.loc[skus["sku"] == sku].iloc[0]
     holding_cost = float(sku_row["holding_cost_per_unit_day"])
     ordering_cost = float(sku_row["ordering_cost"])
-    sup_rows = suppliers.loc[suppliers["sku"] == sku].to_dict("records")
 
     demand_by_date = demand.loc[demand["sku"] == sku].set_index("date")["units_sold"].to_dict()
 
@@ -101,6 +115,7 @@ def run_backtest(
 
     for i, date in enumerate(sim_dates):
         is_decision_day = i % decision_interval_days == 0
+        purchase_cost_before = ledger.purchase_cost_total
 
         if is_decision_day:
             if last_decision_entry is not None:
@@ -114,15 +129,24 @@ def run_backtest(
                 decision_log=decision_log,
                 current_on_hand=ledger.on_hand,
                 currently_stockout=ledger.currently_stockout,
+                market_trends=market_trends,
+                market_price_base_date=market_price_base_date,
             )
             decision = agent_module.decide(state)
             decision["policy"] = policy_name
-            apply_decision(ledger, decision, date, sup_rows, ordering_cost)
+            # use THIS state's suppliers (possibly market-price-adjusted for
+            # today), not a static pre-loop snapshot, so purchase cost
+            # reflects the price actually in effect at decision time
+            apply_decision(ledger, decision, date, state["suppliers"], ordering_cost)
             decision_log.append(decision)
             last_decision_entry = decision
 
         actual = demand_by_date.get(date)
-        daily_log.append(step_day(ledger, date, actual, holding_cost))
+        day_result = step_day(ledger, date, actual, holding_cost)
+        # apply_decision() (if this was a decision day) already ran above --
+        # attribute its purchase cost to this same calendar day's log entry
+        day_result["purchase_cost_today"] = round(ledger.purchase_cost_total - purchase_cost_before, 4)
+        daily_log.append(day_result)
         days_since_decision += 1
 
     if last_decision_entry is not None and "outcome" not in last_decision_entry:
@@ -136,7 +160,10 @@ def run_backtest(
         "days_simulated": ledger.days_simulated,
         "total_holding_cost": round(ledger.holding_cost_total, 2),
         "total_ordering_cost": round(ledger.ordering_cost_total, 2),
-        "total_cost": round(ledger.holding_cost_total + ledger.ordering_cost_total, 2),
+        "total_purchase_cost": round(ledger.purchase_cost_total, 2),
+        "total_cost": round(
+            ledger.holding_cost_total + ledger.ordering_cost_total + ledger.purchase_cost_total, 2
+        ),
         "order_count": ledger.order_count,
         "stockout_days": ledger.stockout_days,
         "stockout_units": round(ledger.stockout_units_total, 2),

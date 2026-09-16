@@ -39,6 +39,7 @@ def summarize(results: list[dict]) -> list[dict]:
             "total_cost": r["total_cost"],
             "total_holding_cost": r["total_holding_cost"],
             "total_ordering_cost": r["total_ordering_cost"],
+            "total_purchase_cost": r.get("total_purchase_cost", 0.0),
             "order_count": r["order_count"],
             "stockout_days": r["stockout_days"],
             "stockout_units": r["stockout_units"],
@@ -50,18 +51,21 @@ def summarize(results: list[dict]) -> list[dict]:
 
 
 def cumulative_cost_series(result: dict, holding_cost_per_unit_day: float, ordering_cost: float) -> list[dict]:
-    """Per-day cumulative (holding + ordering) cost -- the line the
-    dashboard's policy-comparison chart plots. Recomputes holding cost
-    from each day's on_hand rather than trusting a precomputed field on
-    the log, so this stays correct even against run logs collected
-    before simulator.py started recording holding_cost_today directly
-    (recomputing here is free; re-running an llm_agent backtest to
-    regenerate logs is not)."""
+    """Per-day cumulative (holding + ordering + purchase) cost -- the
+    line the dashboard's policy-comparison chart plots. Recomputes
+    holding cost from each day's on_hand rather than trusting a
+    precomputed field on the log, so this stays correct even against run
+    logs collected before simulator.py started recording
+    holding_cost_today directly (recomputing here is free; re-running an
+    llm_agent backtest to regenerate logs is not). purchase_cost_today
+    falls back to 0 for logs collected before purchase-cost tracking
+    existed (data_synthetic_backup runs, where price never moved anyway)."""
     order_dates = {d["date"] for d in result["decisions"] if d.get("action") == "order"}
     cum = 0.0
     series = []
     for day in result["daily_log"]:
         cum += holding_cost_per_unit_day * day["on_hand"]
+        cum += day.get("purchase_cost_today", 0.0)
         if day["date"] in order_dates:
             cum += ordering_cost
         series.append({"date": day["date"], "cumulative_cost": round(cum, 2)})
