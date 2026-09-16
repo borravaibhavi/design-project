@@ -117,6 +117,9 @@ def build_state(
     as_of,
     history_days: int = 90,
     decision_log: list[dict] | None = None,
+    decision_history_limit: int = 20,
+    current_on_hand: float | None = None,
+    currently_stockout: bool | None = None,
 ) -> dict:
     """Everything an agent would have known when deciding for `sku` at
     the start of `as_of`. No row dated >= as_of is ever included.
@@ -124,9 +127,26 @@ def build_state(
     decision_log: this agent's own prior decisions for this sku, each a
     dict with at least a "date" key (plus whatever decide()/simulate()
     produced -- qty, supplier, reasoning, outcome). The backtest engine
-    owns this list and appends to it after each simulated outcome;
-    build_state() re-filters it to date < as_of defensively, so even a
-    caller bug can't leak a same-day-or-future entry into the prompt.
+    owns this list, appends to it after each simulated outcome, and
+    passes the whole running history in every call; build_state() only
+    exposes and validates the last decision_history_limit entries of it
+    (a fixed window, same spirit as history_days for demand) -- both to
+    keep an LLM prompt bounded over a multi-year run rather than growing
+    without limit, and because re-validating a years-long list on every
+    single day is O(n^2) over the backtest. Entries older than the
+    window were already validated the day they were appended; their
+    dates can't retroactively change.
+
+    current_on_hand / currently_stockout: override for the last-observed
+    inventory position. Defaults to the dataset's own on_hand column
+    (the synthetic generator's original replenishment trajectory), which
+    is only correct BEFORE a policy has made any decisions of its own.
+    Once the backtest engine starts running a policy, on-hand diverges
+    from that column (different orders => different actual stock), so
+    backtest_engine always passes its own simulator ledger's current
+    on-hand here instead -- otherwise every agent after the first
+    decision would be reasoning about a fictional inventory level that
+    has nothing to do with what its own choices actually produced.
     """
     as_of = _to_date(as_of)
     decision_log = decision_log or []
@@ -146,12 +166,16 @@ def build_state(
 
     sup_rows = suppliers.loc[suppliers["sku"] == sku].to_dict("records")
 
+    recent_decisions = decision_log[-decision_history_limit:] if decision_history_limit else decision_log
+
     # decision_log is expected to already be strictly historical (the
     # backtest engine only ever appends past outcomes before calling
     # decide() for the next date). A same-day-or-future entry here means
     # a bug in the caller, not dirty input to clean up -- fail loudly
-    # rather than silently dropping it and masking the bug.
-    for d in decision_log:
+    # rather than silently dropping it and masking the bug. Only the
+    # exposed window needs checking each call -- see decision_log note
+    # above for why the full history isn't re-walked every day.
+    for d in recent_decisions:
         d_date = _to_date(d["date"])
         if d_date >= as_of:
             raise LookaheadError(
@@ -180,8 +204,8 @@ def build_state(
             }
             for s in sup_rows
         ],
-        "current_on_hand": float(last_row["on_hand"]),
-        "currently_stockout": bool(last_row["stockout_flag"]),
+        "current_on_hand": float(last_row["on_hand"]) if current_on_hand is None else float(current_on_hand),
+        "currently_stockout": bool(last_row["stockout_flag"]) if currently_stockout is None else bool(currently_stockout),
         "demand_history": [
             {
                 "date": _date_str(r["date"]),
@@ -190,7 +214,7 @@ def build_state(
             }
             for _, r in window.iterrows()
         ],
-        "decision_history": decision_log,
+        "decision_history": recent_decisions,
     }
 
     validate_no_lookahead(state, as_of)
