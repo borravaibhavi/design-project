@@ -89,75 +89,80 @@ def weekly_multiplier(dow, weekly_amp):
     return 1 + weekly_amp * (base - 1)
 
 
-records = []
-for sku, cfg in SKUS.items():
-    on_hand = cfg["base_demand"] * cfg["safety_days"] * 2  # starting stock
-    for i, d in enumerate(dates):
-        seasonal = seasonal_multiplier(d.dayofyear, cfg["annual_amp"])
-        weekly = weekly_multiplier(d.weekday(), cfg["weekly_amp"])
-        noise = rng.normal(1.0, 0.12)
-        demand = max(0, cfg["base_demand"] * seasonal * weekly * noise)
+def main():
+    records = []
+    for sku, cfg in SKUS.items():
+        on_hand = cfg["base_demand"] * cfg["safety_days"] * 2  # starting stock
+        for i, d in enumerate(dates):
+            seasonal = seasonal_multiplier(d.dayofyear, cfg["annual_amp"])
+            weekly = weekly_multiplier(d.weekday(), cfg["weekly_amp"])
+            noise = rng.normal(1.0, 0.12)
+            demand = max(0, cfg["base_demand"] * seasonal * weekly * noise)
 
-        # deliberate injected data-quality issues, ~1.5% of rows
-        if rng.random() < 0.008:
-            demand *= rng.choice([0, 4.0])  # dropout or spike
-        if rng.random() < 0.005:
-            demand = np.nan  # missing read
+            # deliberate injected data-quality issues, ~1.5% of rows
+            if rng.random() < 0.008:
+                demand *= rng.choice([0, 4.0])  # dropout or spike
+            if rng.random() < 0.005:
+                demand = np.nan  # missing read
 
-        units_sold = 0 if np.isnan(demand) else round(demand)
-        on_hand -= units_sold
-        stockout = on_hand < 0
-        if stockout:
-            on_hand = 0
+            units_sold = 0 if np.isnan(demand) else round(demand)
+            on_hand -= units_sold
+            stockout = on_hand < 0
+            if stockout:
+                on_hand = 0
 
-        # simple periodic replenishment so on_hand doesn't just drain to zero
-        reorder_point = cfg["base_demand"] * cfg["safety_days"]
-        if on_hand < reorder_point and i % 3 == 0:
-            on_hand += cfg["base_demand"] * cfg["safety_days"] * 2.5
+            # simple periodic replenishment so on_hand doesn't just drain to zero
+            reorder_point = cfg["base_demand"] * cfg["safety_days"]
+            if on_hand < reorder_point and i % 3 == 0:
+                on_hand += cfg["base_demand"] * cfg["safety_days"] * 2.5
 
-        records.append({
-            "date": d.date().isoformat(),
+            records.append({
+                "date": d.date().isoformat(),
+                "sku": sku,
+                "units_sold": units_sold if not np.isnan(demand) else np.nan,
+                "on_hand": round(on_hand, 1),
+                "stockout_flag": stockout,
+            })
+
+    demand_df = pd.DataFrame(records)
+
+    # For demo purposes, force the final week for two SKUs into a genuine
+    # low-stock situation (busy week, no restock yet) so the dashboard has
+    # something live to recommend against, rather than everything sitting
+    # comfortably at "OK" on the last day by coincidence of the replenishment
+    # cycle above.
+    LOW_STOCK_DEMO_SKUS = {"Oat Milk": 6.0, "Vanilla Syrup": 8.0}
+    for sku, forced_on_hand in LOW_STOCK_DEMO_SKUS.items():
+        mask = demand_df["sku"] == sku
+        last_idx = demand_df[mask].index[-1]
+        demand_df.loc[last_idx, "on_hand"] = forced_on_hand
+
+    demand_df.to_csv(OUT_DIR / "daily_demand.csv", index=False)
+
+    supplier_rows = []
+    for sku, sup_list in SUPPLIERS.items():
+        for s in sup_list:
+            supplier_rows.append({"sku": sku, **s})
+    suppliers_df = pd.DataFrame(supplier_rows)
+    suppliers_df.to_csv(OUT_DIR / "suppliers.csv", index=False)
+
+    sku_rows = []
+    for sku, cfg in SKUS.items():
+        sku_rows.append({
             "sku": sku,
-            "units_sold": units_sold if not np.isnan(demand) else np.nan,
-            "on_hand": round(on_hand, 1),
-            "stockout_flag": stockout,
+            "unit": cfg["unit"],
+            "holding_cost_per_unit_day": cfg["holding_cost"],
+            "ordering_cost": cfg["ordering_cost"],
+            "safety_stock_days": cfg["safety_days"],
         })
+    skus_df = pd.DataFrame(sku_rows)
+    skus_df.to_csv(OUT_DIR / "skus.csv", index=False)
 
-demand_df = pd.DataFrame(records)
+    print(f"Generated {n_days} days x {len(SKUS)} SKUs -> {len(demand_df)} demand rows")
+    print(f"Missing values injected: {demand_df['units_sold'].isna().sum()}")
+    print(f"Stockout days: {int(demand_df['stockout_flag'].sum())}")
+    print("Files written to:", OUT_DIR)
 
-# For demo purposes, force the final week for two SKUs into a genuine
-# low-stock situation (busy week, no restock yet) so the dashboard has
-# something live to recommend against, rather than everything sitting
-# comfortably at "OK" on the last day by coincidence of the replenishment
-# cycle above.
-LOW_STOCK_DEMO_SKUS = {"Oat Milk": 6.0, "Vanilla Syrup": 8.0}
-for sku, forced_on_hand in LOW_STOCK_DEMO_SKUS.items():
-    mask = demand_df["sku"] == sku
-    last_idx = demand_df[mask].index[-1]
-    demand_df.loc[last_idx, "on_hand"] = forced_on_hand
 
-demand_df.to_csv(OUT_DIR / "daily_demand.csv", index=False)
-
-supplier_rows = []
-for sku, sup_list in SUPPLIERS.items():
-    for s in sup_list:
-        supplier_rows.append({"sku": sku, **s})
-suppliers_df = pd.DataFrame(supplier_rows)
-suppliers_df.to_csv(OUT_DIR / "suppliers.csv", index=False)
-
-sku_rows = []
-for sku, cfg in SKUS.items():
-    sku_rows.append({
-        "sku": sku,
-        "unit": cfg["unit"],
-        "holding_cost_per_unit_day": cfg["holding_cost"],
-        "ordering_cost": cfg["ordering_cost"],
-        "safety_stock_days": cfg["safety_days"],
-    })
-skus_df = pd.DataFrame(sku_rows)
-skus_df.to_csv(OUT_DIR / "skus.csv", index=False)
-
-print(f"Generated {n_days} days x {len(SKUS)} SKUs -> {len(demand_df)} demand rows")
-print(f"Missing values injected: {demand_df['units_sold'].isna().sum()}")
-print(f"Stockout days: {int(demand_df['stockout_flag'].sum())}")
-print("Files written to:", OUT_DIR)
+if __name__ == "__main__":
+    main()
